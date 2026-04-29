@@ -1,2 +1,6 @@
 __pycache__
 README.md
+gates_classical.py
+gates_quantum.py
+qcmps.py
+legacy.py
