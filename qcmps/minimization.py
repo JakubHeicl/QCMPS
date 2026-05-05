@@ -63,7 +63,7 @@ def build_from_fcidump(file_path: Path) -> tuple[SparsePauliOp, float, int, int,
 
     return hamiltonian, nuclear_repulsion, n_spin_orbitals, n_spatial_orbitals, num_alpha, num_beta, num_particles_total
 
-def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVector, operator: SparsePauliOp, callback: Callable[[int, float, np.ndarray], None] | None = None, verbose: bool = True) -> Callable[[np.ndarray], float]:
+def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVector, operator: SparsePauliOp, callback: Callable[[int, float, np.ndarray], None] | None = None, verbose: bool = False) -> Callable[[np.ndarray], float]:
 
     counter = {"n": 0}
 
@@ -78,8 +78,6 @@ def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVec
             raise ValueError(
                 f"Expected parameter vector of shape ({n_expected},), got {x.shape}."
             )
-        if verbose:
-            print(f"[qcmps] Evaluation {counter['n']}: assigning parameters")
 
         bind_map = dict(zip(param_list, x, strict=True))
 
@@ -90,9 +88,6 @@ def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVec
             )
             for gate in gates
         ]
-
-        if verbose:
-            print(f"[qcmps] Evaluation {counter['n']}: evaluating energy")
 
         energy = evaluate_hamiltonian(bound_gates, operator, verbose=False)
         energy = float(np.real_if_close(energy))

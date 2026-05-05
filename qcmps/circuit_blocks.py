@@ -1,5 +1,6 @@
 from __future__ import annotations
 from qiskit import QuantumCircuit
+from qiskit.circuit.library import XXPlusYYGate
 
 class HFPreSet(QuantumCircuit):
     def __init__(self, n_entries: int):
@@ -33,6 +34,35 @@ class UGate(Gate):
     @staticmethod
     def n_parameters() -> int:
         return 3
+
+class CUGate(Gate):
+    def __init__(self, parameters: list[float]):
+        super().__init__(parameters, 3, 2)
+
+        theta, phi, lam = parameters
+
+        self.cu(theta, phi, lam, 0.0, 0, 1)
+
+    @staticmethod
+    def n_parameters() -> int:
+        return 3
+
+class PCGate(Gate):
+    def __init__(self, parameters: list[float]):
+        super().__init__(parameters, 5, 2)
+
+        theta, phi, pre_phase, post_phase, pair_phase = parameters
+
+        self.rz(-pre_phase, 0)
+        self.rz(pre_phase, 1)
+        self.append(XXPlusYYGate(2 * theta, phi, label="PC"), [0, 1])
+        self.rz(-post_phase, 0)
+        self.rz(post_phase, 1)
+        self.cp(pair_phase, 0, 1)
+
+    @staticmethod
+    def n_parameters() -> int:
+        return 5
 
 class Block(QuantumCircuit):
 
@@ -96,3 +126,75 @@ class LUBlock(Block):
     @classmethod
     def n_parameters(cls, n_entries: int, layers: int = 1) -> int:
         return cls.gate_cls.n_parameters() * (n_entries - 1) * layers
+
+class LPCBlock(Block):
+    
+    gate_cls = PCGate
+
+    def __init__(self, n_entries: int, parameters: list[float], layers = 1):
+        super().__init__(n_entries, parameters, layers)
+
+        index = 0
+
+        for l in range(layers):
+            for i in range(n_entries - 1):
+
+                gate_circuit = self.gate_cls(parameters[index:index+self.gate_parameters])
+                index += self.gate_parameters
+
+                self.append(gate_circuit.to_gate(), [i, i + 1])
+
+    @classmethod
+    def n_parameters(cls, n_entries: int, layers: int = 1) -> int:
+        return cls.gate_cls.n_parameters() * (n_entries - 1) * layers
+    
+class APCBlock(Block):
+
+    gate_cls = PCGate
+
+    def __init__(self, n_entries: int, parameters: list[float], layers = 1):
+        super().__init__(n_entries, parameters, layers)
+
+        index = 0
+
+        for l in range(layers):
+            for i in range(n_entries):
+                for j in range(n_entries):
+
+                    if i == j:
+                        continue
+
+                    gate_circuit = self.gate_cls(parameters[index:index+self.gate_parameters])
+                    index += self.gate_parameters
+
+                    self.append(gate_circuit.to_gate(), [i, j])
+
+    @classmethod
+    def n_parameters(cls, n_entries: int, layers: int = 1) -> int:
+        return cls.gate_cls.n_parameters() * n_entries * (n_entries - 1) * layers
+
+
+class ACUBlock(Block):
+
+    gate_cls = CUGate
+
+    def __init__(self, n_entries: int, parameters: list[float], layers = 1):
+        super().__init__(n_entries, parameters, layers)
+
+        index = 0
+
+        for l in range(layers):
+            for i in range(n_entries):
+                for j in range(n_entries):
+
+                    if i == j:
+                        continue
+
+                    gate_circuit = self.gate_cls(parameters[index:index+self.gate_parameters])
+                    index += self.gate_parameters
+
+                    self.append(gate_circuit.to_gate(), [i, j])
+
+    @classmethod
+    def n_parameters(cls, n_entries: int, layers: int = 1) -> int:
+        return cls.gate_cls.n_parameters() * n_entries * (n_entries - 1) * layers

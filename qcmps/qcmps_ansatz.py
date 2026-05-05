@@ -30,11 +30,11 @@ def prepare_blocks(n_orbs: int,
             block.compose(HFPreSet(n_entries), inplace=True)
 
         block.compose(
-            block_type(n_entries, params[index : index + block_type.n_parameters(n_entries, layers) * layers], layers),
+            block_type(n_entries, params[index : index + block_type.n_parameters(n_entries, layers)], layers),
             inplace=True,
         )
 
-        index += block_type.n_parameters(n_entries, layers) * layers
+        index += block_type.n_parameters(n_entries, layers)
 
         gates.append(block)
 
@@ -99,7 +99,7 @@ def evaluate_pauli_string_qcmps(gates: list[QuantumCircuit], label: str, verbose
     expectation = p0 - p1
     return float(np.real_if_close(expectation))
 
-def evaluate_hamiltonian(gates: list[QuantumCircuit], op: SparsePauliOp, verbose: bool = True,) -> float:
+def evaluate_hamiltonian(gates: list[QuantumCircuit], op: SparsePauliOp, verbose: bool = True) -> float:
 
     energy = 0.0
 
