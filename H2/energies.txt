@@ -1,0 +1,3 @@
+after global opt:                               -1.144766612466 (differential evolution)
+local opt from initial guess (5000 func calls): -1.145671694819 (COBYLA)
+local opt from another guess (5000 func calls): -1.145799669865 (COBYLA)

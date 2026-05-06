@@ -4,64 +4,10 @@ from qiskit import QuantumCircuit
 from qiskit.circuit import ParameterVector
 from qiskit.quantum_info import SparsePauliOp
 
-from qiskit_nature.second_q.formats import fcidump_to_problem
-from qiskit_nature.second_q.formats.fcidump import FCIDump
-from qiskit_nature.second_q.mappers import JordanWignerMapper
-
-from pathlib import Path
 import numpy as np
 from scipy.optimize import minimize, differential_evolution
 
 from .qcmps_ansatz import evaluate_hamiltonian
-
-def hf_occupancy(num_alpha: int, num_beta: int, n_spatial_orbitals: int) -> list[int]:
-
-    alpha_occ = [1] * num_alpha + [0] * (n_spatial_orbitals - num_alpha)
-    beta_occ = [1] * num_beta + [0] * (n_spatial_orbitals - num_beta)
-
-    occupied = []
-    for i, occ in enumerate(alpha_occ):
-        if int(round(occ)) == 1:
-            occupied.append(i)
-    for i, occ in enumerate(beta_occ):
-        if int(round(occ)) == 1:
-            occupied.append(n_spatial_orbitals + i)
-    return occupied
-
-def build_from_fcidump(file_path: Path) -> tuple[SparsePauliOp, float, int, int, int, int, int]:
-
-    print(f"[qcmps] Loading FCIDUMP from {file_path}")
-    fcidump = FCIDump.from_file(file_path)
-
-    print("[qcmps] Converting FCIDUMP to electronic structure problem")
-    problem = fcidump_to_problem(fcidump)
-
-    print("[qcmps] Building second-quantized Hamiltonian")
-    hamiltonian = problem.second_q_ops()[0]
-
-    print("[qcmps] Mapping fermionic Hamiltonian to qubits with Jordan-Wigner")
-    mapper = JordanWignerMapper()
-    hamiltonian = mapper.map(hamiltonian).simplify()
-
-    nuclear_repulsion = problem.nuclear_repulsion_energy
-
-    n_spin_orbitals = problem.num_spin_orbitals
-    n_spatial_orbitals = n_spin_orbitals // 2
-
-    num_alpha = int(problem.num_alpha)
-    num_beta = int(problem.num_beta)
-    num_particles_total = num_alpha + num_beta
-
-    print(
-        "[qcmps] Loaded system: "
-        f"{n_spatial_orbitals} spatial orbitals, "
-        f"{n_spin_orbitals} spin orbitals, "
-        f"{num_particles_total} electrons "
-        f"({num_alpha} alpha, {num_beta} beta)"
-    )
-    print(f"[qcmps] Qubit Hamiltonian uses {hamiltonian.num_qubits} qubits and {len(hamiltonian)} Pauli terms")
-
-    return hamiltonian, nuclear_repulsion, n_spin_orbitals, n_spatial_orbitals, num_alpha, num_beta, num_particles_total
 
 def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVector, operator: SparsePauliOp, callback: Callable[[int, float, np.ndarray], None] | None = None, verbose: bool = False) -> Callable[[np.ndarray], float]:
 
@@ -102,7 +48,7 @@ def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVec
 
     return objective
 
-def global_then_local(objective, n_params: int, optimizer: str = "COBYLA", maxiter: int = 1000):
+def global_then_local(objective, n_params: int, optimizer: str = "COBYLA", maxiter: int = 10000):
     bounds = [(-np.pi, np.pi)] * n_params
 
     print("[qcmps] Starting differential evolution")
@@ -130,9 +76,27 @@ def global_then_local(objective, n_params: int, optimizer: str = "COBYLA", maxit
         method=optimizer,
         options={
             "maxiter": maxiter,
-            "gtol": 1e-8,
             "disp": True,
         },
     )
 
     return res_global, res_local
+
+def local_only(objective, n_params: int, optimizer: str = "COBYLA", maxiter: int = 10000, initial_guess: np.ndarray | None = None):
+    
+    if initial_guess is None:
+        initial_guess = np.random.uniform(-np.pi, np.pi, size=n_params)
+
+    print("[qcmps] Starting local optimization with " + optimizer)
+
+    res_local = minimize(
+        objective,
+        initial_guess,
+        method=optimizer,
+        options={
+            "maxiter": maxiter,
+            "disp": True,
+        },
+    )
+
+    return res_local
