@@ -5,10 +5,7 @@ import numpy as np
 
 from .circuit_blocks import *
 
-def prepare_blocks(n_orbs: int, 
-                   n_bond_qubits: int,
-                   block_type: type[Block], 
-                   layers: int = 1, hf_occ: list[int] = None) -> tuple[list[QuantumCircuit], ParameterVector]:
+def prepare_blocks(n_orbs: int, n_bond_qubits: int, block_type: type[Block], layers: int = 1, hf_occ: list[int] = None) -> tuple[list[QuantumCircuit], ParameterVector]:
 
     gates = []
 
