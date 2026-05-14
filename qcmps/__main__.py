@@ -2,7 +2,7 @@ from pathlib import Path
 import numpy as np
 import argparse
 
-from .minimization import global_then_local, build_energy_objective_mps, local_only, one_site_sweep_optimize, prescan, two_site_sweep_optimize
+from .minimization import global_then_local, build_energy_objective_mps, local_only, one_site_sweep_optimize, prescan, random_preoptimize, two_site_sweep_optimize
 from .loader import build_from_fcidump, hf_occupancy, load_initial_guess
 from .qcmps_ansatz import prepare_blocks
 from .circuit_blocks import ACUBlock, APCBlock, Block, AUBlock, LPCBlock, LUBlock
@@ -70,6 +70,10 @@ def run(fcidump_path: Path, n_bond_qubits: int, block_type: type[Block], layers:
             prescan(objective, len(params), n_scans=1000)
             print("[qcmps] Optimization finished")
             return None, {"x": None, "fun": None}
+        case "random_preoptimize":
+            x, final_e = random_preoptimize(objective, len(params), n_trials=100)
+            print("[qcmps] Optimization finished")
+            return None, {"x": x, "fun": final_e}
         case _:
             raise ValueError(f"Invalid optimization type: {type_opt}")
         
@@ -82,7 +86,7 @@ def parse_args():
     parser.add_argument("--optimizer", type=str, default="COBYLA", help="Optimizer to use for the classical optimization.")
     parser.add_argument("--block_type", type=str, default="AU", choices=["AU", "LU", "LPC", "APC", "ACU"], help="Type of block to use in the ansatz.")
     parser.add_argument("--maxiter", type=int, default=10000, help="Maximum number of iterations for the optimizer.")
-    parser.add_argument("--type_opt", type=str, default="local", choices=["global", "local", "one_site_sweep", "two_site_sweep", "prescan"], help="Type of optimization to perform.")
+    parser.add_argument("--type_opt", type=str, default="local", choices=["global", "local", "one_site_sweep", "two_site_sweep", "prescan", "random_preoptimize"], help="Type of optimization to perform.")
     parser.add_argument("--initial_guess", type=Path, default=None, help="Path to a file containing an initial guess for the parameters (used only if --global_opt is not set).")
     
     return parser.parse_args()

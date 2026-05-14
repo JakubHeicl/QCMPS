@@ -86,6 +86,8 @@ def local_only(objective, n_params: int, optimizer: str = "COBYLA", maxiter: int
     
     if initial_guess is None:
         initial_guess = np.random.uniform(-np.pi, np.pi, size=n_params)
+        
+    #initial_guess = np.random.normal(loc=0.0, scale=0.1, size=n_params)
 
     print("[qcmps] Starting local optimization with " + optimizer)
 
@@ -158,7 +160,6 @@ def one_site_sweep_optimize(objective, n_params: int, n_orbs: int, n_sweeps: int
     final_e = objective(x)
     return x, final_e
 
-
 def prescan(objective, n_params: int, n_scans: int = 10000):
     
     n_scans = 1000
@@ -172,9 +173,34 @@ def prescan(objective, n_params: int, n_scans: int = 10000):
         if e < best_e:
             best_e = e
 
+def random_preoptimize(objective, n_params: int, n_trials: int = 100):
+    n_trials = 1000
+    
+    best_e = 0
+    best_x = None
+
+    for trial in range(n_trials):
+        x = np.random.uniform(-np.pi, np.pi, size=n_params)
+        
+        res = minimize(
+            objective,
+            x,
+            method="COBYLA",
+            options={
+                "maxiter": 100,
+                "disp": True,
+            },
+        )
+
+        if res.fun < best_e:
+            best_e = res.fun
+            best_x = res.x.copy()
+
+    return best_x, best_e
+
 def two_site_sweep_optimize(objective, n_params: int, n_orbs: int, n_sweeps: int = 10, local_maxiter: int = 30, local_popsize: int = 5, bounds_width: float = np.pi, initial_scale: float = 0.0, seed: int | None = None):
     
-    initial_scale = 0.5
+    initial_scale = 0.0
     
     block_n_params = n_params // n_orbs
     
@@ -226,7 +252,7 @@ def two_site_sweep_optimize(objective, n_params: int, n_orbs: int, n_sweeps: int
                 f"({site + 1},{site + 2})/{n_orbs}, "
                 f"dim={dim}, E_before={e_before:.12f}"
             )
-
+            
             res = differential_evolution(
                 local_objective,
                 bounds=bounds,
@@ -238,7 +264,7 @@ def two_site_sweep_optimize(objective, n_params: int, n_orbs: int, n_sweeps: int
                 updating="immediate",
                 x0=x[sl],
             )
-
+            
             if res.fun < e_before:
                 x[sl] = res.x
                 current_e = res.fun

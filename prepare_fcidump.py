@@ -9,6 +9,8 @@ from pyscf import gto, scf, mcscf, tools
 atom = """
 H 0 0 0
 H 0 0 0.7414
+H 0 0 2.0643
+H 0 0 2.8057
 """
 basis = "sto-3g"
 charge = 0
@@ -23,7 +25,7 @@ nelecas = None
 # use_casscf=False means CASCI (fixed orbitals, better for regression tests)
 use_casscf = False
 
-fcidump_name = "FCIDUMP"
+fcidump_name = "H4_FCIDUMP"
 meta_name = "reference.json"
 
 # =========================

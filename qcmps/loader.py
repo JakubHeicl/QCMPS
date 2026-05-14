@@ -39,10 +39,39 @@ def build_from_fcidump(file_path: Path) -> tuple[SparsePauliOp, float, int, int,
         f"({num_alpha} alpha, {num_beta} beta)"
     )
     print(f"[qcmps] Qubit Hamiltonian uses {hamiltonian.num_qubits} qubits and {len(hamiltonian)} Pauli terms")
+    
+    
+    #hamiltonian = permute_pauli_qubits(hamiltonian, [0, 4, 1, 5, 2, 6, 3, 7])
+    hamiltonian = permute_pauli_qubits(hamiltonian, [0, 2, 4, 6, 1, 3, 5, 7])
 
     return hamiltonian, nuclear_repulsion, n_spin_orbitals, n_spatial_orbitals, num_alpha, num_beta, num_particles_total
 
-def hf_occupancy(num_alpha: int, num_beta: int, n_spatial_orbitals: int) -> list[int]:
+def permute_pauli_qubits(hamiltonian: SparsePauliOp, permutation: list[int] | None = None) -> SparsePauliOp:
+    
+    n_qubits = hamiltonian.num_qubits
+
+    if permutation is None:
+        permutation = list(reversed(range(n_qubits)))
+
+    if len(permutation) != n_qubits:
+        raise ValueError(f"Permutation length must be {n_qubits}, got {len(permutation)}.")
+
+    if sorted(permutation) != list(range(n_qubits)):
+        raise ValueError("Permutation must contain each qubit index exactly once.")
+
+    permuted_terms = []
+    for label, coeff in hamiltonian.to_list():
+        permuted = ["I"] * n_qubits
+        for old_qubit, new_qubit in enumerate(permutation):
+            permuted[n_qubits - 1 - new_qubit] = label[n_qubits - 1 - old_qubit]
+        permuted_terms.append(("".join(permuted), coeff))
+
+    return SparsePauliOp.from_list(permuted_terms).simplify()
+
+def hf_occupancy(num_alpha: int, num_beta: int, n_spatial_orbitals: int, permutation: list[int] | None = None) -> list[int]:
+    
+    #permutation = [0, 4, 1, 5, 2, 6, 3, 7]
+    permutation = [0, 2, 4, 6, 1, 3, 5, 7]
 
     alpha_occ = [1] * num_alpha + [0] * (n_spatial_orbitals - num_alpha)
     beta_occ = [1] * num_beta + [0] * (n_spatial_orbitals - num_beta)
@@ -54,6 +83,8 @@ def hf_occupancy(num_alpha: int, num_beta: int, n_spatial_orbitals: int) -> list
     for i, occ in enumerate(beta_occ):
         if int(round(occ)) == 1:
             occupied.append(n_spatial_orbitals + i)
+    if permutation is not None:
+        occupied = [permutation[i] for i in occupied]
     return occupied
 
 def load_initial_guess(file: Path) -> np.ndarray:

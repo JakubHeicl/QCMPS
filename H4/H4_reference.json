@@ -1,0 +1,16 @@
+{
+  "atom": "H 0 0 0\nH 0 0 0.7414\nH 0 0 2.0643\nH 0 0 2.8057",
+  "basis": "sto-3g",
+  "charge": 0,
+  "spin_2S": 0,
+  "unit": "Angstrom",
+  "scf_method": "RHF",
+  "correlated_method": "CASCI",
+  "ncas": 4,
+  "nelecas": 4,
+  "scf_total_energy_hartree": -2.2152154100252157,
+  "reference_total_energy_hartree": -2.2559620733657995,
+  "fcidump_norb": 4,
+  "fcidump_nelec": 4,
+  "fcidump_ecore_hartree": 2.528823002337975
+}
