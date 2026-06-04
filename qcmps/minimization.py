@@ -7,14 +7,22 @@ from qiskit.quantum_info import SparsePauliOp
 import numpy as np
 from scipy.optimize import minimize, differential_evolution
 
-from .qcmps_ansatz import evaluate_hamiltonian
+from .qcmps_ansatz import evaluate_hamiltonian, evaluate_hamiltonian_global
 
-def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVector, operator: SparsePauliOp, callback: Callable[[int, float, np.ndarray], None] | None = None, verbose: bool = False) -> Callable[[np.ndarray], float]:
+def build_energy_objective_mps(
+    gates: list[QuantumCircuit],
+    params: ParameterVector,
+    operator: SparsePauliOp,
+    callback: Callable[[int, float, np.ndarray], None] | None = None,
+    verbose: bool = False,
+    use_global_ansatz: bool = False,
+) -> Callable[[np.ndarray], float]:
 
     counter = {"n": 0}
 
     param_list = list(params)
     n_expected = len(param_list)
+    evaluate = evaluate_hamiltonian_global if use_global_ansatz else evaluate_hamiltonian
 
     def objective(x: np.ndarray) -> float:
         counter["n"] += 1
@@ -35,7 +43,7 @@ def build_energy_objective_mps(gates: list[QuantumCircuit], params: ParameterVec
             for gate in gates
         ]
 
-        energy = evaluate_hamiltonian(bound_gates, operator, verbose=False)
+        energy = evaluate(bound_gates, operator, verbose=False)
         energy = float(np.real_if_close(energy))
 
         if callback is not None:
@@ -84,10 +92,10 @@ def global_then_local(objective, n_params: int, optimizer: str = "COBYLA", maxit
 
 def local_only(objective, n_params: int, optimizer: str = "COBYLA", maxiter: int = 10000, initial_guess: np.ndarray | None = None):
     
-    if initial_guess is None:
-        initial_guess = np.random.uniform(-np.pi, np.pi, size=n_params)
+    #if initial_guess is None:
+    #    initial_guess = np.random.normal(loc=0.0, scale=0.01, size=n_params)
         
-    #initial_guess = np.random.normal(loc=0.0, scale=0.1, size=n_params)
+    #initial_guess = np.random.normal(loc=0.0, scale=0.05, size=n_params)
 
     print("[qcmps] Starting local optimization with " + optimizer)
 
@@ -198,9 +206,9 @@ def random_preoptimize(objective, n_params: int, n_trials: int = 100):
 
     return best_x, best_e
 
-def two_site_sweep_optimize(objective, n_params: int, n_orbs: int, n_sweeps: int = 10, local_maxiter: int = 30, local_popsize: int = 5, bounds_width: float = np.pi, initial_scale: float = 0.0, seed: int | None = None):
+def two_site_sweep_optimize(objective, n_params: int, n_orbs: int, n_sweeps: int = 10, local_maxiter: int = 5, local_popsize: int = 2, bounds_width: float = np.pi, initial_scale: float = 0.0, seed: int | None = None):
     
-    initial_scale = 0.0
+    initial_scale = 0.01
     
     block_n_params = n_params // n_orbs
     

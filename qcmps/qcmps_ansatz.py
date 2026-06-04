@@ -1,20 +1,31 @@
 from qiskit import QuantumCircuit
 from qiskit.circuit import ParameterVector
-from qiskit.quantum_info import DensityMatrix, SparsePauliOp
+from qiskit.quantum_info import DensityMatrix, SparsePauliOp, Statevector
 import numpy as np
 
 from .circuit_blocks import *
 
-def prepare_blocks(n_orbs: int, n_bond_qubits: int, block_type: type[Block], layers: int = 1, hf_occ: list[int] = None) -> tuple[list[QuantumCircuit], ParameterVector]:
+def prepare_blocks(
+    n_orbs: int,
+    n_bond_qubits: int,
+    block_type: type[Block],
+    layers: int = 1,
+    hf_occ: list[int] = None,
+    mps_unitaries: list[np.ndarray] | None = None,
+    n_mps_bond_qubits: int = 0,
+) -> tuple[list[QuantumCircuit], ParameterVector]:
 
     gates = []
 
-    n_entries = n_bond_qubits + 1
+    n_entries = n_bond_qubits + n_mps_bond_qubits + 1
     n_params = block_type.n_parameters(n_entries, layers) * n_orbs
 
     params = ParameterVector("theta", n_params)
 
     occupied = set(hf_occ or [])
+
+    if mps_unitaries is not None and len(mps_unitaries) != n_orbs:
+        raise ValueError(f"Expected {n_orbs} MPS unitaries, got {len(mps_unitaries)}.")
 
     index = 0
 
@@ -23,7 +34,9 @@ def prepare_blocks(n_orbs: int, n_bond_qubits: int, block_type: type[Block], lay
 
         block = QuantumCircuit(n_entries)
 
-        if q in occupied:
+        if mps_unitaries is not None:
+            block.unitary(mps_unitaries[q], list(range(n_mps_bond_qubits + 1)), label="MPS")
+        elif q in occupied:
             block.compose(HFPreSet(n_entries), inplace=True)
 
         block.compose(
@@ -36,6 +49,61 @@ def prepare_blocks(n_orbs: int, n_bond_qubits: int, block_type: type[Block], lay
         gates.append(block)
 
     return gates, params
+
+def prepare_global_ansatz(gates: list[QuantumCircuit]) -> QuantumCircuit:
+
+    if len(gates) == 0:
+        raise ValueError("`gates` must contain at least one block.")
+
+    n_entries = gates[0].num_qubits
+    n_sites = len(gates)
+
+    circuit = QuantumCircuit(n_sites + n_entries - 1)
+
+    for site, gate in enumerate(gates):
+        if gate.num_qubits != n_entries:
+            raise ValueError(
+                f"All blocks must have {n_entries} qubits; block {site} has {gate.num_qubits}."
+            )
+
+        shifted_gate = QuantumCircuit(n_entries)
+        for q in range(n_entries - 1, 0, -1):
+            shifted_gate.swap(q - 1, q)
+        shifted_gate.compose(gate, inplace=True)
+
+        circuit.compose(shifted_gate, qubits=list(range(site, site + n_entries)), inplace=True)
+
+    return circuit
+
+def _embed_physical_operator(op: SparsePauliOp, n_qubits: int) -> SparsePauliOp:
+
+    if op.num_qubits > n_qubits:
+        raise ValueError(
+            f"Operator acts on {op.num_qubits} qubits, but circuit has only {n_qubits}."
+        )
+
+    n_trailing_bond_qubits = n_qubits - op.num_qubits
+    labels = [
+        ("I" * n_trailing_bond_qubits + label, coeff)
+        for label, coeff in op.to_list()
+    ]
+
+    return SparsePauliOp.from_list(labels)
+
+def evaluate_hamiltonian_global(qcmps: list[QuantumCircuit] | QuantumCircuit, op: SparsePauliOp, verbose: bool = True) -> float:
+
+    ansatz = qcmps if isinstance(qcmps, QuantumCircuit) else prepare_global_ansatz(qcmps)
+
+    if verbose:
+        print(
+            "[qcmps] Evaluating global ansatz: "
+            f"{op.num_qubits} physical qubits, {ansatz.num_qubits} total qubits"
+        )
+
+    state = Statevector.from_instruction(ansatz)
+    energy = state.expectation_value(_embed_physical_operator(op, ansatz.num_qubits))
+
+    return float(np.real_if_close(energy))
 
 def _apply_controlled_pauli(circ: QuantumCircuit, pauli_char: str, anc: int, target: int):
 

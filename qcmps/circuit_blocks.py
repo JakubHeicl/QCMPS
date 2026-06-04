@@ -1,6 +1,31 @@
 from __future__ import annotations
+from functools import lru_cache
+from itertools import product
+
+import numpy as np
 from qiskit import QuantumCircuit
+from qiskit.circuit import Gate as QiskitGate
 from qiskit.circuit.library import XXPlusYYGate
+from scipy.linalg import expm
+
+_PAULI_MATRICES = {
+    "I": np.array([[1.0, 0.0], [0.0, 1.0]], dtype=complex),
+    "X": np.array([[0.0, 1.0], [1.0, 0.0]], dtype=complex),
+    "Y": np.array([[0.0, -1.0j], [1.0j, 0.0]], dtype=complex),
+    "Z": np.array([[1.0, 0.0], [0.0, -1.0]], dtype=complex),
+}
+
+@lru_cache(maxsize=None)
+def _pauli_basis(n_qubits: int) -> tuple[np.ndarray, ...]:
+
+    basis = []
+    for label in product("IXYZ", repeat=n_qubits):
+        matrix = np.array([[1.0]], dtype=complex)
+        for char in label:
+            matrix = np.kron(matrix, _PAULI_MATRICES[char])
+        basis.append(matrix)
+
+    return tuple(basis)
 
 class HFPreSet(QuantumCircuit):
     def __init__(self, n_entries: int):
@@ -63,6 +88,25 @@ class PCGate(Gate):
     @staticmethod
     def n_parameters() -> int:
         return 5
+
+class GeneralUnitaryMatrixGate(QiskitGate):
+    def __init__(self, n_qubits: int, parameters: list[float]):
+
+        n_params = 4**n_qubits
+        if len(parameters) != n_params:
+            raise ValueError(f"Expected {n_params} parameters, got {len(parameters)}.")
+
+        super().__init__("GU", n_qubits, list(parameters))
+
+    def to_matrix(self) -> np.ndarray:
+
+        coefficients = np.asarray([float(param) for param in self.params], dtype=float)
+        generator = np.zeros((2**self.num_qubits, 2**self.num_qubits), dtype=complex)
+
+        for coeff, basis_matrix in zip(coefficients, _pauli_basis(self.num_qubits), strict=True):
+            generator += coeff * basis_matrix
+
+        return expm(1.0j * generator)
 
 class Block(QuantumCircuit):
 
@@ -198,3 +242,25 @@ class ACUBlock(Block):
     @classmethod
     def n_parameters(cls, n_entries: int, layers: int = 1) -> int:
         return cls.gate_cls.n_parameters() * n_entries * (n_entries - 1) * layers
+
+class GUBlock(QuantumCircuit):
+    def __init__(self, n_entries: int, parameters: list[float], layers = 1):
+        super().__init__(n_entries)
+
+        n_layer_params = self.n_parameters(n_entries, 1)
+        if len(parameters) != self.n_parameters(n_entries, layers):
+            raise ValueError(
+                f"Expected {self.n_parameters(n_entries, layers)} parameters, got {len(parameters)}."
+            )
+
+        index = 0
+        for _ in range(layers):
+            self.append(
+                GeneralUnitaryMatrixGate(n_entries, parameters[index : index + n_layer_params]),
+                list(range(n_entries)),
+            )
+            index += n_layer_params
+
+    @classmethod
+    def n_parameters(cls, n_entries: int, layers: int = 1) -> int:
+        return (4**n_entries) * layers
