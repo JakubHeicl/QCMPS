@@ -9,10 +9,15 @@ from pathlib import Path
 import numpy as np
 
 def spin_block_to_interleaved_permutation(n_spatial_orbitals: int) -> list[int]:
+    # The returned list is an old-qubit -> new-qubit map.  Spin-block ordering
+    # is (alpha_0, ..., alpha_n, beta_0, ..., beta_n), while interleaved
+    # ordering is (alpha_0, beta_0, alpha_1, beta_1, ...).
     return [
-        index
+        2 * spatial
         for spatial in range(n_spatial_orbitals)
-        for index in (spatial, n_spatial_orbitals + spatial)
+    ] + [
+        2 * spatial + 1
+        for spatial in range(n_spatial_orbitals)
     ]
 
 def _looks_like_interleaved_spin_orbital_fcidump(fcidump: FCIDump, tol: float = 1e-10) -> bool:

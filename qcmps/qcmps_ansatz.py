@@ -5,6 +5,7 @@ import numpy as np
 
 from .circuit_blocks import *
 
+
 def prepare_blocks(
     n_orbs: int,
     n_bond_qubits: int,
