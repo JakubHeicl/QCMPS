@@ -7,7 +7,10 @@ from qiskit.circuit import ParameterVector
 from qiskit.quantum_info import SparsePauliOp, Statevector
 
 
-class GlobalAnsatz(QuantumCircuit):
+class GlobalQCMPS(QuantumCircuit):
+    
+#--------------Building the ansatz----------------
+    
     def __init__(self, n_orbs: int, n_bond_qubits: int, block_type: type[Block], layers: int = 1, hf_occ: list[int] | None = None, double_excitation: bool = False):
         
         if double_excitation and hf_occ is None:
@@ -122,6 +125,8 @@ class GlobalAnsatz(QuantumCircuit):
                 inplace=True,
             )
 
+#-----------------Energy and optimization functions----------------
+
     def energy(self) -> float:
         
         if self.hamiltonian is None:
@@ -174,7 +179,9 @@ class GlobalAnsatz(QuantumCircuit):
             return self.energy()
         
         return opt_function
-    
+
+#-----------------Parameter management----------------
+
     def current_parameters(self) -> np.ndarray:
         return self.parameters_values.copy()
     
@@ -201,7 +208,13 @@ class GlobalAnsatz(QuantumCircuit):
             raise ValueError(f"Expected {self.n_init_params} parameters, got {len(new_parameters)}.")
         
         self.parameters_values[:self.n_init_params] = new_parameters.copy()
-    
+
+    def gaussian_qcmps_parameters(self, mean: float = 0.0, stddev: float = 0.1) -> None:
+        
+        self.parameters_values[self.n_init_params:] = np.random.normal(mean, stddev, self.n_qcmps_params)
+
+#-----------------Printing functions----------------
+
     def print_energy(self):
         
         energy = self.energy()

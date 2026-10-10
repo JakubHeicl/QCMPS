@@ -1,5 +1,5 @@
 from .loader import FCIDumpLoader
-from .qcmps_ansatz import GlobalAnsatz
+from .qcmps_ansatz import GlobalQCMPS
 from .circuit_blocks import LUBlock
 
 import numpy as np
@@ -12,7 +12,7 @@ def main():
     
     hf_occupancy = [0, 1, 2, 3]
     
-    ansatz = GlobalAnsatz(
+    ansatz = GlobalQCMPS(
         n_orbs=loader.n_spin_orbitals,
         n_bond_qubits=2,
         block_type=LUBlock,
@@ -39,7 +39,9 @@ def main():
     
     print("Starting QCMPS optimization...")
     
-    minimization_result = minimize(ansatz.qcmps_opt_function(), ansatz.current_qcmps_parameters(), method="COBYLA", options={"maxiter": 500}, callback = ansatz.print_total_energy)
+    ansatz.gaussian_qcmps_parameters(mean=0.0, stddev=0.1)
+    
+    minimization_result = minimize(ansatz.qcmps_opt_function(), ansatz.current_qcmps_parameters(), method="COBYLA", options={"maxiter": 500000}, callback = ansatz.print_total_energy)
     
     ansatz.update_qcmps_parameters(minimization_result.x)
     en_after_qcmps = ansatz.total_energy()
