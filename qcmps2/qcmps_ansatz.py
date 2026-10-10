@@ -1,6 +1,7 @@
 from .circuit_blocks import Block, HFPreSetBlock, LUBlock, FullUBlock, DoubleExcitationBlock
 
 import numpy as np
+from typing import Callable
 from qiskit import QuantumCircuit
 from qiskit.circuit import ParameterVector
 from qiskit.quantum_info import SparsePauliOp, Statevector
@@ -32,14 +33,19 @@ class GlobalAnsatz(QuantumCircuit):
         )
         
         self.n_init_params = 0 if not double_excitation else DoubleExcitationBlock.n_parameters(self.num_qubits, 1, self.n_phys_qubits, self.hf_occ)
+        self.n_qcmps_params = self.n_block_params * self.n_phys_qubits
+
+        self.n_params = self.n_qcmps_params + self.n_init_params
         
-        self.n_params = self.n_block_params * self.n_phys_qubits + self.n_init_params
-        
-        self.params = ParameterVector("theta", self.n_params)
+        self.parameters_symbols = ParameterVector("theta", self.n_params)
+        self.parameters_values = np.zeros(self.n_params)
         self.gates = []
         
         self.build_gates()
         self.build_circuit()
+        
+        self.hamiltonian = None
+        self.nuclear_repulsion = None
         
     def build_gates(self):
         
@@ -50,7 +56,7 @@ class GlobalAnsatz(QuantumCircuit):
             
         if self.double_excitation:
             n_de_params = DoubleExcitationBlock.n_parameters(self.num_qubits, 1, self.n_phys_qubits, self.hf_occ)
-            self.gates.append(DoubleExcitationBlock(self.params[index:index + n_de_params], self.num_qubits, self.n_phys_qubits, self.block_entries, self.hf_occ))
+            self.gates.append(DoubleExcitationBlock(self.parameters_symbols[index:index + n_de_params], self.num_qubits, self.n_phys_qubits, self.block_entries, self.hf_occ))
             index += n_de_params
         
         for _ in range(self.n_phys_qubits):
@@ -58,7 +64,7 @@ class GlobalAnsatz(QuantumCircuit):
 
             n_u_params = FullUBlock.n_parameters(self.block_entries)
             block.compose(
-                FullUBlock(self.params[index:index + n_u_params], self.block_entries),
+                FullUBlock(self.parameters_symbols[index:index + n_u_params], self.block_entries),
                 inplace=True,
             )
             index += n_u_params
@@ -67,7 +73,7 @@ class GlobalAnsatz(QuantumCircuit):
             for _ in range(self.layers):
                 block.compose(
                     self.block_type(
-                        parameters=self.params[index:index + n_lu_params],
+                        parameters=self.parameters_symbols[index:index + n_lu_params],
                         n_qubits=self.block_entries,
                     ),
                     inplace=True,
@@ -75,13 +81,25 @@ class GlobalAnsatz(QuantumCircuit):
                 index += n_lu_params
 
                 block.compose(
-                    FullUBlock(self.params[index:index + n_u_params], self.block_entries),
+                    FullUBlock(self.parameters_symbols[index:index + n_u_params], self.block_entries),
                     inplace=True,
                 )
                 index += n_u_params
 
             self.gates.append(block)
 
+    def add_hamiltonian(self, hamiltonian: SparsePauliOp):
+        if hamiltonian.num_qubits != self.n_phys_qubits:
+            raise ValueError(
+                f"Expected a Hamiltonian on {self.n_phys_qubits} orbital qubits, "
+                f"got {hamiltonian.num_qubits}."
+            )
+        
+        self.hamiltonian = hamiltonian
+    
+    def add_nuclear_repulsion(self, nuclear_repulsion: float):
+        self.nuclear_repulsion = nuclear_repulsion
+    
     def build_circuit(self) -> None:
         self.clear()
         gate_offset = 0
@@ -104,20 +122,92 @@ class GlobalAnsatz(QuantumCircuit):
                 inplace=True,
             )
 
-    def energy(self, parameters: list[float], hamiltonian: SparsePauliOp) -> float:
-
-        values = np.asarray(parameters, dtype=float)
+    def energy(self) -> float:
         
-        if values.shape != (len(self.params),):
-            raise ValueError(f"Expected {len(self.params)} parameter values, got shape {values.shape}.")
-        
-        if hamiltonian.num_qubits != self.n_phys_qubits:
-            raise ValueError(
-                f"Expected a Hamiltonian on {self.n_phys_qubits} orbital qubits, "
-                f"got {hamiltonian.num_qubits}."
-            )
+        if self.hamiltonian is None:
+            raise ValueError("Hamiltonian has not been added to the ansatz.")
 
-        circuit = self.assign_parameters(dict(zip(self.params, values, strict=True)))
+        circuit = self.assign_parameters(dict(zip(self.parameters_symbols, self.parameters_values, strict=True)))
         state = Statevector.from_instruction(circuit)
-        energy = state.expectation_value(hamiltonian, qargs=list(range(self.n_phys_qubits)))
+        energy = state.expectation_value(self.hamiltonian, qargs=list(range(self.n_phys_qubits)))
         return float(np.real_if_close(energy))
+    
+    def total_energy(self) -> float:
+        
+        if self.nuclear_repulsion is None:
+            raise ValueError("Nuclear repulsion energy has not been added to the ansatz.")
+        
+        return self.energy() + self.nuclear_repulsion
+    
+    def opt_function(self) -> Callable[[np.ndarray], float]:
+        
+        if self.hamiltonian is None:
+            raise ValueError("Hamiltonian has not been added to the ansatz.")
+        
+        def opt_function(x: np.ndarray) -> float:
+            self.parameters_values = x
+            return self.energy()
+        
+        return opt_function
+    
+    def init_opt_function(self) -> Callable[[np.ndarray], float]:
+        
+        if self.hamiltonian is None:
+            raise ValueError("Hamiltonian has not been added to the ansatz.")
+        
+        if not self.double_excitation:
+            raise ValueError("Double excitation must be enabled to use the init_opt_function.")
+        
+        def opt_function(x: np.ndarray) -> float:
+            self.parameters_values[:self.n_init_params] = x
+            return self.energy()
+        
+        return opt_function
+    
+    def qcmps_opt_function(self) -> Callable[[np.ndarray], float]:
+        
+        if self.hamiltonian is None:
+            raise ValueError("Hamiltonian has not been added to the ansatz.")
+        
+        def opt_function(x: np.ndarray) -> float:
+            self.parameters_values[self.n_init_params:] = x
+            return self.energy()
+        
+        return opt_function
+    
+    def current_parameters(self) -> np.ndarray:
+        return self.parameters_values.copy()
+    
+    def current_qcmps_parameters(self) -> np.ndarray:
+        return self.parameters_values[self.n_init_params:].copy()
+    
+    def current_init_parameters(self) -> np.ndarray:
+        return self.parameters_values[:self.n_init_params].copy()
+    
+    def update_parameters(self, new_parameters: np.ndarray) -> None:
+        if len(new_parameters) != self.n_params:
+            raise ValueError(f"Expected {self.n_params} parameters, got {len(new_parameters)}.")
+        
+        self.parameters_values = new_parameters.copy()
+
+    def update_qcmps_parameters(self, new_parameters: np.ndarray) -> None:
+        if len(new_parameters) != self.n_qcmps_params:
+            raise ValueError(f"Expected {self.n_qcmps_params} parameters, got {len(new_parameters)}.")
+        
+        self.parameters_values[self.n_init_params:] = new_parameters.copy()
+        
+    def update_init_parameters(self, new_parameters: np.ndarray) -> None:
+        if len(new_parameters) != self.n_init_params:
+            raise ValueError(f"Expected {self.n_init_params} parameters, got {len(new_parameters)}.")
+        
+        self.parameters_values[:self.n_init_params] = new_parameters.copy()
+    
+    def print_energy(self):
+        
+        energy = self.energy()
+        print(f"Energy: {energy:.12f}")
+        
+    def print_total_energy(self, *args, **kwargs):
+        
+        total_energy = self.total_energy()
+        print(f"Total Energy: {total_energy:.12f}")
