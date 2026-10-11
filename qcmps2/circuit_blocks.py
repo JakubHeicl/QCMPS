@@ -1,6 +1,5 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
-from itertools import combinations
 
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import RYGate
@@ -117,49 +116,5 @@ class FullUBlock(Block):
     @staticmethod
     def n_parameters(n_qubits: int, layers: int = 1, *args) -> int:
         return UGate.n_parameters() * n_qubits * layers
-    
-class HFPreSetBlock(Block):
-    def __init__(self, n_qubits: int, block_entries: int, occupied_indices: list[int]):
-        n_params = HFPreSetBlock.n_parameters(n_qubits, 1)
-        super().__init__(n_qubits, n_params, None, 1)
-        
-        occupied_indices = {i + block_entries - 1 for i in occupied_indices}
-        
-        for qubit in occupied_indices:
-            self.x(qubit)
-    
-    @staticmethod
-    def n_parameters(n_qubits: int, layers: int = 1) -> int:
-        return 0
-    
-class DoubleExcitationBlock(Block):
-    def __init__(self, parameters, n_qubits: int, n_orbs: int, block_entries: int, occupied: list[int]):
-        n_params = DoubleExcitationBlock.n_parameters(n_qubits, 1, n_orbs, occupied)
-        super().__init__(n_qubits, n_params, parameters, 1)
-        
-        offset = block_entries - 1
-        
-        occupied = tuple(sorted(set(occupied)))
-        occupied_set = set(occupied)
-        
-        occupied_indices = [orbital + offset for orbital in occupied]
-        unoccupied_indices = [offset + orbital for orbital in range(n_orbs) if orbital not in occupied_set]
-        
-        index = 0
-        
-        for (i, j) in combinations(occupied_indices, 2):
-            for (a, b) in combinations(unoccupied_indices, 2):
-                self.append(DoubleExcitationGate(parameters[index:index + 1]), [i, j, a, b])
-                index += 1
-                
-    @staticmethod
-    def n_parameters(n_qubits: int, layers: int = 1, n_orbs: int = 0, occupied: list[int] = None) -> int:
-        if occupied is None:
-            raise ValueError("Occupied indices must be provided to calculate the number of parameters.")
-        
-        n_occupied = len(occupied)
-        n_unoccupied = n_orbs - n_occupied
-        
-        return DoubleExcitationGate.n_parameters() * (n_occupied * (n_occupied - 1) // 2) * (n_unoccupied * (n_unoccupied - 1) // 2)
     
     

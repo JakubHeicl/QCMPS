@@ -25,11 +25,12 @@ class FCIDumpLoader:
         self.num_beta = int(self.problem.num_beta)
         self.num_particles_total = self.num_alpha + self.num_beta
         
-    def permute_hamiltonian(self, permutation: list[int] | None = None):
+    def permute_hamiltonian(self, permutation: list[int]):
         
         n_qubits = self.hamiltonian.num_qubits
         
         permuted_terms = []
+        
         for label, coeff in self.hamiltonian.to_list():
             permuted = ["I"] * n_qubits
             for old_qubit, new_qubit in enumerate(permutation):
