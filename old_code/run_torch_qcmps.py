@@ -14,11 +14,11 @@ from pathlib import Path
 
 import torch
 
-from qcmps.mps_initial_guess import (
+from qcmps_old_package.mps_initial_guess import (
     available_mps_initial_guesses,
     load_mps_initial_guess,
 )
-from qcmps.torch_ansatz import (
+from qcmps_old_package.torch_ansatz import (
     SparsePauliHamiltonian,
     TorchQCMPS,
     optimize_qcmps,
@@ -152,7 +152,7 @@ def run(args: argparse.Namespace) -> dict[str, object]:
     # import local allows --help to work even before that optional dependency is
     # installed.
     try:
-        from qcmps.loader import (
+        from qcmps_old_package.loader import (
             add_particle_number_penalty,
             build_from_fcidump,
             hf_occupancy,

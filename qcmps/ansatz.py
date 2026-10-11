@@ -252,3 +252,6 @@ class GlobalQCMPS(Component):
                 self.swap(orbital + qubit - 1, orbital + qubit)
 
             self.compose(gate, qubits=list(range(orbital, orbital + self.block_entries)), inplace=True)
+            
+    def uniform_parameters(self, min = 0.0, max = 2 * np.pi) -> None:
+        self.parameters_values = np.random.uniform(min, max, self.n_parameters)

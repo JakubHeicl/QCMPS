@@ -4,9 +4,9 @@ import argparse
 import numpy as np
 from scipy.optimize import minimize
 
-from qcmps.loader import build_from_fcidump, hf_occupancy
-from qcmps.qcmps_ansatz import prepare_blocks, evaluate_hamiltonian
-from qcmps.circuit_blocks import ACUBlock, APCBlock, AUBlock, LPCBlock, LUBlock
+from old_code.qcmps.loader import build_from_fcidump, hf_occupancy
+from old_code.qcmps.qcmps_ansatz import prepare_blocks, evaluate_hamiltonian
+from old_code.qcmps.circuit_blocks import ACUBlock, APCBlock, AUBlock, LPCBlock, LUBlock
 
 
 BLOCK_TYPES = {
