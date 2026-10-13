@@ -65,7 +65,7 @@ def main():
         print(f"Overlap: {overlap:.12f}")
     
     print("Starting QCMPS optimization for overlap...")
-    result = minimize(overlap_ansatz.overlap_objective(qcmps, list(range(num_phys_qubits))), qcmps.current_parameters(), method="COBYLA", options={"maxiter": 5000}, callback = print_optimization_overlap)
+    result = minimize(overlap_ansatz.zero_state_objective(qcmps, list(range(num_phys_qubits))), qcmps.current_parameters(), method="COBYLA", options={"maxiter": 5000}, callback = print_optimization_overlap)
     
     qcmps.update_parameters(result.x)
     
