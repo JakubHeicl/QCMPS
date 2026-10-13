@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -N qcmps_step_overlap
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=8gb
+#PBS -l walltime=06:00:00
+#PBS -j oe
+
+set -euo pipefail
+
+cd "${PBS_O_WORKDIR:?PBS_O_WORKDIR is not set}"
+mkdir -p logs
+
+exec > >(tee "logs/step_overlap_${PBS_JOBID}.log") 2>&1
+
+echo "Job ID: ${PBS_JOBID}"
+echo "Host: $(hostname)"
+echo "Working directory: $(pwd)"
+echo "Started: $(date)"
+
+source "$HOME/miniforge3/etc/profile.d/conda.sh"
+conda activate qcmps
+
+python -u -m experiments.step_overlap_opt
+
+echo "Finished: $(date)"
