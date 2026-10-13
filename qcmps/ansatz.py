@@ -1,3 +1,4 @@
+from __future__ import annotations
 from .circuit_blocks import Block, LUBlock, FullUBlock, DoubleExcitationGate
 
 import numpy as np
