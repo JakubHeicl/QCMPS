@@ -1,9 +1,10 @@
 from qcmps.loader import FCIDumpLoader
-from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitationInit, Component
+from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitation, Component
 from qcmps.circuit_blocks import LUBlock
 
 from pathlib import Path
 from scipy.optimize import minimize
+import numpy as np
 
 def main():
     PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -26,7 +27,7 @@ def main():
     de_ansatz = Ansatz(num_phys_qubits)
     
     hf_preset = HFPreset(num_phys_qubits, hf_occupancy)
-    de = DoubleExcitationInit(num_phys_qubits, hf_occupancy)
+    de = DoubleExcitation(num_phys_qubits, hf_occupancy)
     
     de_ansatz.add_component(hf_preset, list(range(num_phys_qubits)))
     de_ansatz.add_component(de, list(range(num_phys_qubits)))
@@ -55,7 +56,7 @@ def main():
     print("Preparing the overlap ansatz")
     overlap_ansatz = Ansatz(num_qubits)
     
-    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, block_type = LUBlock, layers = 1)
+    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, block_type = LUBlock, layers = 2)
     de_inverse_fixed = Component.from_fixed_circuit(de_inverse)
     
     overlap_ansatz.add_component(hf_preset, list(range(num_bond_qubits, num_qubits)))
@@ -72,7 +73,7 @@ def main():
     
     print(f"Initial overlap should be 1.0: {1 - overlap_ansatz.zero_state_infidelity(list(range(num_phys_qubits))):.12f}")
     
-    qcmps.uniform_parameters(min = 0.0, max = 0.1)
+    #qcmps.uniform_parameters(min = 0.0, max = 0.1)
     
     callback_count = 0
     
@@ -83,11 +84,12 @@ def main():
         if callback_count % 10 == 0:
             overlap = 1 - intermediate_result.fun
             print(f"Evaluation {callback_count}: Overlap = {overlap:.12f}")
+            
+    steps = [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0]
     
-    for step in range(1, 21):
-        s = step / 20
+    for s in steps:
         
-        print(f"Optimizing for s = {s:.2f}")
+        print(f"Optimizing for s = {s:.3f}")
         
         de.update_parameters(optimized_parameters*(1-s))
         result = minimize(overlap_ansatz.zero_state_objective(qcmps, list(range(num_phys_qubits))), qcmps.current_parameters(), method="COBYLA", options={"maxiter": 1000}, callback = print_optimization_overlap)

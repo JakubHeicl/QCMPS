@@ -158,7 +158,7 @@ class HFPreset(Component):
         for qubit in occupied_indices:
             self.x(qubit)
 
-class DoubleExcitationInit(Component):
+class DoubleExcitation(Component):
     def __init__(self, n_qubits: int, occupied: list[int]):
         
         if len(set(occupied)) != len(occupied):

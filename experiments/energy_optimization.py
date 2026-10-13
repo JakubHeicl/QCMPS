@@ -1,5 +1,5 @@
 from qcmps.loader import FCIDumpLoader
-from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitationInit
+from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitation
 from qcmps.circuit_blocks import LUBlock
 
 import numpy as np
@@ -22,7 +22,7 @@ def main():
     ansatz = Ansatz(num_qubits)
 
     hf_preset = HFPreset(num_phys_qubits, hf_occupancy)
-    double_excitation_init = DoubleExcitationInit(num_phys_qubits, hf_occupancy)
+    double_excitation_init = DoubleExcitation(num_phys_qubits, hf_occupancy)
     qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, block_type = LUBlock, layers = 1)
 
     ansatz.add_component(hf_preset, list(range(num_bond_qubits, num_qubits)))
