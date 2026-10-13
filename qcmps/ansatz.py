@@ -44,6 +44,9 @@ class Component(ABC, QuantumCircuit):
         
         return self.parameters_values.copy()
     
+    def uniform_parameters(self, min = 0.0, max = 2 * np.pi) -> None:
+        self.parameters_values = np.random.uniform(min, max, self.n_parameters)
+    
     @staticmethod
     def from_fixed_circuit(circuit: QuantumCircuit) -> Component:
         
@@ -104,22 +107,25 @@ class Ansatz(QuantumCircuit):
         
         return objective_function
     
-    def overlap_objective(self, component: Component, target_qubits: list[int]) -> Callable[[np.ndarray], float]:
+    def zero_state_objective(self, component: Component, target_qubits: list[int]) -> Callable[[np.ndarray], float]:
         
         if not any(item is component for item in self.components):
             raise ValueError("The specified component is not part of the ansatz.")
         
         def objective_function(x: np.ndarray) -> float:
             component.update_parameters(x)
-            circuit = self.bound_circuit()
-            state = Statevector.from_instruction(circuit)
-            
-            physical_zero_probability = state.probabilities(qargs=target_qubits)[0]
-            
-            return 1 - float(physical_zero_probability)
+            return self.zero_state_infidelity(target_qubits)
         
         return objective_function
-                
+    
+    def zero_state_infidelity(self, target_qubits: list[int]) -> float:
+        
+        circuit = self.bound_circuit()
+        state = Statevector.from_instruction(circuit)
+        
+        physical_zero_probability = state.probabilities(qargs=target_qubits)[0]
+        return 1 - float(physical_zero_probability)
+
     def energy(self) -> float:
         if self.hamiltonian is None:
             raise ValueError("Hamiltonian has not been added.")
@@ -252,6 +258,3 @@ class GlobalQCMPS(Component):
                 self.swap(orbital + qubit - 1, orbital + qubit)
 
             self.compose(gate, qubits=list(range(orbital, orbital + self.block_entries)), inplace=True)
-            
-    def uniform_parameters(self, min = 0.0, max = 2 * np.pi) -> None:
-        self.parameters_values = np.random.uniform(min, max, self.n_parameters)
