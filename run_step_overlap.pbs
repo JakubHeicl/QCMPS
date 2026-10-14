@@ -21,6 +21,6 @@ echo "Started: $(date)"
 source "$HOME/miniforge3/etc/profile.d/conda.sh"
 conda activate qcmps
 
-python -u -m experiments.step_overlap_opt
+python -u -m experiments.step_overlap_with_reg
 
 echo "Finished: $(date)"
