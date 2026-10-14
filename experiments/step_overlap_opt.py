@@ -56,7 +56,7 @@ def main():
     print("Preparing the overlap ansatz")
     overlap_ansatz = Ansatz(num_qubits)
     
-    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, block_type = LUBlock, layers = 2)
+    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, block_type = LUBlock, layers = 1)
     de_inverse_fixed = Component.from_fixed_circuit(de_inverse)
     
     overlap_ansatz.add_component(hf_preset, list(range(num_bond_qubits, num_qubits)))

@@ -1,0 +1,42 @@
+Loading the system
+Preparing the double excitation initialization ansatz
+Total Energy before optimization: -2.215215410025
+Starting double excitation initialization optimization...
+Total Energy: -2.215215410025
+Total Energy: -2.215215410025
+Total Energy: -2.215215410025
+Total Energy: -2.215215410025
+Total Energy: -2.215215410025
+Total Energy: -2.215215410025
+Total Energy: -2.215215410025
+Total Energy: -2.215215410025
+Total Energy: -2.217889720412
+Total Energy: -2.217889720412
+Total Energy: -2.218407321243
+Total Energy: -2.218407321243
+Total Energy: -2.218407321243
+Total Energy: -2.219418230217
+Total Energy: -2.220377994757
+Total Energy: -2.220377994757
+Total Energy: -2.220377994757
+Total Energy: -2.220377994757
+Total Energy: -2.220377994757
+Total Energy: -2.225492735623
+Total Energy: -2.227487153487
+Total Energy: -2.227487153487
+Total Energy: -2.227487153487
+Total Energy: -2.227588777875
+Total Energy: -2.227869087855
+Total Energy: -2.228811434660
+Total Energy: -2.228811434660
+Total Energy: -2.229540652900
+Total Energy: -2.229631043413
+Total Energy: -2.230906104716
+Double excitation initialization optimization completed with energy: -2.231061242321
+Preparing the overlap ansatz
+Starting step overlap optimization...
+Initial overlap should be 1.0: 1.000000000000
+Overlap after a small perturbation: 0.999995913054
+Optimizing for s = 0.050 with regularization
+Overlap before regularization for s = 0.05: 0.999953146748
+Energy of QCMPS ansatz before regularization for s = 0.05: -2.215212721954, Energy of HF ansatz: -2.215215410025
