@@ -35,7 +35,7 @@ byla optimalizována z HF inicializace (pomocí `HFPreset`) nebo z ansatzu s dvo
 
 ### Pozorování
 
-- Double excitace sama o sobě snížila energii velmi rychle přibližně na −2,2310 Ha.
+- Double excitace sama o sobě snížila energii velmi rychle přibližně na −2.2310 Ha.
 - QCMPS se však nedokáže odpoutat od nulových parametrů $\boldsymbol\theta$ a zůstává přibližně v identitě.
 - Nulový bod parametrů tvoří lokální minimum.
 - Jednotlivé orbitaly spolu při malých změnách účinně nekomunikují, a proto tyto změny vedou mimo fyzikálně relevantní podprostor. Ansatz totiž nezachovává počet elektronů.
