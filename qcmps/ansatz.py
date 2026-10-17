@@ -201,12 +201,12 @@ class GlobalQCMPS(Component):
         
         super().__init__(self.n_phys_qubits + self.n_bond_qubits, self.num_block_params * self.n_phys_qubits, "GlobalQCMPS")
         
-        self.blocks = []
-        
         self.build_blocks()
         self.build_circuit()
             
     def build_blocks(self) -> None:
+        
+        self.blocks = []
         
         index = 0
         
@@ -228,9 +228,8 @@ class GlobalQCMPS(Component):
             
     def build_circuit(self) -> None:
         self.clear()
-        gate_offset = 0
 
-        for orbital, block in enumerate(self.blocks[gate_offset:]):
+        for orbital, block in enumerate(self.blocks):
             
             for qubit in range(self.n_bond_qubits, 0, -1):
                 self.swap(orbital + qubit - 1, orbital + qubit)
