@@ -70,7 +70,27 @@ class ICUGate(Gate):
     @staticmethod
     def n_parameters() -> int:
         return 3
+
+class OPUGate(Gate):
+    def __init__(self, parameters: list[float]):
+        super().__init__(parameters, 1)
+        
+        self.ry(parameters[0], 0)
+        
+    @staticmethod
+    def n_parameters() -> int:
+        return 1
     
+class OPCUGate(Gate):
+    def __init__(self, parameters: list[float]):
+        super().__init__(parameters, 2)
+        
+        self.rxx(parameters[0], 0, 1)
+        
+    @staticmethod
+    def n_parameters() -> int:
+        return 1
+
 class DoubleExcitationGate(Gate):
     def __init__(self, parameters: list[float]):
         super().__init__(parameters, 4)
@@ -109,6 +129,7 @@ class Block(QuantumCircuit, ABC):
     
 class LUBlock(Block):
     def __init__(self, parameters: list[float], n_qubits: int, layers: int = 1):
+        
         n_params = LUBlock.n_parameters(n_qubits, layers)
         super().__init__(n_qubits, n_params, parameters, layers)
         
@@ -117,17 +138,18 @@ class LUBlock(Block):
         for _ in range(layers):
             for qubit in range(n_qubits - 1):
                 
-                gate_circuit = ICUGate(parameters[index:index + ICUGate.n_parameters()])
-                index += ICUGate.n_parameters()
+                gate_circuit = OPCUGate(parameters[index:index + OPCUGate.n_parameters()])
+                index += OPCUGate.n_parameters()
                 
                 self.append(gate_circuit, [qubit, qubit + 1])
                 
     @staticmethod
     def n_parameters(n_qubits: int, layers: int = 1, *args) -> int:
-        return ICUGate.n_parameters() * (n_qubits - 1) * layers
+        return OPCUGate.n_parameters() * (n_qubits - 1) * layers
     
 class FullUBlock(Block):
     def __init__(self, parameters: list[float], n_qubits: int, layers: int = 1):
+        
         n_params = FullUBlock.n_parameters(n_qubits, layers)
         super().__init__(n_qubits, n_params, parameters, layers)
         
@@ -136,13 +158,13 @@ class FullUBlock(Block):
         for _ in range(layers):
             for qubit in range(n_qubits):
                 
-                gate_circuit = IUGate(parameters[index:index + IUGate.n_parameters()])
-                index += IUGate.n_parameters()
+                gate_circuit = OPUGate(parameters[index:index + OPUGate.n_parameters()])
+                index += OPUGate.n_parameters()
                 
                 self.append(gate_circuit, [qubit])
         
     @staticmethod
     def n_parameters(n_qubits: int, layers: int = 1, *args) -> int:
-        return IUGate.n_parameters() * n_qubits * layers
+        return OPUGate.n_parameters() * n_qubits * layers
     
     
