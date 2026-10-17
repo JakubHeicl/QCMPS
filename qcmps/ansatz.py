@@ -1,5 +1,5 @@
 from __future__ import annotations
-from .circuit_blocks import Block, LUBlock, FullUBlock, DoubleExcitationGate
+from .circuit_blocks import DoubleExcitationGate, LayerType
 
 import numpy as np
 from typing import Callable
@@ -189,71 +189,50 @@ class DoubleExcitation(Component):
                 index += 1 
 
 class GlobalQCMPS(Component):
-    def __init__(self, n_phys_qubits: int, n_bond_qubits: int, block_type: type[Block], layers: int = 1):
-            
+    def __init__(self, n_phys_qubits: int, n_bond_qubits: int, layer_types: list[LayerType]):
         self.n_phys_qubits = n_phys_qubits
         self.n_bond_qubits = n_bond_qubits
         
-        self.block_type = block_type
-        
-        self.layers = layers
+        self.layer_types = layer_types
         
         self.block_entries = n_bond_qubits + 1
-        
-        self.num_block_params = (
-            FullUBlock.n_parameters(self.block_entries) * (layers + 1)
-            + block_type.n_parameters(self.block_entries) * layers
-        )
+            
+        self.num_block_params = sum(layer_type.n_parameters(self.block_entries) for layer_type in layer_types)
         
         super().__init__(self.n_phys_qubits + self.n_bond_qubits, self.num_block_params * self.n_phys_qubits, "GlobalQCMPS")
         
-        self.gates = []
+        self.blocks = []
         
-        self.build_gates()
+        self.build_blocks()
         self.build_circuit()
-        
-    def build_gates(self) -> None:
+            
+    def build_blocks(self) -> None:
         
         index = 0
         
         for _ in range(self.n_phys_qubits):
+            
             block = QuantumCircuit(self.block_entries)
-
-            n_u_params = FullUBlock.n_parameters(self.block_entries)
             
-            block.compose(
-                FullUBlock(self.parameters_symbols[index:index + n_u_params], self.block_entries),
-                inplace=True,
-            )
-            index += n_u_params
-
-            n_lu_params = self.block_type.n_parameters(self.block_entries)
-            
-            for _ in range(self.layers):
+            for layer_type in self.layer_types:
+                
+                n_params = layer_type.n_parameters(self.block_entries)
+                
                 block.compose(
-                    self.block_type(
-                        parameters=self.parameters_symbols[index:index + n_lu_params],
-                        n_qubits=self.block_entries,
-                    ),
+                    layer_type.build(self.block_entries, self.parameters_symbols[index:index + n_params]),
                     inplace=True,
                 )
-                index += n_lu_params
-
-                block.compose(
-                    FullUBlock(self.parameters_symbols[index:index + n_u_params], self.block_entries),
-                    inplace=True,
-                )
-                index += n_u_params
-
-            self.gates.append(block)
+                index += n_params
+            
+            self.blocks.append(block)
             
     def build_circuit(self) -> None:
         self.clear()
         gate_offset = 0
 
-        for orbital, gate in enumerate(self.gates[gate_offset:]):
+        for orbital, block in enumerate(self.blocks[gate_offset:]):
             
             for qubit in range(self.n_bond_qubits, 0, -1):
                 self.swap(orbital + qubit - 1, orbital + qubit)
 
-            self.compose(gate, qubits=list(range(orbital, orbital + self.block_entries)), inplace=True)
+            self.compose(block, qubits=list(range(orbital, orbital + self.block_entries)), inplace=True)

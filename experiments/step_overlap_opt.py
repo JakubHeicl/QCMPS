@@ -1,10 +1,9 @@
 from qcmps.loader import FCIDumpLoader
 from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitation, Component
-from qcmps.circuit_blocks import LUBlock
+from qcmps.circuit_blocks import UGate, CUGate, SingleQubitLayerType, EntanglingLayerType
 
 from pathlib import Path
 from scipy.optimize import minimize
-import numpy as np
 
 def main():
     PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -56,7 +55,10 @@ def main():
     print("Preparing the overlap ansatz")
     overlap_ansatz = Ansatz(num_qubits)
     
-    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, block_type = LUBlock, layers = 1)
+    u_layer = SingleQubitLayerType(UGate)
+    cu_layer = EntanglingLayerType(CUGate)
+    
+    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, [u_layer, cu_layer, u_layer])
     de_inverse_fixed = Component.from_fixed_circuit(de_inverse)
     
     overlap_ansatz.add_component(hf_preset, list(range(num_bond_qubits, num_qubits)))

@@ -43,7 +43,7 @@ class CUGate(Gate):
     def n_parameters() -> int:
         return 3
     
-class IUGate(Gate):
+class XYZGate(Gate):
     def __init__(self, parameters: list[float]):
         super().__init__(parameters, 1)
         
@@ -57,7 +57,7 @@ class IUGate(Gate):
     def n_parameters() -> int:
         return 3
     
-class ICUGate(Gate):
+class XYZEntanglingGate(Gate):
     def __init__(self, parameters: list[float]):
         super().__init__(parameters, 2)
         
@@ -71,7 +71,7 @@ class ICUGate(Gate):
     def n_parameters() -> int:
         return 3
 
-class OPUGate(Gate):
+class OneParameterGate(Gate):
     def __init__(self, parameters: list[float]):
         super().__init__(parameters, 1)
         
@@ -81,7 +81,7 @@ class OPUGate(Gate):
     def n_parameters() -> int:
         return 1
     
-class OPCUGate(Gate):
+class OneParameterEntanglingGate(Gate):
     def __init__(self, parameters: list[float]):
         super().__init__(parameters, 2)
         
@@ -111,60 +111,64 @@ class DoubleExcitationGate(Gate):
     @staticmethod
     def n_parameters() -> int:
         return 1
+
+class LayerType(ABC):
+    def __init__(self, gate_type: type[Gate]):
+        self.gate_type = gate_type
         
-class Block(QuantumCircuit, ABC):
-    def __init__(self, n_qubits: int, n_params, parameters: list[float] | None = None, layers: int = 1):
+    def build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
         
-        if parameters is not None:
-            if len(parameters) != n_params:
-                raise ValueError(f"Expected {n_params} parameters, got {len(parameters)}.")
+        if len(parameters) != self.n_parameters(n_qubits):
+            raise ValueError(f"Expected {self.n_parameters(n_qubits)} parameters, got {len(parameters)}.")
         
-        super().__init__(n_qubits)
-        self.layers = layers
-        
-    @staticmethod
+        return self._build(n_qubits, parameters)
+    
     @abstractmethod
-    def n_parameters(n_qubits: int, layers: int = 1, *args) -> int:
+    def _build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
+        pass
+        
+    def n_parameters(self, n_qubits: int) -> int:
+        if n_qubits < 1:
+            raise ValueError("Number of qubits must be at least 1.")
+        
+        return self._n_parameters(n_qubits)
+    
+    @abstractmethod
+    def _n_parameters(self, n_qubits: int) -> int:
         pass
     
-class LUBlock(Block):
-    def __init__(self, parameters: list[float], n_qubits: int, layers: int = 1):
-        
-        n_params = LUBlock.n_parameters(n_qubits, layers)
-        super().__init__(n_qubits, n_params, parameters, layers)
+class EntanglingLayerType(LayerType):
+    
+    def _build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
+        circuit = QuantumCircuit(n_qubits)
         
         index = 0
         
-        for _ in range(layers):
-            for qubit in range(n_qubits - 1):
-                
-                gate_circuit = OPCUGate(parameters[index:index + OPCUGate.n_parameters()])
-                index += OPCUGate.n_parameters()
-                
-                self.append(gate_circuit, [qubit, qubit + 1])
-                
-    @staticmethod
-    def n_parameters(n_qubits: int, layers: int = 1, *args) -> int:
-        return OPCUGate.n_parameters() * (n_qubits - 1) * layers
-    
-class FullUBlock(Block):
-    def __init__(self, parameters: list[float], n_qubits: int, layers: int = 1):
+        for qubit in range(n_qubits - 1):
+            gate_circuit = self.gate_type(parameters[index:index + self.gate_type.n_parameters()])
+            index += self.gate_type.n_parameters()
+            
+            circuit.append(gate_circuit, [qubit, qubit + 1])
         
-        n_params = FullUBlock.n_parameters(n_qubits, layers)
-        super().__init__(n_qubits, n_params, parameters, layers)
+        return circuit
+    
+    def _n_parameters(self, n_qubits: int) -> int:
+        return self.gate_type.n_parameters() * (n_qubits - 1)
+
+class SingleQubitLayerType(LayerType):
+    
+    def _build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
+        circuit = QuantumCircuit(n_qubits)
         
         index = 0
         
-        for _ in range(layers):
-            for qubit in range(n_qubits):
-                
-                gate_circuit = OPUGate(parameters[index:index + OPUGate.n_parameters()])
-                index += OPUGate.n_parameters()
-                
-                self.append(gate_circuit, [qubit])
+        for qubit in range(n_qubits):
+            gate_circuit = self.gate_type(parameters[index:index + self.gate_type.n_parameters()])
+            index += self.gate_type.n_parameters()
+            
+            circuit.append(gate_circuit, [qubit])
         
-    @staticmethod
-    def n_parameters(n_qubits: int, layers: int = 1, *args) -> int:
-        return OPUGate.n_parameters() * n_qubits * layers
+        return circuit
     
-    
+    def _n_parameters(self, n_qubits: int) -> int:
+        return self.gate_type.n_parameters() * n_qubits

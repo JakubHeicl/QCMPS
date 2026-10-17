@@ -1,6 +1,6 @@
 from qcmps.loader import FCIDumpLoader
 from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitation
-from qcmps.circuit_blocks import LUBlock
+from qcmps.circuit_blocks import UGate, CUGate, SingleQubitLayerType, EntanglingLayerType
 
 import numpy as np
 from scipy.optimize import minimize
@@ -23,7 +23,13 @@ def main():
 
     hf_preset = HFPreset(num_phys_qubits, hf_occupancy)
     double_excitation_init = DoubleExcitation(num_phys_qubits, hf_occupancy)
-    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, block_type = LUBlock, layers = 1)
+    
+    u_layer = SingleQubitLayerType(UGate)
+    cu_layer = EntanglingLayerType(CUGate)
+    
+    layers = [u_layer, cu_layer, u_layer]
+    
+    qcmps = GlobalQCMPS(num_phys_qubits, num_bond_qubits, layers)
 
     ansatz.add_component(hf_preset, list(range(num_bond_qubits, num_qubits)))
     ansatz.add_component(double_excitation_init, list(range(num_bond_qubits, num_qubits)))

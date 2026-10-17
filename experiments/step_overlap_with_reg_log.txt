@@ -12,31 +12,1717 @@ Total Energy: -2.215215410025
 Total Energy: -2.215215410025
 Total Energy: -2.217889720412
 Total Energy: -2.217889720412
-Total Energy: -2.218407321243
-Total Energy: -2.218407321243
-Total Energy: -2.218407321243
-Total Energy: -2.219418230217
-Total Energy: -2.220377994757
-Total Energy: -2.220377994757
-Total Energy: -2.220377994757
-Total Energy: -2.220377994757
-Total Energy: -2.220377994757
-Total Energy: -2.225492735623
-Total Energy: -2.227487153487
-Total Energy: -2.227487153487
-Total Energy: -2.227487153487
-Total Energy: -2.227588777875
-Total Energy: -2.227869087855
-Total Energy: -2.228811434660
-Total Energy: -2.228811434660
-Total Energy: -2.229540652900
-Total Energy: -2.229631043413
-Total Energy: -2.230906104716
-Double excitation initialization optimization completed with energy: -2.231061242321
+Total Energy: -2.218407321411
+Total Energy: -2.218407321411
+Total Energy: -2.218407321411
+Total Energy: -2.219700550370
+Total Energy: -2.220728050857
+Total Energy: -2.220728050857
+Total Energy: -2.220728050857
+Total Energy: -2.220728050857
+Total Energy: -2.226723598051
+Total Energy: -2.226723598051
+Total Energy: -2.228562885804
+Total Energy: -2.228562885804
+Total Energy: -2.228562885804
+Total Energy: -2.228694084551
+Total Energy: -2.228762247407
+Total Energy: -2.228762247407
+Total Energy: -2.229611588513
+Total Energy: -2.230756834940
+Total Energy: -2.230995714641
+Double excitation initialization optimization completed with energy: -2.230995714641
 Preparing the overlap ansatz
 Starting step overlap optimization...
 Initial overlap should be 1.0: 1.000000000000
-Overlap after a small perturbation: 0.999995913054
+Overlap after a small perturbation: 0.999995907168
 Optimizing for s = 0.050 with regularization
-Overlap before regularization for s = 0.05: 0.999953146748
+Overlap before regularization for s = 0.05: 0.999955234538
 Energy of QCMPS ansatz before regularization for s = 0.05: -2.215212721954, Energy of HF ansatz: -2.215215410025
+Call 10: Overlap = 0.999844500341, Regularization = 0.393751314031, Objective = 0.000943002287, Norm = 0.142820653443
+Call 20: Overlap = 0.999799208522, Regularization = 0.343577010705, Objective = 0.000887945499, Norm = 0.155264192163
+Call 30: Overlap = 0.999803989154, Regularization = 0.339535297213, Objective = 0.000875081440, Norm = 0.156376278335
+Call 40: Overlap = 0.999813836513, Regularization = 0.335315651384, Objective = 0.000856794790, Norm = 0.157557097238
+Call 50: Overlap = 0.999856336595, Regularization = 0.319393189996, Objective = 0.000782449785, Norm = 0.162207399260
+Call 60: Overlap = 0.999872386277, Regularization = 0.305863468583, Objective = 0.000739340660, Norm = 0.166422576693
+Call 70: Overlap = 0.999906642461, Regularization = 0.282642602126, Objective = 0.000658642744, Norm = 0.174307329104
+Call 80: Overlap = 0.999895952370, Regularization = 0.272358680417, Objective = 0.000648764991, Norm = 0.178099083591
+Call 90: Overlap = 0.999891726207, Regularization = 0.259126478925, Objective = 0.000626526751, Norm = 0.183288312367
+Call 100: Overlap = 0.999903157610, Regularization = 0.247803461429, Objective = 0.000592449313, Norm = 0.188038421340
+Call 110: Overlap = 0.999902209153, Regularization = 0.241943639897, Objective = 0.000581678127, Norm = 0.190620034204
+Call 120: Overlap = 0.999895689741, Regularization = 0.226092025051, Objective = 0.000556494309, Norm = 0.198077278850
+Call 130: Overlap = 0.999908619863, Regularization = 0.215715879323, Objective = 0.000522811895, Norm = 0.203378292644
+Call 140: Overlap = 0.999911613926, Regularization = 0.210447291899, Objective = 0.000509280657, Norm = 0.206212395534
+Call 150: Overlap = 0.999912247059, Regularization = 0.208177370827, Objective = 0.000504107682, Norm = 0.207465202477
+Call 160: Overlap = 0.999918717439, Regularization = 0.205750462721, Objective = 0.000492783486, Norm = 0.208827003219
+Call 170: Overlap = 0.999929651226, Regularization = 0.195931772115, Objective = 0.000462212318, Norm = 0.214581715980
+Call 180: Overlap = 0.999927332568, Regularization = 0.192538560959, Objective = 0.000457744554, Norm = 0.216668340749
+Overlap after regularization for s = 0.05: 0.999925396015
+Energy of QCMPS ansatz after regularization for s = 0.05: -2.215196736487, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.050 without regularization
+Call 190: Overlap = 0.999944260237, Regularization = 0.181738730173, Objective = 0.000055739763, Norm = 0.223679748335
+Call 200: Overlap = 0.999950450150, Regularization = 0.181373670190, Objective = 0.000049549850, Norm = 0.223927289604
+Call 210: Overlap = 0.999952277917, Regularization = 0.181100508053, Objective = 0.000047722083, Norm = 0.224112943787
+Call 220: Overlap = 0.999952508555, Regularization = 0.181014552376, Objective = 0.000047491445, Norm = 0.224171474699
+Call 230: Overlap = 0.999953200080, Regularization = 0.180757575388, Objective = 0.000046799920, Norm = 0.224346686367
+Call 240: Overlap = 0.999953408953, Regularization = 0.180399471884, Objective = 0.000046591047, Norm = 0.224591393566
+Call 250: Overlap = 0.999953666793, Regularization = 0.180153227470, Objective = 0.000046333207, Norm = 0.224760069356
+Call 260: Overlap = 0.999953824359, Regularization = 0.180169790995, Objective = 0.000046175641, Norm = 0.224748712582
+Call 270: Overlap = 0.999954108575, Regularization = 0.179902087796, Objective = 0.000045891425, Norm = 0.224932407140
+Call 280: Overlap = 0.999954130741, Regularization = 0.179845976115, Objective = 0.000045869259, Norm = 0.224970957853
+Call 290: Overlap = 0.999954259976, Regularization = 0.179754733499, Objective = 0.000045740024, Norm = 0.225033686728
+Call 300: Overlap = 0.999954262064, Regularization = 0.179751666764, Objective = 0.000045737936, Norm = 0.225035796110
+Call 310: Overlap = 0.999954266473, Regularization = 0.179858055331, Objective = 0.000045733527, Norm = 0.224962650421
+Call 320: Overlap = 0.999954478294, Regularization = 0.180038972355, Objective = 0.000045521706, Norm = 0.224838381293
+Call 330: Overlap = 0.999954505579, Regularization = 0.180027713485, Objective = 0.000045494421, Norm = 0.224846107285
+Call 340: Overlap = 0.999954706835, Regularization = 0.179902748118, Objective = 0.000045293165, Norm = 0.224931929196
+Call 350: Overlap = 0.999954813680, Regularization = 0.179891193085, Objective = 0.000045186320, Norm = 0.224939847506
+Call 360: Overlap = 0.999954863900, Regularization = 0.179889154066, Objective = 0.000045136100, Norm = 0.224941270326
+Call 370: Overlap = 0.999954970825, Regularization = 0.179678990188, Objective = 0.000045029175, Norm = 0.225085826115
+Call 380: Overlap = 0.999955065124, Regularization = 0.179864044201, Objective = 0.000044934876, Norm = 0.224958530117
+Call 390: Overlap = 0.999955098170, Regularization = 0.179726381966, Objective = 0.000044901830, Norm = 0.225053202948
+Call 400: Overlap = 0.999955163063, Regularization = 0.179766326593, Objective = 0.000044836937, Norm = 0.225025728309
+Call 410: Overlap = 0.999955171727, Regularization = 0.179706217787, Objective = 0.000044828273, Norm = 0.225067074220
+Call 420: Overlap = 0.999955222435, Regularization = 0.179943996122, Objective = 0.000044777565, Norm = 0.224903599573
+Call 430: Overlap = 0.999955256426, Regularization = 0.179894508656, Objective = 0.000044743574, Norm = 0.224937594241
+Call 440: Overlap = 0.999955268035, Regularization = 0.179818932498, Objective = 0.000044731965, Norm = 0.224989553783
+Call 450: Overlap = 0.999955278064, Regularization = 0.179785479428, Objective = 0.000044721936, Norm = 0.225012552113
+Call 460: Overlap = 0.999955290069, Regularization = 0.179866417746, Objective = 0.000044709931, Norm = 0.224956903552
+Call 470: Overlap = 0.999955335695, Regularization = 0.179791601369, Objective = 0.000044664305, Norm = 0.225008323630
+Call 480: Overlap = 0.999955345679, Regularization = 0.179970614901, Objective = 0.000044654321, Norm = 0.224885323544
+Call 490: Overlap = 0.999955400314, Regularization = 0.180273316706, Objective = 0.000044599686, Norm = 0.224677741782
+Call 500: Overlap = 0.999955474075, Regularization = 0.180220768320, Objective = 0.000044525925, Norm = 0.224713741879
+Call 510: Overlap = 0.999955534642, Regularization = 0.180287405995, Objective = 0.000044465358, Norm = 0.224668101018
+Call 520: Overlap = 0.999955564994, Regularization = 0.180271751226, Objective = 0.000044435006, Norm = 0.224678835374
+Call 530: Overlap = 0.999955603684, Regularization = 0.180400744863, Objective = 0.000044396316, Norm = 0.224590508250
+Call 540: Overlap = 0.999955655369, Regularization = 0.180587985140, Objective = 0.000044344631, Norm = 0.224462444308
+Call 550: Overlap = 0.999955704448, Regularization = 0.180619471017, Objective = 0.000044295552, Norm = 0.224440918157
+Call 560: Overlap = 0.999955748062, Regularization = 0.180712205983, Objective = 0.000044251938, Norm = 0.224377585837
+Call 570: Overlap = 0.999955795033, Regularization = 0.180780026072, Objective = 0.000044204967, Norm = 0.224331285929
+Call 580: Overlap = 0.999955838454, Regularization = 0.181181765135, Objective = 0.000044161546, Norm = 0.224057644966
+Call 590: Overlap = 0.999955854939, Regularization = 0.181319442365, Objective = 0.000044145061, Norm = 0.223964066760
+Call 600: Overlap = 0.999955855888, Regularization = 0.181293288115, Objective = 0.000044144112, Norm = 0.223981843461
+Call 610: Overlap = 0.999955895009, Regularization = 0.181277671317, Objective = 0.000044104991, Norm = 0.223992448976
+Call 620: Overlap = 0.999955930165, Regularization = 0.181381642427, Objective = 0.000044069835, Norm = 0.223921877943
+Final overlap for s = 0.05: 0.999955981907
+Final energy of QCMPS ansatz for s = 0.05: -2.215215317749, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.100 with regularization
+Overlap before regularization for s = 0.10: 0.999834082833
+Energy of QCMPS ansatz before regularization for s = 0.10: -2.215215317749, Energy of HF ansatz: -2.215215410025
+Call 630: Overlap = 0.999831781551, Regularization = 0.092370215188, Objective = 0.000260588664, Norm = 0.321390604908
+Call 640: Overlap = 0.999831774695, Regularization = 0.091648793121, Objective = 0.000259874099, Norm = 0.322713956387
+Call 650: Overlap = 0.999831391805, Regularization = 0.089922918916, Objective = 0.000258531114, Norm = 0.325945116479
+Call 660: Overlap = 0.999831154008, Regularization = 0.087764930165, Objective = 0.000256610922, Norm = 0.330117166799
+Call 670: Overlap = 0.999831256363, Regularization = 0.085307020520, Objective = 0.000254050658, Norm = 0.335056261243
+Call 680: Overlap = 0.999831232011, Regularization = 0.083994439689, Objective = 0.000252762429, Norm = 0.337780589804
+Call 690: Overlap = 0.999831445060, Regularization = 0.082408448283, Objective = 0.000250963388, Norm = 0.341157594459
+Call 700: Overlap = 0.999831066250, Regularization = 0.080730902207, Objective = 0.000249664652, Norm = 0.344835823087
+Call 710: Overlap = 0.999831063112, Regularization = 0.079250805024, Objective = 0.000248187693, Norm = 0.348176428018
+Call 720: Overlap = 0.999831296116, Regularization = 0.077791656654, Objective = 0.000246495540, Norm = 0.351561162634
+Call 730: Overlap = 0.999831349628, Regularization = 0.076268169775, Objective = 0.000244918542, Norm = 0.355197045308
+Call 740: Overlap = 0.999831498464, Regularization = 0.074864967484, Objective = 0.000243366503, Norm = 0.358641767609
+Call 750: Overlap = 0.999831947522, Regularization = 0.073585692624, Objective = 0.000241638171, Norm = 0.361866555006
+Call 760: Overlap = 0.999831958988, Regularization = 0.073008095546, Objective = 0.000241049108, Norm = 0.363349761499
+Call 770: Overlap = 0.999832018533, Regularization = 0.072741865210, Objective = 0.000240723332, Norm = 0.364039069132
+Call 780: Overlap = 0.999832477713, Regularization = 0.072574258433, Objective = 0.000240096546, Norm = 0.364475307708
+Overlap after regularization for s = 0.10: 0.999832932328
+Energy of QCMPS ansatz after regularization for s = 0.10: -2.215214614512, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.100 without regularization
+Call 790: Overlap = 0.999833994535, Regularization = 0.070770884507, Objective = 0.000166005465, Norm = 0.369264190918
+Call 800: Overlap = 0.999833999301, Regularization = 0.070788291229, Objective = 0.000166000699, Norm = 0.369217061661
+Call 810: Overlap = 0.999834005584, Regularization = 0.070787947219, Objective = 0.000165994416, Norm = 0.369218016750
+Call 820: Overlap = 0.999834064526, Regularization = 0.070796564878, Objective = 0.000165935474, Norm = 0.369194640893
+Call 830: Overlap = 0.999834108336, Regularization = 0.070777933470, Objective = 0.000165891664, Norm = 0.369245060223
+Call 840: Overlap = 0.999834179988, Regularization = 0.070829592479, Objective = 0.000165820012, Norm = 0.369105353387
+Call 850: Overlap = 0.999834197651, Regularization = 0.070792500701, Objective = 0.000165802349, Norm = 0.369205688591
+Call 860: Overlap = 0.999834204312, Regularization = 0.070806629807, Objective = 0.000165795688, Norm = 0.369167466470
+Call 870: Overlap = 0.999834208875, Regularization = 0.070828463409, Objective = 0.000165791125, Norm = 0.369108424307
+Call 880: Overlap = 0.999834231818, Regularization = 0.070843629709, Objective = 0.000165768182, Norm = 0.369067487509
+Call 890: Overlap = 0.999834293980, Regularization = 0.070858420999, Objective = 0.000165706020, Norm = 0.369027636261
+Call 900: Overlap = 0.999834301601, Regularization = 0.070863195758, Objective = 0.000165698399, Norm = 0.369014675607
+Call 910: Overlap = 0.999834391589, Regularization = 0.070829988761, Objective = 0.000165608411, Norm = 0.369104421325
+Call 920: Overlap = 0.999834467150, Regularization = 0.070876023985, Objective = 0.000165532850, Norm = 0.368980099036
+Call 930: Overlap = 0.999834473419, Regularization = 0.070888506698, Objective = 0.000165526581, Norm = 0.368946414628
+Call 940: Overlap = 0.999834489008, Regularization = 0.070922227074, Objective = 0.000165510992, Norm = 0.368855477340
+Call 950: Overlap = 0.999834511558, Regularization = 0.070893873287, Objective = 0.000165488442, Norm = 0.368932053516
+Call 960: Overlap = 0.999834525470, Regularization = 0.070895865354, Objective = 0.000165474530, Norm = 0.368926707388
+Call 970: Overlap = 0.999834554997, Regularization = 0.070877429242, Objective = 0.000165445003, Norm = 0.368976507579
+Call 980: Overlap = 0.999834562780, Regularization = 0.070882682243, Objective = 0.000165437220, Norm = 0.368962338362
+Call 990: Overlap = 0.999834566894, Regularization = 0.070880734663, Objective = 0.000165433106, Norm = 0.368967585065
+Call 1000: Overlap = 0.999834583913, Regularization = 0.070914579265, Objective = 0.000165416087, Norm = 0.368876285404
+Call 1010: Overlap = 0.999834593639, Regularization = 0.070952425372, Objective = 0.000165406361, Norm = 0.368774250211
+Call 1020: Overlap = 0.999834616111, Regularization = 0.071000518971, Objective = 0.000165383889, Norm = 0.368644690632
+Call 1030: Overlap = 0.999834622300, Regularization = 0.071008204566, Objective = 0.000165377700, Norm = 0.368623982572
+Call 1040: Overlap = 0.999834638458, Regularization = 0.070992808268, Objective = 0.000165361542, Norm = 0.368665440074
+Call 1050: Overlap = 0.999834677293, Regularization = 0.070986737688, Objective = 0.000165322707, Norm = 0.368681783971
+Call 1060: Overlap = 0.999834684172, Regularization = 0.070993491927, Objective = 0.000165315828, Norm = 0.368663599150
+Call 1070: Overlap = 0.999834686701, Regularization = 0.070976613326, Objective = 0.000165313299, Norm = 0.368709071329
+Call 1080: Overlap = 0.999834698385, Regularization = 0.070988591868, Objective = 0.000165301615, Norm = 0.368676801069
+Call 1090: Overlap = 0.999834701997, Regularization = 0.071009298651, Objective = 0.000165298003, Norm = 0.368621056919
+Call 1100: Overlap = 0.999834705420, Regularization = 0.071017709289, Objective = 0.000165294580, Norm = 0.368598410533
+Call 1110: Overlap = 0.999834708425, Regularization = 0.071012717021, Objective = 0.000165291575, Norm = 0.368611852269
+Call 1120: Overlap = 0.999834727498, Regularization = 0.071014223829, Objective = 0.000165272502, Norm = 0.368607798596
+Call 1130: Overlap = 0.999834740267, Regularization = 0.071034688728, Objective = 0.000165259733, Norm = 0.368552753520
+Call 1140: Overlap = 0.999834775671, Regularization = 0.071028004895, Objective = 0.000165224329, Norm = 0.368570734954
+Call 1150: Overlap = 0.999834789241, Regularization = 0.071011266798, Objective = 0.000165210759, Norm = 0.368615826243
+Call 1160: Overlap = 0.999834801904, Regularization = 0.071000770244, Objective = 0.000165198096, Norm = 0.368644042855
+Call 1170: Overlap = 0.999834815496, Regularization = 0.070967470163, Objective = 0.000165184504, Norm = 0.368733742558
+Call 1180: Overlap = 0.999834842842, Regularization = 0.070949137922, Objective = 0.000165157158, Norm = 0.368783147904
+Call 1190: Overlap = 0.999834843586, Regularization = 0.070950344481, Objective = 0.000165156414, Norm = 0.368779896867
+Final overlap for s = 0.10: 0.999834849653
+Final energy of QCMPS ansatz for s = 0.10: -2.215215308758, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.150 with regularization
+Overlap before regularization for s = 0.15: 0.999631464506
+Energy of QCMPS ansatz before regularization for s = 0.15: -2.215215308758, Energy of HF ansatz: -2.215215410025
+Call 1200: Overlap = 0.999630682456, Regularization = 0.044337787254, Objective = 0.000391486437, Norm = 0.469767581132
+Call 1210: Overlap = 0.999630678679, Regularization = 0.044134802332, Objective = 0.000391388722, Norm = 0.470871303122
+Call 1220: Overlap = 0.999630703307, Regularization = 0.043569579600, Objective = 0.000391081483, Norm = 0.473987354495
+Call 1230: Overlap = 0.999630664639, Regularization = 0.043041975254, Objective = 0.000390856349, Norm = 0.476950411376
+Call 1240: Overlap = 0.999630613861, Regularization = 0.042598147308, Objective = 0.000390685212, Norm = 0.479485422041
+Call 1250: Overlap = 0.999630601341, Regularization = 0.042052215274, Objective = 0.000390424766, Norm = 0.482657795976
+Call 1260: Overlap = 0.999630604958, Regularization = 0.041593393455, Objective = 0.000390191739, Norm = 0.485371867175
+Call 1270: Overlap = 0.999630638842, Regularization = 0.041342066238, Objective = 0.000390032191, Norm = 0.486877381506
+Call 1280: Overlap = 0.999630601218, Regularization = 0.040828840665, Objective = 0.000389813203, Norm = 0.489994176068
+Call 1290: Overlap = 0.999630647145, Regularization = 0.040456327829, Objective = 0.000389581019, Norm = 0.492293639519
+Call 1300: Overlap = 0.999630835965, Regularization = 0.039909967729, Objective = 0.000389119019, Norm = 0.495723550463
+Call 1310: Overlap = 0.999630822759, Regularization = 0.039437125973, Objective = 0.000388895804, Norm = 0.498748200822
+Call 1320: Overlap = 0.999631114207, Regularization = 0.038994600388, Objective = 0.000388383093, Norm = 0.501628334482
+Call 1330: Overlap = 0.999631114207, Regularization = 0.038994600388, Objective = 0.000388383093, Norm = 0.501628334482
+Call 1340: Overlap = 0.999631114207, Regularization = 0.038994600388, Objective = 0.000388383093, Norm = 0.501628334482
+Overlap after regularization for s = 0.15: 0.999631114207
+Energy of QCMPS ansatz after regularization for s = 0.15: -2.215214934901, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.150 without regularization
+Call 1350: Overlap = 0.999631484894, Regularization = 0.038489215290, Objective = 0.000368515106, Norm = 0.504978449494
+Call 1360: Overlap = 0.999631490437, Regularization = 0.038487154440, Objective = 0.000368509563, Norm = 0.504992314315
+Call 1370: Overlap = 0.999631494858, Regularization = 0.038488144786, Objective = 0.000368505142, Norm = 0.504985652124
+Call 1380: Overlap = 0.999631502278, Regularization = 0.038488118470, Objective = 0.000368497722, Norm = 0.504985879854
+Call 1390: Overlap = 0.999631526220, Regularization = 0.038489361218, Objective = 0.000368473780, Norm = 0.504977561036
+Call 1400: Overlap = 0.999631660253, Regularization = 0.038436717221, Objective = 0.000368339747, Norm = 0.505330348547
+Call 1410: Overlap = 0.999631757542, Regularization = 0.038401431234, Objective = 0.000368242458, Norm = 0.505567095089
+Call 1420: Overlap = 0.999631771115, Regularization = 0.038395798046, Objective = 0.000368228885, Norm = 0.505605091673
+Call 1430: Overlap = 0.999631789476, Regularization = 0.038397966953, Objective = 0.000368210524, Norm = 0.505590534943
+Call 1440: Overlap = 0.999631801844, Regularization = 0.038396652735, Objective = 0.000368198156, Norm = 0.505599343217
+Call 1450: Overlap = 0.999631816425, Regularization = 0.038395973600, Objective = 0.000368183575, Norm = 0.505603959150
+Call 1460: Overlap = 0.999631820092, Regularization = 0.038398392309, Objective = 0.000368179908, Norm = 0.505587791280
+Call 1470: Overlap = 0.999631873916, Regularization = 0.038416725089, Objective = 0.000368126084, Norm = 0.505464706463
+Call 1480: Overlap = 0.999631879872, Regularization = 0.038425098012, Objective = 0.000368120128, Norm = 0.505408561147
+Call 1490: Overlap = 0.999631901427, Regularization = 0.038404895291, Objective = 0.000368098573, Norm = 0.505544163109
+Call 1500: Overlap = 0.999631911011, Regularization = 0.038407687149, Objective = 0.000368088989, Norm = 0.505525416547
+Call 1510: Overlap = 0.999631976912, Regularization = 0.038401763154, Objective = 0.000368023088, Norm = 0.505565210419
+Call 1520: Overlap = 0.999631995784, Regularization = 0.038404176037, Objective = 0.000368004216, Norm = 0.505548988033
+Call 1530: Overlap = 0.999632000368, Regularization = 0.038418214380, Objective = 0.000367999632, Norm = 0.505454698222
+Call 1540: Overlap = 0.999632022962, Regularization = 0.038411251841, Objective = 0.000367977038, Norm = 0.505501444073
+Call 1550: Overlap = 0.999632056034, Regularization = 0.038427101679, Objective = 0.000367943966, Norm = 0.505395107819
+Call 1560: Overlap = 0.999632056795, Regularization = 0.038428141684, Objective = 0.000367943205, Norm = 0.505388098410
+Call 1570: Overlap = 0.999632063766, Regularization = 0.038427996844, Objective = 0.000367936234, Norm = 0.505389048821
+Call 1580: Overlap = 0.999632068105, Regularization = 0.038433402331, Objective = 0.000367931895, Norm = 0.505352832554
+Call 1590: Overlap = 0.999632087050, Regularization = 0.038443980337, Objective = 0.000367912950, Norm = 0.505281900279
+Call 1600: Overlap = 0.999632094893, Regularization = 0.038444394563, Objective = 0.000367905107, Norm = 0.505279173160
+Call 1610: Overlap = 0.999632099215, Regularization = 0.038453378622, Objective = 0.000367900785, Norm = 0.505218941562
+Call 1620: Overlap = 0.999632099505, Regularization = 0.038450167182, Objective = 0.000367900495, Norm = 0.505240495183
+Call 1630: Overlap = 0.999632106306, Regularization = 0.038445841531, Objective = 0.000367893694, Norm = 0.505269478318
+Call 1640: Overlap = 0.999632145153, Regularization = 0.038435556541, Objective = 0.000367854847, Norm = 0.505338496908
+Call 1650: Overlap = 0.999632158009, Regularization = 0.038428834634, Objective = 0.000367841991, Norm = 0.505383620555
+Call 1660: Overlap = 0.999632163457, Regularization = 0.038425757638, Objective = 0.000367836543, Norm = 0.505404241805
+Call 1670: Overlap = 0.999632166002, Regularization = 0.038427760657, Objective = 0.000367833998, Norm = 0.505390816831
+Call 1680: Overlap = 0.999632175826, Regularization = 0.038425961904, Objective = 0.000367824174, Norm = 0.505402877600
+Call 1690: Overlap = 0.999632176723, Regularization = 0.038430031731, Objective = 0.000367823277, Norm = 0.505375589571
+Call 1700: Overlap = 0.999632187263, Regularization = 0.038451595065, Objective = 0.000367812737, Norm = 0.505230929735
+Call 1710: Overlap = 0.999632206201, Regularization = 0.038432625898, Objective = 0.000367793799, Norm = 0.505358111114
+Call 1720: Overlap = 0.999632224060, Regularization = 0.038445162139, Objective = 0.000367775940, Norm = 0.505273992692
+Call 1730: Overlap = 0.999632224060, Regularization = 0.038445162139, Objective = 0.000367775940, Norm = 0.505273992692
+Call 1740: Overlap = 0.999632240153, Regularization = 0.038433167371, Objective = 0.000367759847, Norm = 0.505354315713
+Call 1750: Overlap = 0.999632255674, Regularization = 0.038429891962, Objective = 0.000367744326, Norm = 0.505376316868
+Call 1760: Overlap = 0.999632266392, Regularization = 0.038430138719, Objective = 0.000367733608, Norm = 0.505374611989
+Final overlap for s = 0.15: 0.999632273945
+Final energy of QCMPS ansatz for s = 0.15: -2.215215308178, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.200 with regularization
+Overlap before regularization for s = 0.20: 0.999347364049
+Energy of QCMPS ansatz before regularization for s = 0.20: -2.215215308178, Energy of HF ansatz: -2.215215410025
+Call 1770: Overlap = 0.999346950895, Regularization = 0.026723498899, Objective = 0.000659729979, Norm = 0.607946736517
+Call 1780: Overlap = 0.999346949671, Regularization = 0.026639294312, Objective = 0.000659710152, Norm = 0.608921052587
+Call 1790: Overlap = 0.999346985082, Regularization = 0.026484213131, Objective = 0.000659635971, Norm = 0.610730340280
+Call 1800: Overlap = 0.999346980825, Regularization = 0.026293053545, Objective = 0.000659592439, Norm = 0.612980251486
+Call 1810: Overlap = 0.999346968078, Regularization = 0.026042922237, Objective = 0.000659542652, Norm = 0.615960431085
+Call 1820: Overlap = 0.999346966896, Regularization = 0.025800272246, Objective = 0.000659483172, Norm = 0.618892901004
+Call 1830: Overlap = 0.999347003387, Regularization = 0.025653489971, Objective = 0.000659409985, Norm = 0.620687601851
+Call 1840: Overlap = 0.999346997353, Regularization = 0.025420048083, Objective = 0.000659357659, Norm = 0.623572067555
+Call 1850: Overlap = 0.999346996013, Regularization = 0.025198011987, Objective = 0.000659303490, Norm = 0.626351743052
+Call 1860: Overlap = 0.999346989235, Regularization = 0.024966706945, Objective = 0.000659252442, Norm = 0.629287396858
+Call 1870: Overlap = 0.999347045928, Regularization = 0.024766526882, Objective = 0.000659145704, Norm = 0.631861451993
+Call 1880: Overlap = 0.999347127524, Regularization = 0.024561814017, Objective = 0.000659012930, Norm = 0.634525552835
+Call 1890: Overlap = 0.999347126090, Regularization = 0.024390755946, Objective = 0.000658971599, Norm = 0.636776482648
+Call 1900: Overlap = 0.999347126090, Regularization = 0.024390755946, Objective = 0.000658971599, Norm = 0.636776482648
+Call 1910: Overlap = 0.999347126090, Regularization = 0.024390755946, Objective = 0.000658971599, Norm = 0.636776482648
+Overlap after regularization for s = 0.20: 0.999347126090
+Energy of QCMPS ansatz after regularization for s = 0.20: -2.215215171607, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.200 without regularization
+Call 1920: Overlap = 0.999347170855, Regularization = 0.024206894002, Objective = 0.000652829145, Norm = 0.639223418533
+Call 1930: Overlap = 0.999347204915, Regularization = 0.024193757252, Objective = 0.000652795085, Norm = 0.639399288820
+Call 1940: Overlap = 0.999347206104, Regularization = 0.024193078510, Objective = 0.000652793896, Norm = 0.639408396556
+Call 1950: Overlap = 0.999347215572, Regularization = 0.024186824028, Objective = 0.000652784428, Norm = 0.639492120560
+Call 1960: Overlap = 0.999347220695, Regularization = 0.024192543811, Objective = 0.000652779305, Norm = 0.639415399979
+Call 1970: Overlap = 0.999347233171, Regularization = 0.024188309486, Objective = 0.000652766829, Norm = 0.639472129418
+Call 1980: Overlap = 0.999347248491, Regularization = 0.024181930177, Objective = 0.000652751509, Norm = 0.639557623145
+Call 1990: Overlap = 0.999347259987, Regularization = 0.024156526011, Objective = 0.000652740013, Norm = 0.639898325642
+Call 2000: Overlap = 0.999347265847, Regularization = 0.024152930115, Objective = 0.000652734153, Norm = 0.639946759643
+Call 2010: Overlap = 0.999347288381, Regularization = 0.024146976276, Objective = 0.000652711619, Norm = 0.640026853209
+Call 2020: Overlap = 0.999347294006, Regularization = 0.024151268344, Objective = 0.000652705994, Norm = 0.639969346126
+Call 2030: Overlap = 0.999347297804, Regularization = 0.024148394909, Objective = 0.000652702196, Norm = 0.640008135792
+Call 2040: Overlap = 0.999347306942, Regularization = 0.024139092906, Objective = 0.000652693058, Norm = 0.640133252024
+Call 2050: Overlap = 0.999347321637, Regularization = 0.024126737482, Objective = 0.000652678363, Norm = 0.640299294991
+Call 2060: Overlap = 0.999347323999, Regularization = 0.024127758264, Objective = 0.000652676001, Norm = 0.640285584747
+Call 2070: Overlap = 0.999347328235, Regularization = 0.024122411430, Objective = 0.000652671765, Norm = 0.640357502770
+Call 2080: Overlap = 0.999347329884, Regularization = 0.024127338990, Objective = 0.000652670116, Norm = 0.640291160076
+Call 2090: Overlap = 0.999347333372, Regularization = 0.024127479676, Objective = 0.000652666628, Norm = 0.640289276962
+Call 2100: Overlap = 0.999347338799, Regularization = 0.024121842142, Objective = 0.000652661201, Norm = 0.640365108759
+Call 2110: Overlap = 0.999347352084, Regularization = 0.024117476137, Objective = 0.000652647916, Norm = 0.640423712494
+Call 2120: Overlap = 0.999347358312, Regularization = 0.024116203979, Objective = 0.000652641688, Norm = 0.640440905356
+Call 2130: Overlap = 0.999347371419, Regularization = 0.024127886560, Objective = 0.000652628581, Norm = 0.640283694477
+Call 2140: Overlap = 0.999347387338, Regularization = 0.024128953669, Objective = 0.000652612662, Norm = 0.640269615369
+Call 2150: Overlap = 0.999347389426, Regularization = 0.024130576981, Objective = 0.000652610574, Norm = 0.640247913744
+Call 2160: Overlap = 0.999347398958, Regularization = 0.024128279138, Objective = 0.000652601042, Norm = 0.640278934073
+Call 2170: Overlap = 0.999347412181, Regularization = 0.024132008197, Objective = 0.000652587819, Norm = 0.640228878490
+Call 2180: Overlap = 0.999347414620, Regularization = 0.024124394414, Objective = 0.000652585380, Norm = 0.640331230845
+Call 2190: Overlap = 0.999347422245, Regularization = 0.024124285381, Objective = 0.000652577755, Norm = 0.640332635547
+Call 2200: Overlap = 0.999347422245, Regularization = 0.024124285381, Objective = 0.000652577755, Norm = 0.640332635547
+Call 2210: Overlap = 0.999347423375, Regularization = 0.024127597223, Objective = 0.000652576625, Norm = 0.640288106506
+Call 2220: Overlap = 0.999347433238, Regularization = 0.024126871620, Objective = 0.000652566762, Norm = 0.640297832159
+Call 2230: Overlap = 0.999347433494, Regularization = 0.024130906030, Objective = 0.000652566506, Norm = 0.640243577061
+Call 2240: Overlap = 0.999347433494, Regularization = 0.024130906030, Objective = 0.000652566506, Norm = 0.640243577061
+Call 2250: Overlap = 0.999347445969, Regularization = 0.024134911442, Objective = 0.000652554031, Norm = 0.640189774039
+Call 2260: Overlap = 0.999347446323, Regularization = 0.024140290656, Objective = 0.000652553677, Norm = 0.640117439612
+Call 2270: Overlap = 0.999347450135, Regularization = 0.024141216411, Objective = 0.000652549865, Norm = 0.640105001911
+Call 2280: Overlap = 0.999347453161, Regularization = 0.024132023948, Objective = 0.000652546839, Norm = 0.640228543050
+Call 2290: Overlap = 0.999347454064, Regularization = 0.024126707237, Objective = 0.000652545936, Norm = 0.640300081669
+Call 2300: Overlap = 0.999347454592, Regularization = 0.024127150471, Objective = 0.000652545408, Norm = 0.640294112423
+Call 2310: Overlap = 0.999347467780, Regularization = 0.024121488807, Objective = 0.000652532220, Norm = 0.640370273057
+Call 2320: Overlap = 0.999347467780, Regularization = 0.024121488807, Objective = 0.000652532220, Norm = 0.640370273057
+Final overlap for s = 0.20: 0.999347471204
+Final energy of QCMPS ansatz for s = 0.20: -2.215215308130, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.250 with regularization
+Overlap before regularization for s = 0.25: 0.998981063930
+Energy of QCMPS ansatz before regularization for s = 0.25: -2.215215308130, Energy of HF ansatz: -2.215215410025
+Call 2330: Overlap = 0.998981013458, Regularization = 0.018591745379, Objective = 0.001021310510, Norm = 0.730572865717
+Call 2340: Overlap = 0.998981011828, Regularization = 0.018548679501, Objective = 0.001021306756, Norm = 0.731429304886
+Call 2350: Overlap = 0.998981038478, Regularization = 0.018481057221, Objective = 0.001021271655, Norm = 0.732784798833
+Call 2360: Overlap = 0.998981039204, Regularization = 0.018392331250, Objective = 0.001021259838, Norm = 0.734572245820
+Call 2370: Overlap = 0.998981040145, Regularization = 0.018336105430, Objective = 0.001021251868, Norm = 0.735711471126
+Call 2380: Overlap = 0.998981039079, Regularization = 0.018181267161, Objective = 0.001021233580, Norm = 0.738874354086
+Call 2390: Overlap = 0.998981042757, Regularization = 0.018061272806, Objective = 0.001021214902, Norm = 0.741353245444
+Call 2400: Overlap = 0.998981046946, Regularization = 0.017982348210, Objective = 0.001021200848, Norm = 0.742997154569
+Call 2410: Overlap = 0.998981054991, Regularization = 0.017854013772, Objective = 0.001021176760, Norm = 0.745693648580
+Call 2420: Overlap = 0.998981054391, Regularization = 0.017725569032, Objective = 0.001021161305, Norm = 0.748421681905
+Call 2430: Overlap = 0.998981065597, Regularization = 0.017620350252, Objective = 0.001021136947, Norm = 0.750678971947
+Call 2440: Overlap = 0.998981064757, Regularization = 0.017461336592, Objective = 0.001021117910, Norm = 0.754126130620
+Call 2450: Overlap = 0.998981064488, Regularization = 0.017329924874, Objective = 0.001021101752, Norm = 0.757010083657
+Call 2460: Overlap = 0.998981064488, Regularization = 0.017329924874, Objective = 0.001021101752, Norm = 0.757010083657
+Call 2470: Overlap = 0.998981064488, Regularization = 0.017329924874, Objective = 0.001021101752, Norm = 0.757010083657
+Overlap after regularization for s = 0.25: 0.998981064488
+Energy of QCMPS ansatz after regularization for s = 0.25: -2.215215316773, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.250 without regularization
+Call 2480: Overlap = 0.998981076437, Regularization = 0.017204758118, Objective = 0.001018923563, Norm = 0.759788714672
+Call 2490: Overlap = 0.998981078363, Regularization = 0.017208753242, Objective = 0.001018921637, Norm = 0.759699775088
+Call 2500: Overlap = 0.998981078363, Regularization = 0.017208753242, Objective = 0.001018921637, Norm = 0.759699775088
+Call 2510: Overlap = 0.998981079131, Regularization = 0.017206480663, Objective = 0.001018920869, Norm = 0.759750506301
+Call 2520: Overlap = 0.998981079131, Regularization = 0.017206480663, Objective = 0.001018920869, Norm = 0.759750506301
+Call 2530: Overlap = 0.998981079131, Regularization = 0.017206480663, Objective = 0.001018920869, Norm = 0.759750506301
+Call 2540: Overlap = 0.998981079184, Regularization = 0.017206242361, Objective = 0.001018920816, Norm = 0.759755799820
+Call 2550: Overlap = 0.998981079695, Regularization = 0.017204972856, Objective = 0.001018920305, Norm = 0.759784213382
+Call 2560: Overlap = 0.998981084224, Regularization = 0.017209843191, Objective = 0.001018915776, Norm = 0.759675448979
+Call 2570: Overlap = 0.998981085474, Regularization = 0.017217544506, Objective = 0.001018914526, Norm = 0.759503698732
+Call 2580: Overlap = 0.998981086802, Regularization = 0.017213777505, Objective = 0.001018913198, Norm = 0.759587808245
+Call 2590: Overlap = 0.998981087273, Regularization = 0.017216842724, Objective = 0.001018912727, Norm = 0.759519578296
+Call 2600: Overlap = 0.998981089441, Regularization = 0.017220291830, Objective = 0.001018910559, Norm = 0.759442734896
+Call 2610: Overlap = 0.998981097895, Regularization = 0.017222447121, Objective = 0.001018902105, Norm = 0.759394695563
+Call 2620: Overlap = 0.998981097895, Regularization = 0.017222447121, Objective = 0.001018902105, Norm = 0.759394695563
+Call 2630: Overlap = 0.998981099371, Regularization = 0.017225055995, Objective = 0.001018900629, Norm = 0.759336607243
+Call 2640: Overlap = 0.998981132644, Regularization = 0.017220163616, Objective = 0.001018867356, Norm = 0.759445547368
+Call 2650: Overlap = 0.998981134259, Regularization = 0.017220695328, Objective = 0.001018865741, Norm = 0.759433739722
+Call 2660: Overlap = 0.998981138159, Regularization = 0.017217635209, Objective = 0.001018861841, Norm = 0.759501955580
+Call 2670: Overlap = 0.998981142126, Regularization = 0.017221803253, Objective = 0.001018857874, Norm = 0.759408888034
+Call 2680: Overlap = 0.998981143282, Regularization = 0.017221569809, Objective = 0.001018856718, Norm = 0.759414175739
+Call 2690: Overlap = 0.998981147801, Regularization = 0.017221520500, Objective = 0.001018852199, Norm = 0.759415257527
+Call 2700: Overlap = 0.998981157997, Regularization = 0.017222582873, Objective = 0.001018842003, Norm = 0.759391625597
+Call 2710: Overlap = 0.998981159555, Regularization = 0.017223907084, Objective = 0.001018840445, Norm = 0.759362096898
+Call 2720: Overlap = 0.998981173531, Regularization = 0.017224840755, Objective = 0.001018826469, Norm = 0.759341186215
+Call 2730: Overlap = 0.998981174474, Regularization = 0.017225612356, Objective = 0.001018825526, Norm = 0.759323992127
+Call 2740: Overlap = 0.998981178224, Regularization = 0.017224075105, Objective = 0.001018821776, Norm = 0.759358165526
+Call 2750: Overlap = 0.998981178224, Regularization = 0.017224075105, Objective = 0.001018821776, Norm = 0.759358165526
+Call 2760: Overlap = 0.998981178224, Regularization = 0.017224075105, Objective = 0.001018821776, Norm = 0.759358165526
+Call 2770: Overlap = 0.998981178224, Regularization = 0.017224075105, Objective = 0.001018821776, Norm = 0.759358165526
+Call 2780: Overlap = 0.998981180627, Regularization = 0.017222126670, Objective = 0.001018819373, Norm = 0.759401647437
+Call 2790: Overlap = 0.998981182516, Regularization = 0.017224419033, Objective = 0.001018817484, Norm = 0.759350635464
+Call 2800: Overlap = 0.998981184610, Regularization = 0.017220608889, Objective = 0.001018815390, Norm = 0.759435566967
+Call 2810: Overlap = 0.998981185942, Regularization = 0.017223214780, Objective = 0.001018814058, Norm = 0.759377426516
+Call 2820: Overlap = 0.998981188289, Regularization = 0.017224212650, Objective = 0.001018811711, Norm = 0.759355202834
+Call 2830: Overlap = 0.998981188986, Regularization = 0.017225360942, Objective = 0.001018811014, Norm = 0.759329603980
+Call 2840: Overlap = 0.998981190313, Regularization = 0.017226771956, Objective = 0.001018809687, Norm = 0.759298153360
+Call 2850: Overlap = 0.998981190313, Regularization = 0.017226771956, Objective = 0.001018809687, Norm = 0.759298153360
+Call 2860: Overlap = 0.998981191005, Regularization = 0.017227204224, Objective = 0.001018808995, Norm = 0.759288596288
+Call 2870: Overlap = 0.998981191005, Regularization = 0.017227204224, Objective = 0.001018808995, Norm = 0.759288596288
+Call 2880: Overlap = 0.998981192490, Regularization = 0.017231965059, Objective = 0.001018807510, Norm = 0.759182577848
+Final overlap for s = 0.25: 0.998981192490
+Final energy of QCMPS ansatz for s = 0.25: -2.215215349249, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.300 with regularization
+Overlap before regularization for s = 0.30: 0.998533297160
+Energy of QCMPS ansatz before regularization for s = 0.30: -2.215215349249, Energy of HF ansatz: -2.215215410025
+Call 2890: Overlap = 0.998533265348, Regularization = 0.013924419364, Objective = 0.001467604928, Norm = 0.845450198138
+Call 2900: Overlap = 0.998533275337, Regularization = 0.013907491812, Objective = 0.001467593881, Norm = 0.845973321063
+Call 2910: Overlap = 0.998533288170, Regularization = 0.013900717057, Objective = 0.001467580625, Norm = 0.846184154438
+Call 2920: Overlap = 0.998533291283, Regularization = 0.013852255077, Objective = 0.001467574483, Norm = 0.847681415754
+Call 2930: Overlap = 0.998533292969, Regularization = 0.013800823840, Objective = 0.001467569583, Norm = 0.849278780828
+Call 2940: Overlap = 0.998533299438, Regularization = 0.013755244588, Objective = 0.001467560265, Norm = 0.850701053203
+Call 2950: Overlap = 0.998533305671, Regularization = 0.013702013034, Objective = 0.001467550705, Norm = 0.852369305221
+Call 2960: Overlap = 0.998533307133, Regularization = 0.013628894256, Objective = 0.001467544673, Norm = 0.854677297171
+Call 2970: Overlap = 0.998533308223, Regularization = 0.013558262066, Objective = 0.001467539168, Norm = 0.856923391880
+Call 2980: Overlap = 0.998533308135, Regularization = 0.013479827140, Objective = 0.001467534354, Norm = 0.859440428432
+Call 2990: Overlap = 0.998533306394, Regularization = 0.013381996220, Objective = 0.001467529981, Norm = 0.862607341952
+Call 3000: Overlap = 0.998533315896, Regularization = 0.013315373202, Objective = 0.001467516314, Norm = 0.864784663612
+Call 3010: Overlap = 0.998533315840, Regularization = 0.013253717289, Objective = 0.001467512517, Norm = 0.866812694612
+Call 3020: Overlap = 0.998533315840, Regularization = 0.013253717289, Objective = 0.001467512517, Norm = 0.866812694612
+Call 3030: Overlap = 0.998533315840, Regularization = 0.013253717289, Objective = 0.001467512517, Norm = 0.866812694612
+Overlap after regularization for s = 0.30: 0.998533315840
+Energy of QCMPS ansatz after regularization for s = 0.30: -2.215215342510, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.300 without regularization
+Call 3040: Overlap = 0.998533321249, Regularization = 0.013191276340, Objective = 0.001466678751, Norm = 0.868882422197
+Call 3050: Overlap = 0.998533322043, Regularization = 0.013190292016, Objective = 0.001466677957, Norm = 0.868915199503
+Call 3060: Overlap = 0.998533322844, Regularization = 0.013191723155, Objective = 0.001466677156, Norm = 0.868867487590
+Call 3070: Overlap = 0.998533325919, Regularization = 0.013190971937, Objective = 0.001466674081, Norm = 0.868892508931
+Call 3080: Overlap = 0.998533325919, Regularization = 0.013190971937, Objective = 0.001466674081, Norm = 0.868892508931
+Call 3090: Overlap = 0.998533326389, Regularization = 0.013190777650, Objective = 0.001466673611, Norm = 0.868898902324
+Call 3100: Overlap = 0.998533326595, Regularization = 0.013188980129, Objective = 0.001466673405, Norm = 0.868958679372
+Call 3110: Overlap = 0.998533327019, Regularization = 0.013191451089, Objective = 0.001466672981, Norm = 0.868876454428
+Call 3120: Overlap = 0.998533327788, Regularization = 0.013192377479, Objective = 0.001466672212, Norm = 0.868845638667
+Call 3130: Overlap = 0.998533338991, Regularization = 0.013197821326, Objective = 0.001466661009, Norm = 0.868664681838
+Call 3140: Overlap = 0.998533339602, Regularization = 0.013201390513, Objective = 0.001466660398, Norm = 0.868546034340
+Call 3150: Overlap = 0.998533340400, Regularization = 0.013203303108, Objective = 0.001466659600, Norm = 0.868482498139
+Call 3160: Overlap = 0.998533340441, Regularization = 0.013204934942, Objective = 0.001466659559, Norm = 0.868428292016
+Call 3170: Overlap = 0.998533342428, Regularization = 0.013207753004, Objective = 0.001466657572, Norm = 0.868334756245
+Call 3180: Overlap = 0.998533342428, Regularization = 0.013207753004, Objective = 0.001466657572, Norm = 0.868334756245
+Call 3190: Overlap = 0.998533349782, Regularization = 0.013207144310, Objective = 0.001466650218, Norm = 0.868354932431
+Call 3200: Overlap = 0.998533352011, Regularization = 0.013205980023, Objective = 0.001466647989, Norm = 0.868393746486
+Call 3210: Overlap = 0.998533372782, Regularization = 0.013205302274, Objective = 0.001466627218, Norm = 0.868416408837
+Call 3220: Overlap = 0.998533374695, Regularization = 0.013204414041, Objective = 0.001466625305, Norm = 0.868445961177
+Call 3230: Overlap = 0.998533377182, Regularization = 0.013204558711, Objective = 0.001466622818, Norm = 0.868441252000
+Call 3240: Overlap = 0.998533377737, Regularization = 0.013206337559, Objective = 0.001466622263, Norm = 0.868382219560
+Call 3250: Overlap = 0.998533383127, Regularization = 0.013208740162, Objective = 0.001466616873, Norm = 0.868302378608
+Call 3260: Overlap = 0.998533385431, Regularization = 0.013207225263, Objective = 0.001466614569, Norm = 0.868352570768
+Call 3270: Overlap = 0.998533385431, Regularization = 0.013207225263, Objective = 0.001466614569, Norm = 0.868352570768
+Call 3280: Overlap = 0.998533388881, Regularization = 0.013207091566, Objective = 0.001466611119, Norm = 0.868356985665
+Call 3290: Overlap = 0.998533390381, Regularization = 0.013208780343, Objective = 0.001466609619, Norm = 0.868301000720
+Call 3300: Overlap = 0.998533390960, Regularization = 0.013207540408, Objective = 0.001466609040, Norm = 0.868342229787
+Call 3310: Overlap = 0.998533390960, Regularization = 0.013207540408, Objective = 0.001466609040, Norm = 0.868342229787
+Call 3320: Overlap = 0.998533390960, Regularization = 0.013207540408, Objective = 0.001466609040, Norm = 0.868342229787
+Call 3330: Overlap = 0.998533391949, Regularization = 0.013208220186, Objective = 0.001466608051, Norm = 0.868319646723
+Call 3340: Overlap = 0.998533391949, Regularization = 0.013208220186, Objective = 0.001466608051, Norm = 0.868319646723
+Call 3350: Overlap = 0.998533394702, Regularization = 0.013209988221, Objective = 0.001466605298, Norm = 0.868260860783
+Call 3360: Overlap = 0.998533398596, Regularization = 0.013211389214, Objective = 0.001466601404, Norm = 0.868214136932
+Call 3370: Overlap = 0.998533399603, Regularization = 0.013211360259, Objective = 0.001466600397, Norm = 0.868215119083
+Call 3380: Overlap = 0.998533399603, Regularization = 0.013211360259, Objective = 0.001466600397, Norm = 0.868215119083
+Call 3390: Overlap = 0.998533399603, Regularization = 0.013211360259, Objective = 0.001466600397, Norm = 0.868215119083
+Call 3400: Overlap = 0.998533399603, Regularization = 0.013211360259, Objective = 0.001466600397, Norm = 0.868215119083
+Call 3410: Overlap = 0.998533401434, Regularization = 0.013214488356, Objective = 0.001466598566, Norm = 0.868111325932
+Call 3420: Overlap = 0.998533406164, Regularization = 0.013213511573, Objective = 0.001466593836, Norm = 0.868143677608
+Call 3430: Overlap = 0.998533406164, Regularization = 0.013213511573, Objective = 0.001466593836, Norm = 0.868143677608
+Final overlap for s = 0.30: 0.998533409354
+Final energy of QCMPS ansatz for s = 0.30: -2.215215357196, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.350 with regularization
+Overlap before regularization for s = 0.35: 0.998004049402
+Energy of QCMPS ansatz before regularization for s = 0.35: -2.215215357196, Energy of HF ansatz: -2.215215410025
+Call 3440: Overlap = 0.998004039005, Regularization = 0.011417239908, Objective = 0.001996317784, Norm = 0.934571298360
+Call 3450: Overlap = 0.998004056248, Regularization = 0.011413395252, Objective = 0.001996300421, Norm = 0.934732133536
+Call 3460: Overlap = 0.998004063195, Regularization = 0.011414012361, Objective = 0.001996293493, Norm = 0.934713028025
+Call 3470: Overlap = 0.998004067236, Regularization = 0.011393230007, Objective = 0.001996288803, Norm = 0.935579200588
+Call 3480: Overlap = 0.998004067212, Regularization = 0.011376877351, Objective = 0.001996288316, Norm = 0.936260223710
+Call 3490: Overlap = 0.998004068424, Regularization = 0.011348562569, Objective = 0.001996286219, Norm = 0.937443018748
+Call 3500: Overlap = 0.998004069156, Regularization = 0.011321279432, Objective = 0.001996284634, Norm = 0.938583586755
+Call 3510: Overlap = 0.998004075299, Regularization = 0.011273236679, Objective = 0.001996276989, Norm = 0.940604969135
+Call 3520: Overlap = 0.998004077156, Regularization = 0.011256228138, Objective = 0.001996274601, Norm = 0.941322436176
+Call 3530: Overlap = 0.998004079855, Regularization = 0.011234410023, Objective = 0.001996271220, Norm = 0.942247574704
+Call 3540: Overlap = 0.998004080045, Regularization = 0.011181932238, Objective = 0.001996269391, Norm = 0.944482693645
+Call 3550: Overlap = 0.998004080045, Regularization = 0.011156217998, Objective = 0.001996268587, Norm = 0.945581189246
+Call 3560: Overlap = 0.998004080047, Regularization = 0.011104755421, Objective = 0.001996266976, Norm = 0.947791274384
+Call 3570: Overlap = 0.998004080044, Regularization = 0.011067190335, Objective = 0.001996265806, Norm = 0.949413760676
+Call 3580: Overlap = 0.998004080044, Regularization = 0.011067190335, Objective = 0.001996265806, Norm = 0.949413760676
+Call 3590: Overlap = 0.998004080044, Regularization = 0.011067190335, Objective = 0.001996265806, Norm = 0.949413760676
+Overlap after regularization for s = 0.35: 0.998004080044
+Energy of QCMPS ansatz after regularization for s = 0.35: -2.215215362482, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.350 without regularization
+Call 3600: Overlap = 0.998004085063, Regularization = 0.011031604142, Objective = 0.001995914937, Norm = 0.950957621284
+Call 3610: Overlap = 0.998004085063, Regularization = 0.011031604142, Objective = 0.001995914937, Norm = 0.950957621284
+Call 3620: Overlap = 0.998004085362, Regularization = 0.011031165165, Objective = 0.001995914638, Norm = 0.950976889462
+Call 3630: Overlap = 0.998004087074, Regularization = 0.011030616430, Objective = 0.001995912926, Norm = 0.951000808500
+Call 3640: Overlap = 0.998004087074, Regularization = 0.011030616430, Objective = 0.001995912926, Norm = 0.951000808500
+Call 3650: Overlap = 0.998004087074, Regularization = 0.011030616430, Objective = 0.001995912926, Norm = 0.951000808500
+Call 3660: Overlap = 0.998004087074, Regularization = 0.011030616430, Objective = 0.001995912926, Norm = 0.951000808500
+Call 3670: Overlap = 0.998004088693, Regularization = 0.011030236502, Objective = 0.001995911307, Norm = 0.951017483821
+Call 3680: Overlap = 0.998004089556, Regularization = 0.011033767840, Objective = 0.001995910444, Norm = 0.950863778527
+Call 3690: Overlap = 0.998004090073, Regularization = 0.011034283183, Objective = 0.001995909927, Norm = 0.950841495149
+Call 3700: Overlap = 0.998004091107, Regularization = 0.011035738760, Objective = 0.001995908893, Norm = 0.950778263738
+Call 3710: Overlap = 0.998004091409, Regularization = 0.011036140312, Objective = 0.001995908591, Norm = 0.950760741930
+Call 3720: Overlap = 0.998004091481, Regularization = 0.011038347705, Objective = 0.001995908519, Norm = 0.950664914256
+Call 3730: Overlap = 0.998004100646, Regularization = 0.011039352106, Objective = 0.001995899354, Norm = 0.950621216053
+Call 3740: Overlap = 0.998004101958, Regularization = 0.011038709072, Objective = 0.001995898042, Norm = 0.950649040648
+Call 3750: Overlap = 0.998004101958, Regularization = 0.011038709072, Objective = 0.001995898042, Norm = 0.950649040648
+Call 3760: Overlap = 0.998004108162, Regularization = 0.011038704996, Objective = 0.001995891838, Norm = 0.950649148369
+Call 3770: Overlap = 0.998004110205, Regularization = 0.011038181921, Objective = 0.001995889795, Norm = 0.950671965189
+Call 3780: Overlap = 0.998004111390, Regularization = 0.011039932203, Objective = 0.001995888610, Norm = 0.950596276907
+Call 3790: Overlap = 0.998004112637, Regularization = 0.011038401324, Objective = 0.001995887363, Norm = 0.950662983625
+Call 3800: Overlap = 0.998004114183, Regularization = 0.011038877198, Objective = 0.001995885817, Norm = 0.950642263381
+Call 3810: Overlap = 0.998004114801, Regularization = 0.011038658637, Objective = 0.001995885199, Norm = 0.950652015144
+Call 3820: Overlap = 0.998004115248, Regularization = 0.011038238320, Objective = 0.001995884752, Norm = 0.950670258010
+Call 3830: Overlap = 0.998004116999, Regularization = 0.011037934183, Objective = 0.001995883001, Norm = 0.950683630230
+Call 3840: Overlap = 0.998004116999, Regularization = 0.011037934183, Objective = 0.001995883001, Norm = 0.950683630230
+Call 3850: Overlap = 0.998004117433, Regularization = 0.011036027178, Objective = 0.001995882567, Norm = 0.950766563251
+Call 3860: Overlap = 0.998004117433, Regularization = 0.011036027178, Objective = 0.001995882567, Norm = 0.950766563251
+Call 3870: Overlap = 0.998004117566, Regularization = 0.011036149570, Objective = 0.001995882434, Norm = 0.950761213691
+Call 3880: Overlap = 0.998004118617, Regularization = 0.011035245780, Objective = 0.001995881383, Norm = 0.950800542858
+Call 3890: Overlap = 0.998004122412, Regularization = 0.011033845726, Objective = 0.001995877588, Norm = 0.950861358137
+Call 3900: Overlap = 0.998004122412, Regularization = 0.011033845726, Objective = 0.001995877588, Norm = 0.950861358137
+Call 3910: Overlap = 0.998004123262, Regularization = 0.011033619385, Objective = 0.001995876738, Norm = 0.950871220649
+Call 3920: Overlap = 0.998004123262, Regularization = 0.011033619385, Objective = 0.001995876738, Norm = 0.950871220649
+Call 3930: Overlap = 0.998004124109, Regularization = 0.011033744804, Objective = 0.001995875891, Norm = 0.950865714723
+Call 3940: Overlap = 0.998004124521, Regularization = 0.011034140398, Objective = 0.001995875479, Norm = 0.950848485611
+Call 3950: Overlap = 0.998004126312, Regularization = 0.011033590346, Objective = 0.001995873688, Norm = 0.950872503874
+Call 3960: Overlap = 0.998004126821, Regularization = 0.011033167459, Objective = 0.001995873179, Norm = 0.950891026256
+Call 3970: Overlap = 0.998004126882, Regularization = 0.011033230247, Objective = 0.001995873118, Norm = 0.950888167220
+Call 3980: Overlap = 0.998004127455, Regularization = 0.011032338816, Objective = 0.001995872545, Norm = 0.950926930446
+Call 3990: Overlap = 0.998004127639, Regularization = 0.011032618043, Objective = 0.001995872361, Norm = 0.950914850476
+Final overlap for s = 0.35: 0.998004127812
+Final energy of QCMPS ansatz for s = 0.35: -2.215215367577, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.400 with regularization
+Overlap before regularization for s = 0.40: 0.997393350541
+Energy of QCMPS ansatz before regularization for s = 0.40: -2.215215367577, Energy of HF ansatz: -2.215215410025
+Call 4000: Overlap = 0.997393359425, Regularization = 0.009825748740, Objective = 0.002606794102, Norm = 1.008154564664
+Call 4010: Overlap = 0.997393359936, Regularization = 0.009832486851, Objective = 0.002606793696, Norm = 1.007807470532
+Call 4020: Overlap = 0.997393363009, Regularization = 0.009831154860, Objective = 0.002606790603, Norm = 1.007884302263
+Call 4030: Overlap = 0.997393363329, Regularization = 0.009841278977, Objective = 0.002606790441, Norm = 1.007361187047
+Call 4040: Overlap = 0.997393363769, Regularization = 0.009833665947, Objective = 0.002606789883, Norm = 1.007758370961
+Call 4050: Overlap = 0.997393365082, Regularization = 0.009827540441, Objective = 0.002606788473, Norm = 1.008078263181
+Call 4060: Overlap = 0.997393367726, Regularization = 0.009824878483, Objective = 0.002606785788, Norm = 1.008219719372
+Call 4070: Overlap = 0.997393369670, Regularization = 0.009840061044, Objective = 0.002606784081, Norm = 1.007433135997
+Call 4080: Overlap = 0.997393371961, Regularization = 0.009816269586, Objective = 0.002606781418, Norm = 1.008669088226
+Call 4090: Overlap = 0.997393372381, Regularization = 0.009803772520, Objective = 0.002606780803, Norm = 1.009319882879
+Call 4100: Overlap = 0.997393372563, Regularization = 0.009778113919, Objective = 0.002606780220, Norm = 1.010660010444
+Call 4110: Overlap = 0.997393372920, Regularization = 0.009772739261, Objective = 0.002606779780, Norm = 1.010944505459
+Call 4120: Overlap = 0.997393372921, Regularization = 0.009705535898, Objective = 0.002606778728, Norm = 1.014476094764
+Call 4130: Overlap = 0.997393372921, Regularization = 0.009694643404, Objective = 0.002606778558, Norm = 1.015051722348
+Call 4140: Overlap = 0.997393372921, Regularization = 0.009694643404, Objective = 0.002606778558, Norm = 1.015051722348
+Overlap after regularization for s = 0.40: 0.997393372921
+Energy of QCMPS ansatz after regularization for s = 0.40: -2.215215372897, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.400 without regularization
+Call 4150: Overlap = 0.997393375087, Regularization = 0.009654450860, Objective = 0.002606624913, Norm = 1.017180378484
+Call 4160: Overlap = 0.997393375499, Regularization = 0.009657188775, Objective = 0.002606624501, Norm = 1.017035213499
+Call 4170: Overlap = 0.997393376398, Regularization = 0.009656587386, Objective = 0.002606623602, Norm = 1.017067382668
+Call 4180: Overlap = 0.997393377120, Regularization = 0.009656480022, Objective = 0.002606622880, Norm = 1.017073472609
+Call 4190: Overlap = 0.997393377120, Regularization = 0.009656480022, Objective = 0.002606622880, Norm = 1.017073472609
+Call 4200: Overlap = 0.997393377120, Regularization = 0.009656480022, Objective = 0.002606622880, Norm = 1.017073472609
+Call 4210: Overlap = 0.997393377120, Regularization = 0.009656480022, Objective = 0.002606622880, Norm = 1.017073472609
+Call 4220: Overlap = 0.997393377679, Regularization = 0.009658686389, Objective = 0.002606622321, Norm = 1.016956194167
+Call 4230: Overlap = 0.997393379032, Regularization = 0.009659235535, Objective = 0.002606620968, Norm = 1.016926813414
+Call 4240: Overlap = 0.997393379616, Regularization = 0.009660623122, Objective = 0.002606620384, Norm = 1.016853202031
+Call 4250: Overlap = 0.997393379826, Regularization = 0.009663635821, Objective = 0.002606620174, Norm = 1.016692723977
+Call 4260: Overlap = 0.997393380222, Regularization = 0.009662739209, Objective = 0.002606619778, Norm = 1.016740578488
+Call 4270: Overlap = 0.997393380284, Regularization = 0.009662749883, Objective = 0.002606619716, Norm = 1.016739962287
+Call 4280: Overlap = 0.997393380756, Regularization = 0.009662444401, Objective = 0.002606619244, Norm = 1.016756311817
+Call 4290: Overlap = 0.997393384592, Regularization = 0.009663620814, Objective = 0.002606615408, Norm = 1.016693884447
+Call 4300: Overlap = 0.997393384592, Regularization = 0.009663620814, Objective = 0.002606615408, Norm = 1.016693884447
+Call 4310: Overlap = 0.997393384694, Regularization = 0.009663248972, Objective = 0.002606615306, Norm = 1.016713789605
+Call 4320: Overlap = 0.997393384854, Regularization = 0.009663048930, Objective = 0.002606615146, Norm = 1.016724330829
+Call 4330: Overlap = 0.997393384930, Regularization = 0.009664097692, Objective = 0.002606615070, Norm = 1.016668847604
+Call 4340: Overlap = 0.997393385281, Regularization = 0.009665373436, Objective = 0.002606614719, Norm = 1.016601325358
+Call 4350: Overlap = 0.997393386123, Regularization = 0.009665707220, Objective = 0.002606613877, Norm = 1.016583047939
+Call 4360: Overlap = 0.997393387295, Regularization = 0.009667606800, Objective = 0.002606612705, Norm = 1.016482211657
+Call 4370: Overlap = 0.997393387295, Regularization = 0.009667606800, Objective = 0.002606612705, Norm = 1.016482211657
+Call 4380: Overlap = 0.997393387295, Regularization = 0.009667606800, Objective = 0.002606612705, Norm = 1.016482211657
+Call 4390: Overlap = 0.997393387295, Regularization = 0.009667606800, Objective = 0.002606612705, Norm = 1.016482211657
+Call 4400: Overlap = 0.997393391551, Regularization = 0.009669384223, Objective = 0.002606608449, Norm = 1.016387858974
+Call 4410: Overlap = 0.997393393425, Regularization = 0.009669373488, Objective = 0.002606606575, Norm = 1.016388673157
+Call 4420: Overlap = 0.997393393425, Regularization = 0.009669373488, Objective = 0.002606606575, Norm = 1.016388673157
+Call 4430: Overlap = 0.997393395777, Regularization = 0.009668918999, Objective = 0.002606604223, Norm = 1.016412865739
+Call 4440: Overlap = 0.997393395777, Regularization = 0.009668918999, Objective = 0.002606604223, Norm = 1.016412865739
+Call 4450: Overlap = 0.997393395777, Regularization = 0.009668918999, Objective = 0.002606604223, Norm = 1.016412865739
+Call 4460: Overlap = 0.997393396874, Regularization = 0.009669311053, Objective = 0.002606603126, Norm = 1.016392212820
+Call 4470: Overlap = 0.997393397104, Regularization = 0.009668603730, Objective = 0.002606602896, Norm = 1.016429641374
+Call 4480: Overlap = 0.997393397764, Regularization = 0.009670569450, Objective = 0.002606602236, Norm = 1.016325683948
+Call 4490: Overlap = 0.997393398210, Regularization = 0.009670641431, Objective = 0.002606601790, Norm = 1.016321734792
+Call 4500: Overlap = 0.997393398742, Regularization = 0.009670586690, Objective = 0.002606601258, Norm = 1.016324542027
+Call 4510: Overlap = 0.997393398742, Regularization = 0.009670586690, Objective = 0.002606601258, Norm = 1.016324542027
+Call 4520: Overlap = 0.997393398742, Regularization = 0.009670586690, Objective = 0.002606601258, Norm = 1.016324542027
+Call 4530: Overlap = 0.997393398742, Regularization = 0.009670586690, Objective = 0.002606601258, Norm = 1.016324542027
+Call 4540: Overlap = 0.997393398742, Regularization = 0.009670586690, Objective = 0.002606601258, Norm = 1.016324542027
+Final overlap for s = 0.40: 0.997393398742
+Final energy of QCMPS ansatz for s = 0.40: -2.215215378695, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.450 with regularization
+Overlap before regularization for s = 0.45: 0.996701270554
+Energy of QCMPS ansatz before regularization for s = 0.45: -2.215215378695, Energy of HF ansatz: -2.215215410025
+Call 4550: Overlap = 0.996701272158, Regularization = 0.008871094697, Objective = 0.003298797148, Norm = 1.061574476161
+Call 4560: Overlap = 0.996701279256, Regularization = 0.008879268890, Objective = 0.003298790113, Norm = 1.061085928036
+Call 4570: Overlap = 0.996701281294, Regularization = 0.008885881074, Objective = 0.003298788126, Norm = 1.060692144755
+Call 4580: Overlap = 0.996701281294, Regularization = 0.008885881074, Objective = 0.003298788126, Norm = 1.060692144755
+Call 4590: Overlap = 0.996701281294, Regularization = 0.008885881074, Objective = 0.003298788126, Norm = 1.060692144755
+Call 4600: Overlap = 0.996701281294, Regularization = 0.008885881074, Objective = 0.003298788126, Norm = 1.060692144755
+Call 4610: Overlap = 0.996701282412, Regularization = 0.008886331908, Objective = 0.003298787013, Norm = 1.060671352001
+Call 4620: Overlap = 0.996701283998, Regularization = 0.008882215925, Objective = 0.003298785394, Norm = 1.060923819513
+Call 4630: Overlap = 0.996701285385, Regularization = 0.008886014431, Objective = 0.003298784037, Norm = 1.060693652846
+Call 4640: Overlap = 0.996701287231, Regularization = 0.008890974866, Objective = 0.003298782230, Norm = 1.060401406807
+Call 4650: Overlap = 0.996701287367, Regularization = 0.008879186299, Objective = 0.003298782001, Norm = 1.061115421058
+Call 4660: Overlap = 0.996701287464, Regularization = 0.008867220732, Objective = 0.003298781811, Norm = 1.061841714528
+Call 4670: Overlap = 0.996701287697, Regularization = 0.008837649734, Objective = 0.003298781347, Norm = 1.063646039781
+Call 4680: Overlap = 0.996701287695, Regularization = 0.008776571863, Objective = 0.003298780872, Norm = 1.067381623491
+Call 4690: Overlap = 0.996701287695, Regularization = 0.008776571863, Objective = 0.003298780872, Norm = 1.067381623491
+Call 4700: Overlap = 0.996701287695, Regularization = 0.008776571863, Objective = 0.003298780872, Norm = 1.067381623491
+Overlap after regularization for s = 0.45: 0.996701287695
+Energy of QCMPS ansatz after regularization for s = 0.45: -2.215215382759, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.450 without regularization
+Call 4710: Overlap = 0.996701289490, Regularization = 0.008736612368, Objective = 0.003298710510, Norm = 1.069843225178
+Call 4720: Overlap = 0.996701289593, Regularization = 0.008737102880, Objective = 0.003298710407, Norm = 1.069813143006
+Call 4730: Overlap = 0.996701289607, Regularization = 0.008737583603, Objective = 0.003298710393, Norm = 1.069783633654
+Call 4740: Overlap = 0.996701289634, Regularization = 0.008737600076, Objective = 0.003298710366, Norm = 1.069782619226
+Call 4750: Overlap = 0.996701289658, Regularization = 0.008737408002, Objective = 0.003298710342, Norm = 1.069794434315
+Call 4760: Overlap = 0.996701289658, Regularization = 0.008737408002, Objective = 0.003298710342, Norm = 1.069794434315
+Call 4770: Overlap = 0.996701289758, Regularization = 0.008736546784, Objective = 0.003298710242, Norm = 1.069847651443
+Call 4780: Overlap = 0.996701290714, Regularization = 0.008739952564, Objective = 0.003298709286, Norm = 1.069637722499
+Call 4790: Overlap = 0.996701290761, Regularization = 0.008740266451, Objective = 0.003298709239, Norm = 1.069618492757
+Call 4800: Overlap = 0.996701291270, Regularization = 0.008741411428, Objective = 0.003298708730, Norm = 1.069547512348
+Call 4810: Overlap = 0.996701291329, Regularization = 0.008743124530, Objective = 0.003298708671, Norm = 1.069441875688
+Call 4820: Overlap = 0.996701291342, Regularization = 0.008742563907, Objective = 0.003298708658, Norm = 1.069477124551
+Call 4830: Overlap = 0.996701291418, Regularization = 0.008743314699, Objective = 0.003298708582, Norm = 1.069430326028
+Call 4840: Overlap = 0.996701295185, Regularization = 0.008741556426, Objective = 0.003298704815, Norm = 1.069538987116
+Call 4850: Overlap = 0.996701295185, Regularization = 0.008741556426, Objective = 0.003298704815, Norm = 1.069538987116
+Call 4860: Overlap = 0.996701296519, Regularization = 0.008740616600, Objective = 0.003298703481, Norm = 1.069596802432
+Call 4870: Overlap = 0.996701296997, Regularization = 0.008740505239, Objective = 0.003298703003, Norm = 1.069603679135
+Call 4880: Overlap = 0.996701296997, Regularization = 0.008740505239, Objective = 0.003298703003, Norm = 1.069603679135
+Call 4890: Overlap = 0.996701297132, Regularization = 0.008740431186, Objective = 0.003298702868, Norm = 1.069608149486
+Call 4900: Overlap = 0.996701297472, Regularization = 0.008739583762, Objective = 0.003298702528, Norm = 1.069660918999
+Call 4910: Overlap = 0.996701297576, Regularization = 0.008739418614, Objective = 0.003298702424, Norm = 1.069671618820
+Call 4920: Overlap = 0.996701299292, Regularization = 0.008740855832, Objective = 0.003298700708, Norm = 1.069582165987
+Call 4930: Overlap = 0.996701300047, Regularization = 0.008741473754, Objective = 0.003298699953, Norm = 1.069544165337
+Call 4940: Overlap = 0.996701300570, Regularization = 0.008740710771, Objective = 0.003298699430, Norm = 1.069591124312
+Call 4950: Overlap = 0.996701300570, Regularization = 0.008740710771, Objective = 0.003298699430, Norm = 1.069591124312
+Call 4960: Overlap = 0.996701302823, Regularization = 0.008741241681, Objective = 0.003298697177, Norm = 1.069558369984
+Call 4970: Overlap = 0.996701302866, Regularization = 0.008740813298, Objective = 0.003298697134, Norm = 1.069585037761
+Call 4980: Overlap = 0.996701303624, Regularization = 0.008739725183, Objective = 0.003298696376, Norm = 1.069652368170
+Call 4990: Overlap = 0.996701303624, Regularization = 0.008739725183, Objective = 0.003298696376, Norm = 1.069652368170
+Call 5000: Overlap = 0.996701303624, Regularization = 0.008739725183, Objective = 0.003298696376, Norm = 1.069652368170
+Call 5010: Overlap = 0.996701303666, Regularization = 0.008739990372, Objective = 0.003298696334, Norm = 1.069636174470
+Call 5020: Overlap = 0.996701304019, Regularization = 0.008739095349, Objective = 0.003298695981, Norm = 1.069691793043
+Call 5030: Overlap = 0.996701304956, Regularization = 0.008738597718, Objective = 0.003298695044, Norm = 1.069722681528
+Call 5040: Overlap = 0.996701305280, Regularization = 0.008738562464, Objective = 0.003298694720, Norm = 1.069725302456
+Call 5050: Overlap = 0.996701310926, Regularization = 0.008738637982, Objective = 0.003298689074, Norm = 1.069720421583
+Call 5060: Overlap = 0.996701310926, Regularization = 0.008738637982, Objective = 0.003298689074, Norm = 1.069720421583
+Call 5070: Overlap = 0.996701310926, Regularization = 0.008738637982, Objective = 0.003298689074, Norm = 1.069720421583
+Call 5080: Overlap = 0.996701310978, Regularization = 0.008739503931, Objective = 0.003298689022, Norm = 1.069666898604
+Call 5090: Overlap = 0.996701313599, Regularization = 0.008740639947, Objective = 0.003298686401, Norm = 1.069596843792
+Call 5100: Overlap = 0.996701313599, Regularization = 0.008740639947, Objective = 0.003298686401, Norm = 1.069596843792
+Final overlap for s = 0.45: 0.996701313639
+Final energy of QCMPS ansatz for s = 0.45: -2.215215385657, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.500 with regularization
+Overlap before regularization for s = 0.50: 0.995927917975
+Energy of QCMPS ansatz before regularization for s = 0.50: -2.215215385657, Energy of HF ansatz: -2.215215410025
+Call 5110: Overlap = 0.995927920114, Regularization = 0.008103727800, Objective = 0.004072111541, Norm = 1.111286378526
+Call 5120: Overlap = 0.995927920114, Regularization = 0.008103727800, Objective = 0.004072111541, Norm = 1.111286378526
+Call 5130: Overlap = 0.995927923091, Regularization = 0.008107069858, Objective = 0.004072108577, Norm = 1.111063449100
+Call 5140: Overlap = 0.995927923231, Regularization = 0.008106143002, Objective = 0.004072108434, Norm = 1.111130887893
+Call 5150: Overlap = 0.995927923231, Regularization = 0.008106143002, Objective = 0.004072108434, Norm = 1.111130887893
+Call 5160: Overlap = 0.995927923231, Regularization = 0.008106143002, Objective = 0.004072108434, Norm = 1.111130887893
+Call 5170: Overlap = 0.995927923231, Regularization = 0.008106143002, Objective = 0.004072108434, Norm = 1.111130887893
+Call 5180: Overlap = 0.995927924626, Regularization = 0.008118829240, Objective = 0.004072107088, Norm = 1.110253904985
+Call 5190: Overlap = 0.995927924626, Regularization = 0.008118829240, Objective = 0.004072107088, Norm = 1.110253904985
+Call 5200: Overlap = 0.995927924626, Regularization = 0.008118829240, Objective = 0.004072107088, Norm = 1.110253904985
+Call 5210: Overlap = 0.995927924963, Regularization = 0.008108962507, Objective = 0.004072106712, Norm = 1.110950832731
+Call 5220: Overlap = 0.995927925007, Regularization = 0.008097442608, Objective = 0.004072106624, Norm = 1.111753585685
+Call 5230: Overlap = 0.995927925026, Regularization = 0.008065938378, Objective = 0.004072106482, Norm = 1.113950476180
+Call 5240: Overlap = 0.995927925025, Regularization = 0.008028089559, Objective = 0.004072106334, Norm = 1.116609751160
+Call 5250: Overlap = 0.995927925025, Regularization = 0.008028089559, Objective = 0.004072106334, Norm = 1.116609751160
+Overlap after regularization for s = 0.50: 0.995927925025
+Energy of QCMPS ansatz after regularization for s = 0.50: -2.215215388724, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.500 without regularization
+Call 5260: Overlap = 0.995927925260, Regularization = 0.007999163495, Objective = 0.004072074740, Norm = 1.118646925702
+Call 5270: Overlap = 0.995927925808, Regularization = 0.008000174452, Objective = 0.004072074192, Norm = 1.118575855835
+Call 5280: Overlap = 0.995927925990, Regularization = 0.007999899636, Objective = 0.004072074010, Norm = 1.118595354127
+Call 5290: Overlap = 0.995927926079, Regularization = 0.007999584426, Objective = 0.004072073921, Norm = 1.118617980454
+Call 5300: Overlap = 0.995927926297, Regularization = 0.007999242251, Objective = 0.004072073703, Norm = 1.118641923299
+Call 5310: Overlap = 0.995927926303, Regularization = 0.007998828256, Objective = 0.004072073697, Norm = 1.118671413873
+Call 5320: Overlap = 0.995927926303, Regularization = 0.007998828256, Objective = 0.004072073697, Norm = 1.118671413873
+Call 5330: Overlap = 0.995927926496, Regularization = 0.007999258476, Objective = 0.004072073504, Norm = 1.118641635207
+Call 5340: Overlap = 0.995927926714, Regularization = 0.007999372707, Objective = 0.004072073286, Norm = 1.118633200792
+Call 5350: Overlap = 0.995927927074, Regularization = 0.007999311162, Objective = 0.004072072926, Norm = 1.118638115486
+Call 5360: Overlap = 0.995927927222, Regularization = 0.008000735010, Objective = 0.004072072778, Norm = 1.118537343617
+Call 5370: Overlap = 0.995927927317, Regularization = 0.008002848857, Objective = 0.004072072683, Norm = 1.118388132962
+Call 5380: Overlap = 0.995927927467, Regularization = 0.008003462308, Objective = 0.004072072533, Norm = 1.118344353678
+Call 5390: Overlap = 0.995927928695, Regularization = 0.008005599267, Objective = 0.004072071305, Norm = 1.118193727256
+Call 5400: Overlap = 0.995927928695, Regularization = 0.008005599267, Objective = 0.004072071305, Norm = 1.118193727256
+Call 5410: Overlap = 0.995927928695, Regularization = 0.008005599267, Objective = 0.004072071305, Norm = 1.118193727256
+Call 5420: Overlap = 0.995927929891, Regularization = 0.008005213014, Objective = 0.004072070109, Norm = 1.118220988905
+Call 5430: Overlap = 0.995927931716, Regularization = 0.008005217968, Objective = 0.004072068284, Norm = 1.118220656570
+Call 5440: Overlap = 0.995927931716, Regularization = 0.008005217968, Objective = 0.004072068284, Norm = 1.118220656570
+Call 5450: Overlap = 0.995927931716, Regularization = 0.008005217968, Objective = 0.004072068284, Norm = 1.118220656570
+Call 5460: Overlap = 0.995927931769, Regularization = 0.008004917839, Objective = 0.004072068231, Norm = 1.118241750997
+Call 5470: Overlap = 0.995927931940, Regularization = 0.008003756316, Objective = 0.004072068060, Norm = 1.118323926008
+Call 5480: Overlap = 0.995927932548, Regularization = 0.008003729858, Objective = 0.004072067452, Norm = 1.118325506113
+Call 5490: Overlap = 0.995927932548, Regularization = 0.008003729858, Objective = 0.004072067452, Norm = 1.118325506113
+Call 5500: Overlap = 0.995927932548, Regularization = 0.008003729858, Objective = 0.004072067452, Norm = 1.118325506113
+Call 5510: Overlap = 0.995927932548, Regularization = 0.008003729858, Objective = 0.004072067452, Norm = 1.118325506113
+Call 5520: Overlap = 0.995927934735, Regularization = 0.008004152754, Objective = 0.004072065265, Norm = 1.118295885881
+Call 5530: Overlap = 0.995927936204, Regularization = 0.008003673708, Objective = 0.004072063796, Norm = 1.118329545430
+Call 5540: Overlap = 0.995927936204, Regularization = 0.008003673708, Objective = 0.004072063796, Norm = 1.118329545430
+Call 5550: Overlap = 0.995927936204, Regularization = 0.008003673708, Objective = 0.004072063796, Norm = 1.118329545430
+Call 5560: Overlap = 0.995927936204, Regularization = 0.008003673708, Objective = 0.004072063796, Norm = 1.118329545430
+Call 5570: Overlap = 0.995927936204, Regularization = 0.008003673708, Objective = 0.004072063796, Norm = 1.118329545430
+Call 5580: Overlap = 0.995927937924, Regularization = 0.008003467293, Objective = 0.004072062076, Norm = 1.118344098584
+Call 5590: Overlap = 0.995927939391, Regularization = 0.008003238067, Objective = 0.004072060609, Norm = 1.118360238779
+Call 5600: Overlap = 0.995927941995, Regularization = 0.008003226384, Objective = 0.004072058005, Norm = 1.118361008212
+Call 5610: Overlap = 0.995927942314, Regularization = 0.008003088689, Objective = 0.004072057686, Norm = 1.118370743259
+Call 5620: Overlap = 0.995927945343, Regularization = 0.008003056394, Objective = 0.004072054657, Norm = 1.118372979400
+Call 5630: Overlap = 0.995927947134, Regularization = 0.008002863159, Objective = 0.004072052866, Norm = 1.118386579764
+Call 5640: Overlap = 0.995927947914, Regularization = 0.008002877416, Objective = 0.004072052086, Norm = 1.118385472405
+Call 5650: Overlap = 0.995927948016, Regularization = 0.008002867138, Objective = 0.004072051984, Norm = 1.118386212953
+Call 5660: Overlap = 0.995927949581, Regularization = 0.008002798016, Objective = 0.004072050419, Norm = 1.118391112823
+Call 5670: Overlap = 0.995927950404, Regularization = 0.008002691008, Objective = 0.004072049596, Norm = 1.118398657219
+Final overlap for s = 0.50: 0.995927950404
+Final energy of QCMPS ansatz for s = 0.50: -2.215215391680, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.550 with regularization
+Overlap before regularization for s = 0.55: 0.995073391306
+Energy of QCMPS ansatz before regularization for s = 0.55: -2.215215391680, Energy of HF ansatz: -2.215215410025
+Call 5680: Overlap = 0.995073396387, Regularization = 0.007449184261, Objective = 0.004926618162, Norm = 1.159716375286
+Call 5690: Overlap = 0.995073396387, Regularization = 0.007449184261, Objective = 0.004926618162, Norm = 1.159716375286
+Call 5700: Overlap = 0.995073396387, Regularization = 0.007449184261, Objective = 0.004926618162, Norm = 1.159716375286
+Call 5710: Overlap = 0.995073396568, Regularization = 0.007451009568, Objective = 0.004926617985, Norm = 1.159572628355
+Call 5720: Overlap = 0.995073396568, Regularization = 0.007451009568, Objective = 0.004926617985, Norm = 1.159572628355
+Call 5730: Overlap = 0.995073396602, Regularization = 0.007453445667, Objective = 0.004926617956, Norm = 1.159379877211
+Call 5740: Overlap = 0.995073397494, Regularization = 0.007441630890, Objective = 0.004926617041, Norm = 1.160313764758
+Call 5750: Overlap = 0.995073397834, Regularization = 0.007449914079, Objective = 0.004926616716, Norm = 1.159662893624
+Call 5760: Overlap = 0.995073397834, Regularization = 0.007449914079, Objective = 0.004926616716, Norm = 1.159662893624
+Call 5770: Overlap = 0.995073397978, Regularization = 0.007445037836, Objective = 0.004926616564, Norm = 1.160054882710
+Call 5780: Overlap = 0.995073398057, Regularization = 0.007430240117, Objective = 0.004926616456, Norm = 1.161233576357
+Call 5790: Overlap = 0.995073398213, Regularization = 0.007422279868, Objective = 0.004926616284, Norm = 1.161875143766
+Call 5800: Overlap = 0.995073398212, Regularization = 0.007367710635, Objective = 0.004926616178, Norm = 1.166236309968
+Call 5810: Overlap = 0.995073398212, Regularization = 0.007359092275, Objective = 0.004926616161, Norm = 1.166929618611
+Call 5820: Overlap = 0.995073398212, Regularization = 0.007359092275, Objective = 0.004926616161, Norm = 1.166929618611
+Overlap after regularization for s = 0.55: 0.995073398212
+Energy of QCMPS ansatz after regularization for s = 0.55: -2.215215392458, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.550 without regularization
+Call 5830: Overlap = 0.995073398717, Regularization = 0.007323585980, Objective = 0.004926601283, Norm = 1.169789022697
+Call 5840: Overlap = 0.995073398723, Regularization = 0.007323941642, Objective = 0.004926601277, Norm = 1.169760596549
+Call 5850: Overlap = 0.995073398838, Regularization = 0.007323688090, Objective = 0.004926601162, Norm = 1.169781325398
+Call 5860: Overlap = 0.995073398838, Regularization = 0.007323688090, Objective = 0.004926601162, Norm = 1.169781325398
+Call 5870: Overlap = 0.995073398838, Regularization = 0.007323688090, Objective = 0.004926601162, Norm = 1.169781325398
+Call 5880: Overlap = 0.995073398838, Regularization = 0.007323688090, Objective = 0.004926601162, Norm = 1.169781325398
+Call 5890: Overlap = 0.995073398921, Regularization = 0.007322720498, Objective = 0.004926601079, Norm = 1.169859170237
+Call 5900: Overlap = 0.995073398921, Regularization = 0.007322720498, Objective = 0.004926601079, Norm = 1.169859170237
+Call 5910: Overlap = 0.995073398957, Regularization = 0.007323555389, Objective = 0.004926601043, Norm = 1.169791611346
+Call 5920: Overlap = 0.995073399186, Regularization = 0.007324836229, Objective = 0.004926600814, Norm = 1.169687772585
+Call 5930: Overlap = 0.995073399211, Regularization = 0.007325659749, Objective = 0.004926600789, Norm = 1.169620702501
+Call 5940: Overlap = 0.995073399333, Regularization = 0.007326420266, Objective = 0.004926600667, Norm = 1.169559962222
+Call 5950: Overlap = 0.995073399352, Regularization = 0.007327395988, Objective = 0.004926600648, Norm = 1.169481007083
+Call 5960: Overlap = 0.995073399352, Regularization = 0.007327395988, Objective = 0.004926600648, Norm = 1.169481007083
+Call 5970: Overlap = 0.995073399352, Regularization = 0.007327395988, Objective = 0.004926600648, Norm = 1.169481007083
+Call 5980: Overlap = 0.995073399352, Regularization = 0.007327395988, Objective = 0.004926600648, Norm = 1.169481007083
+Call 5990: Overlap = 0.995073399979, Regularization = 0.007327879625, Objective = 0.004926600021, Norm = 1.169441987537
+Call 6000: Overlap = 0.995073400953, Regularization = 0.007327491898, Objective = 0.004926599047, Norm = 1.169473518257
+Call 6010: Overlap = 0.995073401085, Regularization = 0.007327292624, Objective = 0.004926598915, Norm = 1.169489844417
+Call 6020: Overlap = 0.995073401095, Regularization = 0.007327185034, Objective = 0.004926598905, Norm = 1.169498662782
+Call 6030: Overlap = 0.995073401157, Regularization = 0.007327194946, Objective = 0.004926598843, Norm = 1.169497670491
+Call 6040: Overlap = 0.995073401358, Regularization = 0.007328504602, Objective = 0.004926598642, Norm = 1.169391651039
+Call 6050: Overlap = 0.995073402055, Regularization = 0.007328362418, Objective = 0.004926597945, Norm = 1.169402935144
+Call 6060: Overlap = 0.995073402344, Regularization = 0.007329294090, Objective = 0.004926597656, Norm = 1.169327433967
+Call 6070: Overlap = 0.995073402520, Regularization = 0.007330206513, Objective = 0.004926597480, Norm = 1.169253574676
+Call 6080: Overlap = 0.995073402537, Regularization = 0.007330157432, Objective = 0.004926597463, Norm = 1.169257589998
+Call 6090: Overlap = 0.995073403175, Regularization = 0.007331536182, Objective = 0.004926596825, Norm = 1.169146628793
+Call 6100: Overlap = 0.995073403175, Regularization = 0.007331536182, Objective = 0.004926596825, Norm = 1.169146628793
+Call 6110: Overlap = 0.995073403277, Regularization = 0.007330599237, Objective = 0.004926596723, Norm = 1.169222364934
+Call 6120: Overlap = 0.995073403277, Regularization = 0.007330599237, Objective = 0.004926596723, Norm = 1.169222364934
+Call 6130: Overlap = 0.995073403517, Regularization = 0.007330925069, Objective = 0.004926596483, Norm = 1.169196111513
+Call 6140: Overlap = 0.995073403517, Regularization = 0.007330925069, Objective = 0.004926596483, Norm = 1.169196111513
+Call 6150: Overlap = 0.995073404002, Regularization = 0.007330712481, Objective = 0.004926595998, Norm = 1.169213308269
+Call 6160: Overlap = 0.995073404339, Regularization = 0.007330497364, Objective = 0.004926595661, Norm = 1.169230947290
+Call 6170: Overlap = 0.995073404370, Regularization = 0.007330457619, Objective = 0.004926595630, Norm = 1.169234320537
+Call 6180: Overlap = 0.995073404370, Regularization = 0.007330457619, Objective = 0.004926595630, Norm = 1.169234320537
+Call 6190: Overlap = 0.995073404458, Regularization = 0.007330518079, Objective = 0.004926595542, Norm = 1.169229442572
+Call 6200: Overlap = 0.995073404458, Regularization = 0.007330518079, Objective = 0.004926595542, Norm = 1.169229442572
+Call 6210: Overlap = 0.995073404468, Regularization = 0.007330393420, Objective = 0.004926595532, Norm = 1.169239515058
+Call 6220: Overlap = 0.995073404639, Regularization = 0.007330556761, Objective = 0.004926595361, Norm = 1.169226244498
+Final overlap for s = 0.55: 0.995073404790
+Final energy of QCMPS ansatz for s = 0.55: -2.215215392653, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.600 with regularization
+Overlap before regularization for s = 0.60: 0.994137805952
+Energy of QCMPS ansatz before regularization for s = 0.60: -2.215215392653, Energy of HF ansatz: -2.215215410025
+Call 6230: Overlap = 0.994137806826, Regularization = 0.006901878242, Objective = 0.005862199915, Norm = 1.205488056995
+Call 6240: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6250: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6260: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6270: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6280: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6290: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6300: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6310: Overlap = 0.994137809483, Regularization = 0.006903226184, Objective = 0.005862197258, Norm = 1.205370687360
+Call 6320: Overlap = 0.994137809490, Regularization = 0.006906818768, Objective = 0.005862197255, Norm = 1.205051757094
+Call 6330: Overlap = 0.994137809490, Regularization = 0.006906818768, Objective = 0.005862197255, Norm = 1.205051757094
+Call 6340: Overlap = 0.994137809490, Regularization = 0.006906818768, Objective = 0.005862197255, Norm = 1.205051757094
+Call 6350: Overlap = 0.994137809607, Regularization = 0.006885461997, Objective = 0.005862197117, Norm = 1.206960661034
+Call 6360: Overlap = 0.994137809607, Regularization = 0.006836047818, Objective = 0.005862197069, Norm = 1.211395622059
+Call 6370: Overlap = 0.994137809607, Regularization = 0.006836047818, Objective = 0.005862197069, Norm = 1.211395622059
+Call 6380: Overlap = 0.994137809607, Regularization = 0.006836047818, Objective = 0.005862197069, Norm = 1.211395622059
+Overlap after regularization for s = 0.60: 0.994137809607
+Energy of QCMPS ansatz after regularization for s = 0.60: -2.215215393137, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.600 without regularization
+Call 6390: Overlap = 0.994137810029, Regularization = 0.006808367119, Objective = 0.005862189971, Norm = 1.213886071257
+Call 6400: Overlap = 0.994137810181, Regularization = 0.006808853245, Objective = 0.005862189819, Norm = 1.213841808982
+Call 6410: Overlap = 0.994137810233, Regularization = 0.006809318987, Objective = 0.005862189767, Norm = 1.213800079208
+Call 6420: Overlap = 0.994137810308, Regularization = 0.006809324368, Objective = 0.005862189692, Norm = 1.213799599073
+Call 6430: Overlap = 0.994137810450, Regularization = 0.006809717603, Objective = 0.005862189550, Norm = 1.213764021247
+Call 6440: Overlap = 0.994137810524, Regularization = 0.006810039894, Objective = 0.005862189476, Norm = 1.213735026654
+Call 6450: Overlap = 0.994137810610, Regularization = 0.006810446826, Objective = 0.005862189390, Norm = 1.213698032081
+Call 6460: Overlap = 0.994137810649, Regularization = 0.006811194840, Objective = 0.005862189351, Norm = 1.213630159212
+Call 6470: Overlap = 0.994137810672, Regularization = 0.006811533713, Objective = 0.005862189328, Norm = 1.213599454889
+Call 6480: Overlap = 0.994137810905, Regularization = 0.006812719208, Objective = 0.005862189095, Norm = 1.213492082301
+Call 6490: Overlap = 0.994137810908, Regularization = 0.006812735991, Objective = 0.005862189092, Norm = 1.213490667004
+Call 6500: Overlap = 0.994137811500, Regularization = 0.006812775087, Objective = 0.005862188500, Norm = 1.213487454275
+Call 6510: Overlap = 0.994137811670, Regularization = 0.006813252250, Objective = 0.005862188330, Norm = 1.213444997187
+Call 6520: Overlap = 0.994137811670, Regularization = 0.006813252250, Objective = 0.005862188330, Norm = 1.213444997187
+Call 6530: Overlap = 0.994137811670, Regularization = 0.006813252250, Objective = 0.005862188330, Norm = 1.213444997187
+Call 6540: Overlap = 0.994137811690, Regularization = 0.006812936790, Objective = 0.005862188310, Norm = 1.213473674958
+Call 6550: Overlap = 0.994137812096, Regularization = 0.006812791345, Objective = 0.005862187904, Norm = 1.213486726143
+Call 6560: Overlap = 0.994137812783, Regularization = 0.006812814471, Objective = 0.005862187217, Norm = 1.213484850489
+Call 6570: Overlap = 0.994137812866, Regularization = 0.006812750726, Objective = 0.005862187134, Norm = 1.213490625744
+Call 6580: Overlap = 0.994137812866, Regularization = 0.006812750726, Objective = 0.005862187134, Norm = 1.213490625744
+Call 6590: Overlap = 0.994137812938, Regularization = 0.006812966912, Objective = 0.005862187062, Norm = 1.213471509617
+Call 6600: Overlap = 0.994137813059, Regularization = 0.006813120933, Objective = 0.005862186941, Norm = 1.213457752461
+Call 6610: Overlap = 0.994137813409, Regularization = 0.006812947144, Objective = 0.005862186591, Norm = 1.213473473649
+Call 6620: Overlap = 0.994137813417, Regularization = 0.006813248187, Objective = 0.005862186583, Norm = 1.213446131071
+Call 6630: Overlap = 0.994137813421, Regularization = 0.006813000398, Objective = 0.005862186579, Norm = 1.213468907936
+Call 6640: Overlap = 0.994137813500, Regularization = 0.006812019093, Objective = 0.005862186500, Norm = 1.213557964141
+Call 6650: Overlap = 0.994137813609, Regularization = 0.006812074985, Objective = 0.005862186391, Norm = 1.213553052686
+Call 6660: Overlap = 0.994137813609, Regularization = 0.006812074985, Objective = 0.005862186391, Norm = 1.213553052686
+Call 6670: Overlap = 0.994137813609, Regularization = 0.006812074985, Objective = 0.005862186391, Norm = 1.213553052686
+Call 6680: Overlap = 0.994137813609, Regularization = 0.006812074985, Objective = 0.005862186391, Norm = 1.213553052686
+Call 6690: Overlap = 0.994137813792, Regularization = 0.006811919960, Objective = 0.005862186208, Norm = 1.213566925243
+Call 6700: Overlap = 0.994137814882, Regularization = 0.006811241583, Objective = 0.005862185118, Norm = 1.213627437950
+Call 6710: Overlap = 0.994137814956, Regularization = 0.006811689196, Objective = 0.005862185044, Norm = 1.213586728681
+Call 6720: Overlap = 0.994137815029, Regularization = 0.006811234410, Objective = 0.005862184971, Norm = 1.213627733597
+Call 6730: Overlap = 0.994137815537, Regularization = 0.006811298720, Objective = 0.005862184463, Norm = 1.213621695004
+Call 6740: Overlap = 0.994137815537, Regularization = 0.006811298720, Objective = 0.005862184463, Norm = 1.213621695004
+Call 6750: Overlap = 0.994137815616, Regularization = 0.006811620309, Objective = 0.005862184384, Norm = 1.213592671305
+Call 6760: Overlap = 0.994137815616, Regularization = 0.006811620309, Objective = 0.005862184384, Norm = 1.213592671305
+Call 6770: Overlap = 0.994137815772, Regularization = 0.006811449469, Objective = 0.005862184228, Norm = 1.213608114066
+Call 6780: Overlap = 0.994137815785, Regularization = 0.006810449395, Objective = 0.005862184215, Norm = 1.213698959029
+Final overlap for s = 0.60: 0.994137815785
+Final energy of QCMPS ansatz for s = 0.60: -2.215215394357, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.650 with regularization
+Overlap before regularization for s = 0.65: 0.993121319683
+Energy of QCMPS ansatz before regularization for s = 0.65: -2.215215394357, Energy of HF ansatz: -2.215215410025
+Call 6790: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6800: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6810: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6820: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6830: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6840: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6850: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6860: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6870: Overlap = 0.993121321006, Regularization = 0.006395656289, Objective = 0.006878682117, Norm = 1.253040989108
+Call 6880: Overlap = 0.993121321175, Regularization = 0.006398710918, Objective = 0.006878681950, Norm = 1.252736454438
+Call 6890: Overlap = 0.993121321175, Regularization = 0.006398710918, Objective = 0.006878681950, Norm = 1.252736454438
+Call 6900: Overlap = 0.993121321278, Regularization = 0.006387318781, Objective = 0.006878681841, Norm = 1.253881442233
+Call 6910: Overlap = 0.993121321324, Regularization = 0.006365674545, Objective = 0.006878681784, Norm = 1.256067826071
+Call 6920: Overlap = 0.993121321324, Regularization = 0.006335249621, Objective = 0.006878681770, Norm = 1.259143473922
+Call 6930: Overlap = 0.993121321324, Regularization = 0.006335249621, Objective = 0.006878681770, Norm = 1.259143473922
+Overlap after regularization for s = 0.65: 0.993121321324
+Energy of QCMPS ansatz after regularization for s = 0.65: -2.215215393968, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.650 without regularization
+Call 6940: Overlap = 0.993121322296, Regularization = 0.006310510043, Objective = 0.006878677704, Norm = 1.261638918261
+Call 6950: Overlap = 0.993121322320, Regularization = 0.006311163785, Objective = 0.006878677680, Norm = 1.261573508912
+Call 6960: Overlap = 0.993121322330, Regularization = 0.006312176989, Objective = 0.006878677670, Norm = 1.261470671417
+Call 6970: Overlap = 0.993121322353, Regularization = 0.006312484427, Objective = 0.006878677647, Norm = 1.261439966279
+Call 6980: Overlap = 0.993121322356, Regularization = 0.006312384461, Objective = 0.006878677644, Norm = 1.261449957273
+Call 6990: Overlap = 0.993121322356, Regularization = 0.006312384461, Objective = 0.006878677644, Norm = 1.261449957273
+Call 7000: Overlap = 0.993121322409, Regularization = 0.006312325106, Objective = 0.006878677591, Norm = 1.261455759634
+Call 7010: Overlap = 0.993121322573, Regularization = 0.006314166637, Objective = 0.006878677427, Norm = 1.261269622841
+Call 7020: Overlap = 0.993121322573, Regularization = 0.006314166637, Objective = 0.006878677427, Norm = 1.261269622841
+Call 7030: Overlap = 0.993121322575, Regularization = 0.006314458838, Objective = 0.006878677425, Norm = 1.261239879671
+Call 7040: Overlap = 0.993121322629, Regularization = 0.006315565477, Objective = 0.006878677371, Norm = 1.261127408372
+Call 7050: Overlap = 0.993121322629, Regularization = 0.006315565477, Objective = 0.006878677371, Norm = 1.261127408372
+Call 7060: Overlap = 0.993121322931, Regularization = 0.006315236346, Objective = 0.006878677069, Norm = 1.261160910378
+Call 7070: Overlap = 0.993121322931, Regularization = 0.006315236346, Objective = 0.006878677069, Norm = 1.261160910378
+Call 7080: Overlap = 0.993121323106, Regularization = 0.006315659251, Objective = 0.006878676894, Norm = 1.261118582018
+Call 7090: Overlap = 0.993121323352, Regularization = 0.006315752115, Objective = 0.006878676648, Norm = 1.261109153172
+Call 7100: Overlap = 0.993121323393, Regularization = 0.006316159535, Objective = 0.006878676607, Norm = 1.261068128808
+Call 7110: Overlap = 0.993121323642, Regularization = 0.006315763577, Objective = 0.006878676358, Norm = 1.261107688007
+Call 7120: Overlap = 0.993121323768, Regularization = 0.006314549907, Objective = 0.006878676232, Norm = 1.261230215639
+Call 7130: Overlap = 0.993121323768, Regularization = 0.006314549907, Objective = 0.006878676232, Norm = 1.261230215639
+Call 7140: Overlap = 0.993121324439, Regularization = 0.006314216964, Objective = 0.006878675561, Norm = 1.261263972059
+Call 7150: Overlap = 0.993121324505, Regularization = 0.006314511474, Objective = 0.006878675495, Norm = 1.261234532336
+Call 7160: Overlap = 0.993121324540, Regularization = 0.006314303182, Objective = 0.006878675460, Norm = 1.261255589203
+Call 7170: Overlap = 0.993121324631, Regularization = 0.006314216564, Objective = 0.006878675369, Norm = 1.261264506121
+Call 7180: Overlap = 0.993121324631, Regularization = 0.006314216564, Objective = 0.006878675369, Norm = 1.261264506121
+Call 7190: Overlap = 0.993121324958, Regularization = 0.006314655811, Objective = 0.006878675042, Norm = 1.261219712678
+Call 7200: Overlap = 0.993121325105, Regularization = 0.006315340024, Objective = 0.006878674895, Norm = 1.261149687347
+Call 7210: Overlap = 0.993121325331, Regularization = 0.006315100642, Objective = 0.006878674669, Norm = 1.261174191151
+Call 7220: Overlap = 0.993121325331, Regularization = 0.006315100642, Objective = 0.006878674669, Norm = 1.261174191151
+Call 7230: Overlap = 0.993121326116, Regularization = 0.006314219327, Objective = 0.006878673884, Norm = 1.261262998149
+Call 7240: Overlap = 0.993121327698, Regularization = 0.006314819797, Objective = 0.006878672302, Norm = 1.261202510240
+Call 7250: Overlap = 0.993121327698, Regularization = 0.006314819797, Objective = 0.006878672302, Norm = 1.261202510240
+Call 7260: Overlap = 0.993121328012, Regularization = 0.006315346611, Objective = 0.006878671988, Norm = 1.261149724506
+Call 7270: Overlap = 0.993121328238, Regularization = 0.006315057589, Objective = 0.006878671762, Norm = 1.261178931863
+Call 7280: Overlap = 0.993121328305, Regularization = 0.006314964771, Objective = 0.006878671695, Norm = 1.261188132011
+Call 7290: Overlap = 0.993121328305, Regularization = 0.006314964771, Objective = 0.006878671695, Norm = 1.261188132011
+Call 7300: Overlap = 0.993121328480, Regularization = 0.006314639209, Objective = 0.006878671520, Norm = 1.261220933233
+Call 7310: Overlap = 0.993121328872, Regularization = 0.006315072872, Objective = 0.006878671128, Norm = 1.261177014556
+Call 7320: Overlap = 0.993121328872, Regularization = 0.006315072872, Objective = 0.006878671128, Norm = 1.261177014556
+Call 7330: Overlap = 0.993121329712, Regularization = 0.006314373188, Objective = 0.006878670288, Norm = 1.261247636078
+Final overlap for s = 0.65: 0.993121329830
+Final energy of QCMPS ansatz for s = 0.65: -2.215215395081, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.700 with regularization
+Overlap before regularization for s = 0.70: 0.992024097464
+Energy of QCMPS ansatz before regularization for s = 0.70: -2.215215395081, Energy of HF ansatz: -2.215215410025
+Call 7340: Overlap = 0.992024100554, Regularization = 0.005872487621, Objective = 0.007975900880, Norm = 1.308591143201
+Call 7350: Overlap = 0.992024101562, Regularization = 0.005872780434, Objective = 0.007975899871, Norm = 1.308558701834
+Call 7360: Overlap = 0.992024101562, Regularization = 0.005872780434, Objective = 0.007975899871, Norm = 1.308558701834
+Call 7370: Overlap = 0.992024101562, Regularization = 0.005872780434, Objective = 0.007975899871, Norm = 1.308558701834
+Call 7380: Overlap = 0.992024101562, Regularization = 0.005872780434, Objective = 0.007975899871, Norm = 1.308558701834
+Call 7390: Overlap = 0.992024101562, Regularization = 0.005872780434, Objective = 0.007975899871, Norm = 1.308558701834
+Call 7400: Overlap = 0.992024101562, Regularization = 0.005872780434, Objective = 0.007975899871, Norm = 1.308558701834
+Call 7410: Overlap = 0.992024101932, Regularization = 0.005870512228, Objective = 0.007975899501, Norm = 1.308816268847
+Call 7420: Overlap = 0.992024101932, Regularization = 0.005870512228, Objective = 0.007975899501, Norm = 1.308816268847
+Call 7430: Overlap = 0.992024101932, Regularization = 0.005870512228, Objective = 0.007975899501, Norm = 1.308816268847
+Call 7440: Overlap = 0.992024102019, Regularization = 0.005868395893, Objective = 0.007975899414, Norm = 1.309065990052
+Call 7450: Overlap = 0.992024102047, Regularization = 0.005866160763, Objective = 0.007975899385, Norm = 1.309322584865
+Call 7460: Overlap = 0.992024102066, Regularization = 0.005849679415, Objective = 0.007975899362, Norm = 1.311216515591
+Call 7470: Overlap = 0.992024102066, Regularization = 0.005815243109, Objective = 0.007975899354, Norm = 1.315184915571
+Call 7480: Overlap = 0.992024102066, Regularization = 0.005815243109, Objective = 0.007975899354, Norm = 1.315184915571
+Call 7490: Overlap = 0.992024102066, Regularization = 0.005815243109, Objective = 0.007975899354, Norm = 1.315184915571
+Overlap after regularization for s = 0.70: 0.992024102066
+Energy of QCMPS ansatz after regularization for s = 0.70: -2.215215396913, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.700 without regularization
+Call 7500: Overlap = 0.992024102646, Regularization = 0.005786448359, Objective = 0.007975897354, Norm = 1.318501080224
+Call 7510: Overlap = 0.992024102673, Regularization = 0.005786461607, Objective = 0.007975897327, Norm = 1.318499564204
+Call 7520: Overlap = 0.992024102673, Regularization = 0.005786461607, Objective = 0.007975897327, Norm = 1.318499564204
+Call 7530: Overlap = 0.992024102692, Regularization = 0.005786457982, Objective = 0.007975897308, Norm = 1.318499977901
+Call 7540: Overlap = 0.992024102701, Regularization = 0.005786369280, Objective = 0.007975897299, Norm = 1.318510071392
+Call 7550: Overlap = 0.992024102701, Regularization = 0.005786369280, Objective = 0.007975897299, Norm = 1.318510071392
+Call 7560: Overlap = 0.992024102816, Regularization = 0.005786837265, Objective = 0.007975897184, Norm = 1.318456254215
+Call 7570: Overlap = 0.992024102882, Regularization = 0.005787817244, Objective = 0.007975897118, Norm = 1.318343361676
+Call 7580: Overlap = 0.992024102984, Regularization = 0.005788704682, Objective = 0.007975897016, Norm = 1.318240576040
+Call 7590: Overlap = 0.992024102984, Regularization = 0.005788704682, Objective = 0.007975897016, Norm = 1.318240576040
+Call 7600: Overlap = 0.992024102990, Regularization = 0.005788131525, Objective = 0.007975897010, Norm = 1.318308284564
+Call 7610: Overlap = 0.992024103287, Regularization = 0.005788834178, Objective = 0.007975896713, Norm = 1.318228630125
+Call 7620: Overlap = 0.992024103295, Regularization = 0.005788590950, Objective = 0.007975896705, Norm = 1.318256586057
+Call 7630: Overlap = 0.992024103420, Regularization = 0.005788614074, Objective = 0.007975896580, Norm = 1.318253968414
+Call 7640: Overlap = 0.992024103420, Regularization = 0.005788614074, Objective = 0.007975896580, Norm = 1.318253968414
+Call 7650: Overlap = 0.992024103420, Regularization = 0.005789099166, Objective = 0.007975896580, Norm = 1.318198265182
+Call 7660: Overlap = 0.992024104079, Regularization = 0.005788708896, Objective = 0.007975895921, Norm = 1.318243802682
+Call 7670: Overlap = 0.992024104331, Regularization = 0.005788563274, Objective = 0.007975895669, Norm = 1.318260400141
+Call 7680: Overlap = 0.992024104362, Regularization = 0.005788433085, Objective = 0.007975895638, Norm = 1.318275357404
+Call 7690: Overlap = 0.992024104647, Regularization = 0.005788115804, Objective = 0.007975895353, Norm = 1.318311754582
+Call 7700: Overlap = 0.992024105030, Regularization = 0.005787406226, Objective = 0.007975894970, Norm = 1.318393383841
+Call 7710: Overlap = 0.992024105271, Regularization = 0.005787866600, Objective = 0.007975894729, Norm = 1.318340203979
+Call 7720: Overlap = 0.992024105271, Regularization = 0.005787866600, Objective = 0.007975894729, Norm = 1.318340203979
+Call 7730: Overlap = 0.992024105271, Regularization = 0.005787866600, Objective = 0.007975894729, Norm = 1.318340203979
+Call 7740: Overlap = 0.992024105307, Regularization = 0.005789029032, Objective = 0.007975894693, Norm = 1.318206143237
+Call 7750: Overlap = 0.992024105308, Regularization = 0.005789206716, Objective = 0.007975894692, Norm = 1.318185085665
+Call 7760: Overlap = 0.992024105310, Regularization = 0.005788225597, Objective = 0.007975894690, Norm = 1.318300178417
+Call 7770: Overlap = 0.992024105310, Regularization = 0.005788225597, Objective = 0.007975894690, Norm = 1.318300178417
+Call 7780: Overlap = 0.992024105310, Regularization = 0.005788225597, Objective = 0.007975894690, Norm = 1.318300178417
+Call 7790: Overlap = 0.992024105310, Regularization = 0.005788225597, Objective = 0.007975894690, Norm = 1.318300178417
+Call 7800: Overlap = 0.992024105386, Regularization = 0.005788312807, Objective = 0.007975894614, Norm = 1.318290075380
+Call 7810: Overlap = 0.992024105415, Regularization = 0.005788110570, Objective = 0.007975894585, Norm = 1.318313377362
+Call 7820: Overlap = 0.992024105736, Regularization = 0.005788211709, Objective = 0.007975894264, Norm = 1.318301924995
+Call 7830: Overlap = 0.992024105762, Regularization = 0.005788730674, Objective = 0.007975894238, Norm = 1.318242211668
+Call 7840: Overlap = 0.992024105762, Regularization = 0.005788730674, Objective = 0.007975894238, Norm = 1.318242211668
+Call 7850: Overlap = 0.992024106382, Regularization = 0.005788756812, Objective = 0.007975893618, Norm = 1.318239235301
+Call 7860: Overlap = 0.992024106422, Regularization = 0.005788734623, Objective = 0.007975893578, Norm = 1.318241825361
+Call 7870: Overlap = 0.992024107469, Regularization = 0.005788759444, Objective = 0.007975892531, Norm = 1.318238906134
+Call 7880: Overlap = 0.992024107520, Regularization = 0.005788762686, Objective = 0.007975892480, Norm = 1.318238491455
+Call 7890: Overlap = 0.992024108097, Regularization = 0.005788663728, Objective = 0.007975891903, Norm = 1.318249741706
+Final overlap for s = 0.70: 0.992024108218
+Final energy of QCMPS ansatz for s = 0.70: -2.215215398700, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.750 with regularization
+Overlap before regularization for s = 0.75: 0.990846320823
+Energy of QCMPS ansatz before regularization for s = 0.75: -2.215215398700, Energy of HF ansatz: -2.215215410025
+Call 7900: Overlap = 0.990846323004, Regularization = 0.005417332395, Objective = 0.009153677657, Norm = 1.363462362946
+Call 7910: Overlap = 0.990846323033, Regularization = 0.005417298870, Objective = 0.009153677628, Norm = 1.363466552520
+Call 7920: Overlap = 0.990846323033, Regularization = 0.005417298870, Objective = 0.009153677628, Norm = 1.363466552520
+Call 7930: Overlap = 0.990846323303, Regularization = 0.005422446306, Objective = 0.009153677359, Norm = 1.362811349935
+Call 7940: Overlap = 0.990846323303, Regularization = 0.005422446306, Objective = 0.009153677359, Norm = 1.362811349935
+Call 7950: Overlap = 0.990846323303, Regularization = 0.005422446306, Objective = 0.009153677359, Norm = 1.362811349935
+Call 7960: Overlap = 0.990846323303, Regularization = 0.005422446306, Objective = 0.009153677359, Norm = 1.362811349935
+Call 7970: Overlap = 0.990846323303, Regularization = 0.005422446306, Objective = 0.009153677359, Norm = 1.362811349935
+Call 7980: Overlap = 0.990846323303, Regularization = 0.005422446306, Objective = 0.009153677359, Norm = 1.362811349935
+Call 7990: Overlap = 0.990846323341, Regularization = 0.005425482723, Objective = 0.009153677321, Norm = 1.362425366425
+Call 8000: Overlap = 0.990846323341, Regularization = 0.005425482723, Objective = 0.009153677321, Norm = 1.362425366425
+Call 8010: Overlap = 0.990846323354, Regularization = 0.005417957132, Objective = 0.009153677307, Norm = 1.363396215011
+Call 8020: Overlap = 0.990846323383, Regularization = 0.005397250660, Objective = 0.009153677275, Norm = 1.366082672999
+Call 8030: Overlap = 0.990846323383, Regularization = 0.005372129504, Objective = 0.009153677272, Norm = 1.369358576843
+Call 8040: Overlap = 0.990846323383, Regularization = 0.005372129504, Objective = 0.009153677272, Norm = 1.369358576843
+Overlap after regularization for s = 0.75: 0.990846323383
+Energy of QCMPS ansatz after regularization for s = 0.75: -2.215215399528, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.750 without regularization
+Call 8050: Overlap = 0.990846323600, Regularization = 0.005352962326, Objective = 0.009153676400, Norm = 1.371846862088
+Call 8060: Overlap = 0.990846323600, Regularization = 0.005352962326, Objective = 0.009153676400, Norm = 1.371846862088
+Call 8070: Overlap = 0.990846323615, Regularization = 0.005352969953, Objective = 0.009153676385, Norm = 1.371845881707
+Call 8080: Overlap = 0.990846323615, Regularization = 0.005352969953, Objective = 0.009153676385, Norm = 1.371845881707
+Call 8090: Overlap = 0.990846323660, Regularization = 0.005353046110, Objective = 0.009153676340, Norm = 1.371836295640
+Call 8100: Overlap = 0.990846323685, Regularization = 0.005352980568, Objective = 0.009153676315, Norm = 1.371844459402
+Call 8110: Overlap = 0.990846323685, Regularization = 0.005352980568, Objective = 0.009153676315, Norm = 1.371844459402
+Call 8120: Overlap = 0.990846323734, Regularization = 0.005353484945, Objective = 0.009153676266, Norm = 1.371778814044
+Call 8130: Overlap = 0.990846323779, Regularization = 0.005354349626, Objective = 0.009153676221, Norm = 1.371666708298
+Call 8140: Overlap = 0.990846323782, Regularization = 0.005354583826, Objective = 0.009153676218, Norm = 1.371636061854
+Call 8150: Overlap = 0.990846323846, Regularization = 0.005355323765, Objective = 0.009153676154, Norm = 1.371539012475
+Call 8160: Overlap = 0.990846323846, Regularization = 0.005355365452, Objective = 0.009153676154, Norm = 1.371533364324
+Call 8170: Overlap = 0.990846323893, Regularization = 0.005356289036, Objective = 0.009153676107, Norm = 1.371411916138
+Call 8180: Overlap = 0.990846323893, Regularization = 0.005355653087, Objective = 0.009153676107, Norm = 1.371495653193
+Call 8190: Overlap = 0.990846323893, Regularization = 0.005355653087, Objective = 0.009153676107, Norm = 1.371495653193
+Call 8200: Overlap = 0.990846323893, Regularization = 0.005355653087, Objective = 0.009153676107, Norm = 1.371495653193
+Call 8210: Overlap = 0.990846324050, Regularization = 0.005355497469, Objective = 0.009153675950, Norm = 1.371516134723
+Call 8220: Overlap = 0.990846324162, Regularization = 0.005355130580, Objective = 0.009153675838, Norm = 1.371563856372
+Call 8230: Overlap = 0.990846324171, Regularization = 0.005355061004, Objective = 0.009153675829, Norm = 1.371572853198
+Call 8240: Overlap = 0.990846324216, Regularization = 0.005354992306, Objective = 0.009153675784, Norm = 1.371581835888
+Call 8250: Overlap = 0.990846324226, Regularization = 0.005355030352, Objective = 0.009153675774, Norm = 1.371576809678
+Call 8260: Overlap = 0.990846324385, Regularization = 0.005354859808, Objective = 0.009153675615, Norm = 1.371599066465
+Call 8270: Overlap = 0.990846324475, Regularization = 0.005355399335, Objective = 0.009153675525, Norm = 1.371529380736
+Call 8280: Overlap = 0.990846324525, Regularization = 0.005355285787, Objective = 0.009153675475, Norm = 1.371544334273
+Call 8290: Overlap = 0.990846325872, Regularization = 0.005354864928, Objective = 0.009153674128, Norm = 1.371598368690
+Call 8300: Overlap = 0.990846325915, Regularization = 0.005355150923, Objective = 0.009153674085, Norm = 1.371560532992
+Call 8310: Overlap = 0.990846325916, Regularization = 0.005355012161, Objective = 0.009153674084, Norm = 1.371578607646
+Call 8320: Overlap = 0.990846326127, Regularization = 0.005354846783, Objective = 0.009153673873, Norm = 1.371599075851
+Call 8330: Overlap = 0.990846326127, Regularization = 0.005354846783, Objective = 0.009153673873, Norm = 1.371599075851
+Call 8340: Overlap = 0.990846326127, Regularization = 0.005354846783, Objective = 0.009153673873, Norm = 1.371599075851
+Call 8350: Overlap = 0.990846326155, Regularization = 0.005355513923, Objective = 0.009153673845, Norm = 1.371512420549
+Call 8360: Overlap = 0.990846326240, Regularization = 0.005355971005, Objective = 0.009153673760, Norm = 1.371452526426
+Call 8370: Overlap = 0.990846326683, Regularization = 0.005356191678, Objective = 0.009153673317, Norm = 1.371424107430
+Call 8380: Overlap = 0.990846326725, Regularization = 0.005356458093, Objective = 0.009153673275, Norm = 1.371390026416
+Call 8390: Overlap = 0.990846326731, Regularization = 0.005356614747, Objective = 0.009153673269, Norm = 1.371369926630
+Call 8400: Overlap = 0.990846326731, Regularization = 0.005356614747, Objective = 0.009153673269, Norm = 1.371369926630
+Call 8410: Overlap = 0.990846326731, Regularization = 0.005356614747, Objective = 0.009153673269, Norm = 1.371369926630
+Call 8420: Overlap = 0.990846326764, Regularization = 0.005356359416, Objective = 0.009153673236, Norm = 1.371403138641
+Call 8430: Overlap = 0.990846326770, Regularization = 0.005356335922, Objective = 0.009153673230, Norm = 1.371406264140
+Call 8440: Overlap = 0.990846326780, Regularization = 0.005356318160, Objective = 0.009153673220, Norm = 1.371408654719
+Call 8450: Overlap = 0.990846326914, Regularization = 0.005356215621, Objective = 0.009153673086, Norm = 1.371421857841
+Final overlap for s = 0.75: 0.990846326931
+Final energy of QCMPS ansatz for s = 0.75: -2.215215400463, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.800 with regularization
+Overlap before regularization for s = 0.80: 0.989588184574
+Energy of QCMPS ansatz before regularization for s = 0.80: -2.215215400463, Energy of HF ansatz: -2.215215410025
+Call 8460: Overlap = 0.989588185122, Regularization = 0.005106813659, Objective = 0.010411815190, Norm = 1.405190110880
+Call 8470: Overlap = 0.989588185122, Regularization = 0.005106813659, Objective = 0.010411815190, Norm = 1.405190110880
+Call 8480: Overlap = 0.989588185122, Regularization = 0.005106813659, Objective = 0.010411815190, Norm = 1.405190110880
+Call 8490: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8500: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8510: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8520: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8530: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8540: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8550: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8560: Overlap = 0.989588185396, Regularization = 0.005105219273, Objective = 0.010411814916, Norm = 1.405412326614
+Call 8570: Overlap = 0.989588185601, Regularization = 0.005102601210, Objective = 0.010411814710, Norm = 1.405784396916
+Call 8580: Overlap = 0.989588185659, Regularization = 0.005086677224, Objective = 0.010411814652, Norm = 1.408063503389
+Call 8590: Overlap = 0.989588185659, Regularization = 0.005057119582, Objective = 0.010411814650, Norm = 1.412296722976
+Call 8600: Overlap = 0.989588185659, Regularization = 0.005057119582, Objective = 0.010411814650, Norm = 1.412296722976
+Overlap after regularization for s = 0.80: 0.989588185659
+Energy of QCMPS ansatz after regularization for s = 0.80: -2.215215400783, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.800 without regularization
+Call 8610: Overlap = 0.989588185746, Regularization = 0.005047289064, Objective = 0.010411814254, Norm = 1.413693094477
+Call 8620: Overlap = 0.989588185752, Regularization = 0.005047292837, Objective = 0.010411814248, Norm = 1.413692565120
+Call 8630: Overlap = 0.989588185828, Regularization = 0.005047642404, Objective = 0.010411814172, Norm = 1.413642124220
+Call 8640: Overlap = 0.989588185841, Regularization = 0.005047835271, Objective = 0.010411814159, Norm = 1.413615247758
+Call 8650: Overlap = 0.989588185854, Regularization = 0.005047652350, Objective = 0.010411814146, Norm = 1.413641257474
+Call 8660: Overlap = 0.989588185856, Regularization = 0.005047439579, Objective = 0.010411814144, Norm = 1.413671826458
+Call 8670: Overlap = 0.989588185876, Regularization = 0.005047371674, Objective = 0.010411814124, Norm = 1.413681718976
+Call 8680: Overlap = 0.989588185915, Regularization = 0.005047890903, Objective = 0.010411814085, Norm = 1.413607006425
+Call 8690: Overlap = 0.989588185916, Regularization = 0.005048043425, Objective = 0.010411814084, Norm = 1.413585460795
+Call 8700: Overlap = 0.989588185916, Regularization = 0.005048043425, Objective = 0.010411814084, Norm = 1.413585460795
+Call 8710: Overlap = 0.989588185940, Regularization = 0.005048130161, Objective = 0.010411814060, Norm = 1.413574271488
+Call 8720: Overlap = 0.989588185954, Regularization = 0.005048213081, Objective = 0.010411814046, Norm = 1.413562238156
+Call 8730: Overlap = 0.989588185954, Regularization = 0.005048213081, Objective = 0.010411814046, Norm = 1.413562238156
+Call 8740: Overlap = 0.989588185954, Regularization = 0.005048213081, Objective = 0.010411814046, Norm = 1.413562238156
+Call 8750: Overlap = 0.989588185954, Regularization = 0.005048213081, Objective = 0.010411814046, Norm = 1.413562238156
+Call 8760: Overlap = 0.989588188137, Regularization = 0.005048232286, Objective = 0.010411811863, Norm = 1.413559692811
+Call 8770: Overlap = 0.989588188227, Regularization = 0.005048312511, Objective = 0.010411811773, Norm = 1.413548193561
+Call 8780: Overlap = 0.989588188241, Regularization = 0.005047995920, Objective = 0.010411811759, Norm = 1.413592539624
+Call 8790: Overlap = 0.989588188402, Regularization = 0.005047716057, Objective = 0.010411811598, Norm = 1.413632367769
+Call 8800: Overlap = 0.989588188405, Regularization = 0.005047870724, Objective = 0.010411811595, Norm = 1.413610402858
+Call 8810: Overlap = 0.989588188405, Regularization = 0.005047870724, Objective = 0.010411811595, Norm = 1.413610402858
+Call 8820: Overlap = 0.989588188444, Regularization = 0.005047787004, Objective = 0.010411811556, Norm = 1.413622047500
+Call 8830: Overlap = 0.989588188444, Regularization = 0.005047787004, Objective = 0.010411811556, Norm = 1.413622047500
+Call 8840: Overlap = 0.989588188453, Regularization = 0.005047662969, Objective = 0.010411811547, Norm = 1.413639728775
+Call 8850: Overlap = 0.989588188473, Regularization = 0.005048083361, Objective = 0.010411811527, Norm = 1.413579959890
+Call 8860: Overlap = 0.989588188473, Regularization = 0.005048083361, Objective = 0.010411811527, Norm = 1.413579959890
+Call 8870: Overlap = 0.989588188473, Regularization = 0.005048083361, Objective = 0.010411811527, Norm = 1.413579959890
+Call 8880: Overlap = 0.989588188473, Regularization = 0.005048083361, Objective = 0.010411811527, Norm = 1.413579959890
+Call 8890: Overlap = 0.989588188473, Regularization = 0.005048083361, Objective = 0.010411811527, Norm = 1.413579959890
+Call 8900: Overlap = 0.989588188473, Regularization = 0.005048083361, Objective = 0.010411811527, Norm = 1.413579959890
+Call 8910: Overlap = 0.989588188473, Regularization = 0.005048083361, Objective = 0.010411811527, Norm = 1.413579959890
+Call 8920: Overlap = 0.989588188555, Regularization = 0.005048136641, Objective = 0.010411811445, Norm = 1.413572464611
+Call 8930: Overlap = 0.989588188563, Regularization = 0.005048070586, Objective = 0.010411811437, Norm = 1.413581812021
+Call 8940: Overlap = 0.989588188640, Regularization = 0.005048030530, Objective = 0.010411811360, Norm = 1.413587465312
+Call 8950: Overlap = 0.989588188665, Regularization = 0.005048030815, Objective = 0.010411811335, Norm = 1.413587410802
+Call 8960: Overlap = 0.989588188740, Regularization = 0.005048039383, Objective = 0.010411811260, Norm = 1.413586163868
+Call 8970: Overlap = 0.989588189626, Regularization = 0.005048022292, Objective = 0.010411810374, Norm = 1.413588584101
+Call 8980: Overlap = 0.989588189837, Regularization = 0.005048142346, Objective = 0.010411810163, Norm = 1.413571628643
+Call 8990: Overlap = 0.989588190213, Regularization = 0.005048109644, Objective = 0.010411809787, Norm = 1.413576334422
+Call 9000: Overlap = 0.989588190856, Regularization = 0.005048151731, Objective = 0.010411809144, Norm = 1.413570319468
+Call 9010: Overlap = 0.989588191008, Regularization = 0.005048285669, Objective = 0.010411808992, Norm = 1.413551319752
+Final overlap for s = 0.80: 0.989588191008
+Final energy of QCMPS ansatz for s = 0.80: -2.215215401236, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.850 with regularization
+Overlap before regularization for s = 0.85: 0.988249912197
+Energy of QCMPS ansatz before regularization for s = 0.85: -2.215215401236, Energy of HF ansatz: -2.215215410025
+Call 9020: Overlap = 0.988249912662, Regularization = 0.004783699575, Objective = 0.011750087484, Norm = 1.452932084981
+Call 9030: Overlap = 0.988249912662, Regularization = 0.004783699575, Objective = 0.011750087484, Norm = 1.452932084981
+Call 9040: Overlap = 0.988249912662, Regularization = 0.004783699575, Objective = 0.011750087484, Norm = 1.452932084981
+Call 9050: Overlap = 0.988249912662, Regularization = 0.004783699575, Objective = 0.011750087484, Norm = 1.452932084981
+Call 9060: Overlap = 0.988249912662, Regularization = 0.004783699575, Objective = 0.011750087484, Norm = 1.452932084981
+Call 9070: Overlap = 0.988249912662, Regularization = 0.004783699575, Objective = 0.011750087484, Norm = 1.452932084981
+Call 9080: Overlap = 0.988249912860, Regularization = 0.004777046881, Objective = 0.011750087286, Norm = 1.453961233222
+Call 9090: Overlap = 0.988249912860, Regularization = 0.004777046881, Objective = 0.011750087286, Norm = 1.453961233222
+Call 9100: Overlap = 0.988249912860, Regularization = 0.004777046881, Objective = 0.011750087286, Norm = 1.453961233222
+Call 9110: Overlap = 0.988249912860, Regularization = 0.004777046881, Objective = 0.011750087286, Norm = 1.453961233222
+Call 9120: Overlap = 0.988249912860, Regularization = 0.004777046881, Objective = 0.011750087286, Norm = 1.453961233222
+Call 9130: Overlap = 0.988249912882, Regularization = 0.004768112291, Objective = 0.011750087263, Norm = 1.455383023348
+Call 9140: Overlap = 0.988249912882, Regularization = 0.004757035159, Objective = 0.011750087263, Norm = 1.457134849104
+Call 9150: Overlap = 0.988249912882, Regularization = 0.004735124286, Objective = 0.011750087262, Norm = 1.460616537994
+Call 9160: Overlap = 0.988249912882, Regularization = 0.004735124286, Objective = 0.011750087262, Norm = 1.460616537994
+Overlap after regularization for s = 0.85: 0.988249912882
+Energy of QCMPS ansatz after regularization for s = 0.85: -2.215215401273, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.850 without regularization
+Call 9170: Overlap = 0.988249913061, Regularization = 0.004725952682, Objective = 0.011750086939, Norm = 1.462057991822
+Call 9180: Overlap = 0.988249913061, Regularization = 0.004725952682, Objective = 0.011750086939, Norm = 1.462057991822
+Call 9190: Overlap = 0.988249913093, Regularization = 0.004725872090, Objective = 0.011750086907, Norm = 1.462070621434
+Call 9200: Overlap = 0.988249913093, Regularization = 0.004725872090, Objective = 0.011750086907, Norm = 1.462070621434
+Call 9210: Overlap = 0.988249913099, Regularization = 0.004725704251, Objective = 0.011750086901, Norm = 1.462096934744
+Call 9220: Overlap = 0.988249913108, Regularization = 0.004725503795, Objective = 0.011750086892, Norm = 1.462128666477
+Call 9230: Overlap = 0.988249913122, Regularization = 0.004725851588, Objective = 0.011750086878, Norm = 1.462074158990
+Call 9240: Overlap = 0.988249913126, Regularization = 0.004726277747, Objective = 0.011750086874, Norm = 1.462006916228
+Call 9250: Overlap = 0.988249913127, Regularization = 0.004726257725, Objective = 0.011750086873, Norm = 1.462010092346
+Call 9260: Overlap = 0.988249913129, Regularization = 0.004726254006, Objective = 0.011750086871, Norm = 1.462010644068
+Call 9270: Overlap = 0.988249913141, Regularization = 0.004726286161, Objective = 0.011750086859, Norm = 1.462005537220
+Call 9280: Overlap = 0.988249913143, Regularization = 0.004726322664, Objective = 0.011750086857, Norm = 1.461999711748
+Call 9290: Overlap = 0.988249913442, Regularization = 0.004726301090, Objective = 0.011750086558, Norm = 1.462002792676
+Call 9300: Overlap = 0.988249913557, Regularization = 0.004726207379, Objective = 0.011750086443, Norm = 1.462017335241
+Call 9310: Overlap = 0.988249913726, Regularization = 0.004725948361, Objective = 0.011750086274, Norm = 1.462058280597
+Call 9320: Overlap = 0.988249914086, Regularization = 0.004725959292, Objective = 0.011750085914, Norm = 1.462056541210
+Call 9330: Overlap = 0.988249914138, Regularization = 0.004725954616, Objective = 0.011750085862, Norm = 1.462057261384
+Call 9340: Overlap = 0.988249914162, Regularization = 0.004725903834, Objective = 0.011750085838, Norm = 1.462065153983
+Call 9350: Overlap = 0.988249914184, Regularization = 0.004725933746, Objective = 0.011750085816, Norm = 1.462060504740
+Call 9360: Overlap = 0.988249914320, Regularization = 0.004725918841, Objective = 0.011750085680, Norm = 1.462062847793
+Call 9370: Overlap = 0.988249914373, Regularization = 0.004725981775, Objective = 0.011750085627, Norm = 1.462053126495
+Call 9380: Overlap = 0.988249914665, Regularization = 0.004725921500, Objective = 0.011750085335, Norm = 1.462062637313
+Call 9390: Overlap = 0.988249914766, Regularization = 0.004725954107, Objective = 0.011750085234, Norm = 1.462057488887
+Call 9400: Overlap = 0.988249914834, Regularization = 0.004725975092, Objective = 0.011750085166, Norm = 1.462054283353
+Call 9410: Overlap = 0.988249914836, Regularization = 0.004725988676, Objective = 0.011750085164, Norm = 1.462052070703
+Call 9420: Overlap = 0.988249914854, Regularization = 0.004725937717, Objective = 0.011750085146, Norm = 1.462060178961
+Call 9430: Overlap = 0.988249915113, Regularization = 0.004725871442, Objective = 0.011750084887, Norm = 1.462070514400
+Call 9440: Overlap = 0.988249915419, Regularization = 0.004725653444, Objective = 0.011750084581, Norm = 1.462105096879
+Call 9450: Overlap = 0.988249915481, Regularization = 0.004725679748, Objective = 0.011750084519, Norm = 1.462101079706
+Call 9460: Overlap = 0.988249915708, Regularization = 0.004725699639, Objective = 0.011750084292, Norm = 1.462097996108
+Call 9470: Overlap = 0.988249915708, Regularization = 0.004725699639, Objective = 0.011750084292, Norm = 1.462097996108
+Call 9480: Overlap = 0.988249915708, Regularization = 0.004725699639, Objective = 0.011750084292, Norm = 1.462097996108
+Call 9490: Overlap = 0.988249916171, Regularization = 0.004725831933, Objective = 0.011750083829, Norm = 1.462077243894
+Call 9500: Overlap = 0.988249916221, Regularization = 0.004725875411, Objective = 0.011750083779, Norm = 1.462070437621
+Call 9510: Overlap = 0.988249916301, Regularization = 0.004725910473, Objective = 0.011750083699, Norm = 1.462064883897
+Call 9520: Overlap = 0.988249916551, Regularization = 0.004725927723, Objective = 0.011750083449, Norm = 1.462062264843
+Call 9530: Overlap = 0.988249916561, Regularization = 0.004725937065, Objective = 0.011750083439, Norm = 1.462060776469
+Call 9540: Overlap = 0.988249916688, Regularization = 0.004725982664, Objective = 0.011750083312, Norm = 1.462053562301
+Call 9550: Overlap = 0.988249916729, Regularization = 0.004725905041, Objective = 0.011750083271, Norm = 1.462065642458
+Call 9560: Overlap = 0.988249916800, Regularization = 0.004725906059, Objective = 0.011750083200, Norm = 1.462065433213
+Call 9570: Overlap = 0.988249916849, Regularization = 0.004725854874, Objective = 0.011750083151, Norm = 1.462073436848
+Final overlap for s = 0.85: 0.988249916849
+Final energy of QCMPS ansatz for s = 0.85: -2.215215402302, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.900 with regularization
+Overlap before regularization for s = 0.90: 0.986831740081
+Energy of QCMPS ansatz before regularization for s = 0.90: -2.215215402302, Energy of HF ansatz: -2.215215410025
+Call 9580: Overlap = 0.986831740676, Regularization = 0.004520049363, Objective = 0.013168259393, Norm = 1.495803329674
+Call 9590: Overlap = 0.986831740676, Regularization = 0.004520049363, Objective = 0.013168259393, Norm = 1.495803329674
+Call 9600: Overlap = 0.986831740676, Regularization = 0.004520049363, Objective = 0.013168259393, Norm = 1.495803329674
+Call 9610: Overlap = 0.986831740676, Regularization = 0.004520049363, Objective = 0.013168259393, Norm = 1.495803329674
+Call 9620: Overlap = 0.986831740704, Regularization = 0.004521536323, Objective = 0.013168259365, Norm = 1.495555346936
+Call 9630: Overlap = 0.986831740704, Regularization = 0.004521536323, Objective = 0.013168259365, Norm = 1.495555346936
+Call 9640: Overlap = 0.986831740730, Regularization = 0.004525238004, Objective = 0.013168259339, Norm = 1.494937570745
+Call 9650: Overlap = 0.986831740730, Regularization = 0.004525238004, Objective = 0.013168259339, Norm = 1.494937570745
+Call 9660: Overlap = 0.986831740730, Regularization = 0.004525238004, Objective = 0.013168259339, Norm = 1.494937570745
+Call 9670: Overlap = 0.986831740730, Regularization = 0.004525238004, Objective = 0.013168259339, Norm = 1.494937570745
+Call 9680: Overlap = 0.986831740730, Regularization = 0.004525238004, Objective = 0.013168259339, Norm = 1.494937570745
+Call 9690: Overlap = 0.986831740755, Regularization = 0.004524009966, Objective = 0.013168259314, Norm = 1.495151082811
+Call 9700: Overlap = 0.986831740782, Regularization = 0.004512086955, Objective = 0.013168259286, Norm = 1.497207566476
+Call 9710: Overlap = 0.986831740782, Regularization = 0.004480718220, Objective = 0.013168259286, Norm = 1.502616464833
+Call 9720: Overlap = 0.986831740782, Regularization = 0.004480718220, Objective = 0.013168259286, Norm = 1.502616464833
+Overlap after regularization for s = 0.90: 0.986831740782
+Energy of QCMPS ansatz after regularization for s = 0.90: -2.215215402843, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.900 without regularization
+Call 9730: Overlap = 0.986831740823, Regularization = 0.004471362245, Objective = 0.013168259177, Norm = 1.504213559045
+Call 9740: Overlap = 0.986831740823, Regularization = 0.004471362245, Objective = 0.013168259177, Norm = 1.504213559045
+Call 9750: Overlap = 0.986831740924, Regularization = 0.004471522947, Objective = 0.013168259076, Norm = 1.504185916014
+Call 9760: Overlap = 0.986831740939, Regularization = 0.004471474553, Objective = 0.013168259061, Norm = 1.504194033271
+Call 9770: Overlap = 0.986831740940, Regularization = 0.004471412330, Objective = 0.013168259060, Norm = 1.504204509131
+Call 9780: Overlap = 0.986831740940, Regularization = 0.004471412330, Objective = 0.013168259060, Norm = 1.504204509131
+Call 9790: Overlap = 0.986831740941, Regularization = 0.004471537492, Objective = 0.013168259059, Norm = 1.504183320478
+Call 9800: Overlap = 0.986831740995, Regularization = 0.004473026028, Objective = 0.013168259005, Norm = 1.503927024530
+Call 9810: Overlap = 0.986831741000, Regularization = 0.004472790291, Objective = 0.013168259000, Norm = 1.503967880123
+Call 9820: Overlap = 0.986831741013, Regularization = 0.004472672446, Objective = 0.013168258987, Norm = 1.503987612237
+Call 9830: Overlap = 0.986831741013, Regularization = 0.004472672446, Objective = 0.013168258987, Norm = 1.503987612237
+Call 9840: Overlap = 0.986831741013, Regularization = 0.004472672446, Objective = 0.013168258987, Norm = 1.503987612237
+Call 9850: Overlap = 0.986831741037, Regularization = 0.004472983597, Objective = 0.013168258963, Norm = 1.503933288765
+Call 9860: Overlap = 0.986831741037, Regularization = 0.004472983597, Objective = 0.013168258963, Norm = 1.503933288765
+Call 9870: Overlap = 0.986831741037, Regularization = 0.004472983597, Objective = 0.013168258963, Norm = 1.503933288765
+Call 9880: Overlap = 0.986831741114, Regularization = 0.004472787062, Objective = 0.013168258886, Norm = 1.503966690356
+Call 9890: Overlap = 0.986831741150, Regularization = 0.004472906202, Objective = 0.013168258850, Norm = 1.503946246201
+Call 9900: Overlap = 0.986831741198, Regularization = 0.004472639874, Objective = 0.013168258802, Norm = 1.503991170131
+Call 9910: Overlap = 0.986831741258, Regularization = 0.004472632842, Objective = 0.013168258742, Norm = 1.503992010827
+Call 9920: Overlap = 0.986831741274, Regularization = 0.004472484736, Objective = 0.013168258726, Norm = 1.504017594593
+Call 9930: Overlap = 0.986831741274, Regularization = 0.004472484736, Objective = 0.013168258726, Norm = 1.504017594593
+Call 9940: Overlap = 0.986831741437, Regularization = 0.004472541899, Objective = 0.013168258563, Norm = 1.504007872391
+Call 9950: Overlap = 0.986831741465, Regularization = 0.004472579200, Objective = 0.013168258535, Norm = 1.504001546960
+Call 9960: Overlap = 0.986831741479, Regularization = 0.004472621327, Objective = 0.013168258521, Norm = 1.503994425002
+Call 9970: Overlap = 0.986831741543, Regularization = 0.004472594479, Objective = 0.013168258457, Norm = 1.503999019466
+Call 9980: Overlap = 0.986831741555, Regularization = 0.004472649859, Objective = 0.013168258445, Norm = 1.503989477813
+Call 9990: Overlap = 0.986831741559, Regularization = 0.004472672679, Objective = 0.013168258441, Norm = 1.503985639900
+Call 10000: Overlap = 0.986831741592, Regularization = 0.004472691887, Objective = 0.013168258408, Norm = 1.503982204618
+Call 10010: Overlap = 0.986831741600, Regularization = 0.004472772397, Objective = 0.013168258400, Norm = 1.503968404745
+Call 10020: Overlap = 0.986831741645, Regularization = 0.004472781716, Objective = 0.013168258355, Norm = 1.503966631323
+Call 10030: Overlap = 0.986831741734, Regularization = 0.004472772798, Objective = 0.013168258266, Norm = 1.503968182093
+Call 10040: Overlap = 0.986831741774, Regularization = 0.004472742811, Objective = 0.013168258226, Norm = 1.503973179123
+Call 10050: Overlap = 0.986831741827, Regularization = 0.004472709741, Objective = 0.013168258173, Norm = 1.503978733967
+Call 10060: Overlap = 0.986831741828, Regularization = 0.004472695265, Objective = 0.013168258172, Norm = 1.503981169311
+Call 10070: Overlap = 0.986831741828, Regularization = 0.004472695265, Objective = 0.013168258172, Norm = 1.503981169311
+Call 10080: Overlap = 0.986831741849, Regularization = 0.004472752676, Objective = 0.013168258151, Norm = 1.503971438700
+Call 10090: Overlap = 0.986831741959, Regularization = 0.004472838004, Objective = 0.013168258041, Norm = 1.503956547459
+Call 10100: Overlap = 0.986831742014, Regularization = 0.004472750281, Objective = 0.013168257986, Norm = 1.503971782911
+Call 10110: Overlap = 0.986831742093, Regularization = 0.004472721907, Objective = 0.013168257907, Norm = 1.503976617050
+Call 10120: Overlap = 0.986831742093, Regularization = 0.004472721907, Objective = 0.013168257907, Norm = 1.503976617050
+Call 10130: Overlap = 0.986831742093, Regularization = 0.004472721907, Objective = 0.013168257907, Norm = 1.503976617050
+Final overlap for s = 0.90: 0.986831742102
+Final energy of QCMPS ansatz for s = 0.90: -2.215215403263, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.950 with regularization
+Overlap before regularization for s = 0.95: 0.985333925510
+Energy of QCMPS ansatz before regularization for s = 0.95: -2.215215403263, Energy of HF ansatz: -2.215215410025
+Call 10140: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10150: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10160: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10170: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10180: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10190: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10200: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10210: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10220: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10230: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10240: Overlap = 0.985333926114, Regularization = 0.004273497136, Objective = 0.014666073918, Norm = 1.539558375446
+Call 10250: Overlap = 0.985333926126, Regularization = 0.004268321984, Objective = 0.014666073906, Norm = 1.540533376905
+Call 10260: Overlap = 0.985333926126, Regularization = 0.004258511783, Objective = 0.014666073906, Norm = 1.542382613475
+Call 10270: Overlap = 0.985333926126, Regularization = 0.004242706384, Objective = 0.014666073906, Norm = 1.545374326682
+Call 10280: Overlap = 0.985333926126, Regularization = 0.004242706384, Objective = 0.014666073906, Norm = 1.545374326682
+Overlap after regularization for s = 0.95: 0.985333926126
+Energy of QCMPS ansatz after regularization for s = 0.95: -2.215215403653, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 0.950 without regularization
+Call 10290: Overlap = 0.985333926166, Regularization = 0.004232581817, Objective = 0.014666073834, Norm = 1.547251683769
+Call 10300: Overlap = 0.985333926173, Regularization = 0.004232640882, Objective = 0.014666073827, Norm = 1.547240114729
+Call 10310: Overlap = 0.985333926321, Regularization = 0.004232194486, Objective = 0.014666073679, Norm = 1.547325844910
+Call 10320: Overlap = 0.985333926334, Regularization = 0.004232060355, Objective = 0.014666073666, Norm = 1.547350702097
+Call 10330: Overlap = 0.985333926358, Regularization = 0.004231860463, Objective = 0.014666073642, Norm = 1.547387349327
+Call 10340: Overlap = 0.985333926358, Regularization = 0.004231860463, Objective = 0.014666073642, Norm = 1.547387349327
+Call 10350: Overlap = 0.985333926358, Regularization = 0.004231860463, Objective = 0.014666073642, Norm = 1.547387349327
+Call 10360: Overlap = 0.985333926373, Regularization = 0.004232482687, Objective = 0.014666073627, Norm = 1.547271440595
+Call 10370: Overlap = 0.985333926383, Regularization = 0.004232668196, Objective = 0.014666073617, Norm = 1.547237286839
+Call 10380: Overlap = 0.985333926383, Regularization = 0.004232476000, Objective = 0.014666073617, Norm = 1.547273546841
+Call 10390: Overlap = 0.985333926388, Regularization = 0.004232616434, Objective = 0.014666073612, Norm = 1.547248619664
+Call 10400: Overlap = 0.985333926389, Regularization = 0.004232507909, Objective = 0.014666073611, Norm = 1.547269646114
+Call 10410: Overlap = 0.985333926417, Regularization = 0.004232979143, Objective = 0.014666073583, Norm = 1.547182204324
+Call 10420: Overlap = 0.985333926418, Regularization = 0.004232920431, Objective = 0.014666073582, Norm = 1.547194902539
+Call 10430: Overlap = 0.985333926418, Regularization = 0.004232920431, Objective = 0.014666073582, Norm = 1.547194902539
+Call 10440: Overlap = 0.985333926418, Regularization = 0.004232920431, Objective = 0.014666073582, Norm = 1.547194902539
+Call 10450: Overlap = 0.985333926481, Regularization = 0.004232899240, Objective = 0.014666073519, Norm = 1.547198693761
+Call 10460: Overlap = 0.985333926532, Regularization = 0.004232486305, Objective = 0.014666073468, Norm = 1.547274306383
+Call 10470: Overlap = 0.985333926548, Regularization = 0.004232400422, Objective = 0.014666073452, Norm = 1.547289839735
+Call 10480: Overlap = 0.985333926578, Regularization = 0.004232553581, Objective = 0.014666073422, Norm = 1.547261994511
+Call 10490: Overlap = 0.985333926578, Regularization = 0.004232553581, Objective = 0.014666073422, Norm = 1.547261994511
+Call 10500: Overlap = 0.985333926607, Regularization = 0.004232387121, Objective = 0.014666073393, Norm = 1.547293197024
+Call 10510: Overlap = 0.985333926618, Regularization = 0.004232346109, Objective = 0.014666073382, Norm = 1.547301335311
+Call 10520: Overlap = 0.985333926620, Regularization = 0.004232264139, Objective = 0.014666073380, Norm = 1.547316310060
+Call 10530: Overlap = 0.985333926626, Regularization = 0.004232547541, Objective = 0.014666073374, Norm = 1.547262595434
+Call 10540: Overlap = 0.985333926638, Regularization = 0.004232382168, Objective = 0.014666073362, Norm = 1.547292608885
+Call 10550: Overlap = 0.985333926638, Regularization = 0.004232382168, Objective = 0.014666073362, Norm = 1.547292608885
+Call 10560: Overlap = 0.985333926658, Regularization = 0.004232145402, Objective = 0.014666073342, Norm = 1.547338365147
+Call 10570: Overlap = 0.985333926658, Regularization = 0.004232145402, Objective = 0.014666073342, Norm = 1.547338365147
+Call 10580: Overlap = 0.985333926658, Regularization = 0.004232145402, Objective = 0.014666073342, Norm = 1.547338365147
+Call 10590: Overlap = 0.985333926658, Regularization = 0.004232145402, Objective = 0.014666073342, Norm = 1.547338365147
+Call 10600: Overlap = 0.985333926658, Regularization = 0.004232145402, Objective = 0.014666073342, Norm = 1.547338365147
+Call 10610: Overlap = 0.985333926658, Regularization = 0.004232145402, Objective = 0.014666073342, Norm = 1.547338365147
+Call 10620: Overlap = 0.985333926658, Regularization = 0.004232145402, Objective = 0.014666073342, Norm = 1.547338365147
+Call 10630: Overlap = 0.985333926740, Regularization = 0.004232139742, Objective = 0.014666073260, Norm = 1.547339030501
+Call 10640: Overlap = 0.985333926740, Regularization = 0.004232139742, Objective = 0.014666073260, Norm = 1.547339030501
+Call 10650: Overlap = 0.985333926740, Regularization = 0.004232139742, Objective = 0.014666073260, Norm = 1.547339030501
+Call 10660: Overlap = 0.985333926757, Regularization = 0.004232140551, Objective = 0.014666073243, Norm = 1.547338923707
+Call 10670: Overlap = 0.985333926775, Regularization = 0.004232142118, Objective = 0.014666073225, Norm = 1.547338674548
+Call 10680: Overlap = 0.985333926886, Regularization = 0.004232126459, Objective = 0.014666073114, Norm = 1.547341613499
+Final overlap for s = 0.95: 0.985333926896
+Final energy of QCMPS ansatz for s = 0.95: -2.215215403900, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 1.000 with regularization
+Overlap before regularization for s = 1.00: 0.983756746735
+Energy of QCMPS ansatz before regularization for s = 1.00: -2.215215403900, Energy of HF ansatz: -2.215215410025
+Call 10690: Overlap = 0.983756747178, Regularization = 0.004043804354, Objective = 0.016243252838, Norm = 1.583859582419
+Call 10700: Overlap = 0.983756747231, Regularization = 0.004048009241, Objective = 0.016243252784, Norm = 1.583037736132
+Call 10710: Overlap = 0.983756747231, Regularization = 0.004048009241, Objective = 0.016243252784, Norm = 1.583037736132
+Call 10720: Overlap = 0.983756747231, Regularization = 0.004048009241, Objective = 0.016243252784, Norm = 1.583037736132
+Call 10730: Overlap = 0.983756747231, Regularization = 0.004048009241, Objective = 0.016243252784, Norm = 1.583037736132
+Call 10740: Overlap = 0.983756747349, Regularization = 0.004049223305, Objective = 0.016243252666, Norm = 1.582798544689
+Call 10750: Overlap = 0.983756747349, Regularization = 0.004049223305, Objective = 0.016243252666, Norm = 1.582798544689
+Call 10760: Overlap = 0.983756747387, Regularization = 0.004050229076, Objective = 0.016243252629, Norm = 1.582600370482
+Call 10770: Overlap = 0.983756747463, Regularization = 0.004051120090, Objective = 0.016243252553, Norm = 1.582428395151
+Call 10780: Overlap = 0.983756747476, Regularization = 0.004049420647, Objective = 0.016243252539, Norm = 1.582769224662
+Call 10790: Overlap = 0.983756747506, Regularization = 0.004048679928, Objective = 0.016243252509, Norm = 1.582926367780
+Call 10800: Overlap = 0.983756747573, Regularization = 0.004046549715, Objective = 0.016243252443, Norm = 1.583353175097
+Call 10810: Overlap = 0.983756747597, Regularization = 0.004038897090, Objective = 0.016243252419, Norm = 1.584940434298
+Call 10820: Overlap = 0.983756747597, Regularization = 0.004005226624, Objective = 0.016243252419, Norm = 1.591861629343
+Call 10830: Overlap = 0.983756747597, Regularization = 0.004005226624, Objective = 0.016243252419, Norm = 1.591861629343
+Call 10840: Overlap = 0.983756747597, Regularization = 0.004005226624, Objective = 0.016243252419, Norm = 1.591861629343
+Overlap after regularization for s = 1.00: 0.983756747597
+Energy of QCMPS ansatz after regularization for s = 1.00: -2.215215404394, Energy of HF ansatz: -2.215215410025
+Optimizing for s = 1.000 without regularization
+Call 10850: Overlap = 0.983756747845, Regularization = 0.003990736312, Objective = 0.016243252155, Norm = 1.594763281255
+Call 10860: Overlap = 0.983756747851, Regularization = 0.003990772785, Objective = 0.016243252149, Norm = 1.594756029022
+Call 10870: Overlap = 0.983756747856, Regularization = 0.003990627466, Objective = 0.016243252144, Norm = 1.594786195968
+Call 10880: Overlap = 0.983756748090, Regularization = 0.003991150286, Objective = 0.016243251910, Norm = 1.594682211882
+Call 10890: Overlap = 0.983756748159, Regularization = 0.003991602213, Objective = 0.016243251841, Norm = 1.594590653164
+Call 10900: Overlap = 0.983756748172, Regularization = 0.003992110362, Objective = 0.016243251828, Norm = 1.594488965563
+Call 10910: Overlap = 0.983756748187, Regularization = 0.003992178541, Objective = 0.016243251813, Norm = 1.594476779523
+Call 10920: Overlap = 0.983756748208, Regularization = 0.003991909927, Objective = 0.016243251792, Norm = 1.594528885906
+Call 10930: Overlap = 0.983756748223, Regularization = 0.003991903723, Objective = 0.016243251777, Norm = 1.594531190888
+Call 10940: Overlap = 0.983756748231, Regularization = 0.003991850798, Objective = 0.016243251769, Norm = 1.594544290654
+Call 10950: Overlap = 0.983756748240, Regularization = 0.003992139290, Objective = 0.016243251760, Norm = 1.594485644519
+Call 10960: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 10970: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 10980: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 10990: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 11000: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 11010: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 11020: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 11030: Overlap = 0.983756748240, Regularization = 0.003992145699, Objective = 0.016243251760, Norm = 1.594484363701
+Call 11040: Overlap = 0.983756748245, Regularization = 0.003992573233, Objective = 0.016243251755, Norm = 1.594400013424
+Call 11050: Overlap = 0.983756748249, Regularization = 0.003992870474, Objective = 0.016243251751, Norm = 1.594341171208
+Call 11060: Overlap = 0.983756748255, Regularization = 0.003992552643, Objective = 0.016243251745, Norm = 1.594405783409
+Call 11070: Overlap = 0.983756748260, Regularization = 0.003993062353, Objective = 0.016243251740, Norm = 1.594299483367
+Call 11080: Overlap = 0.983756748260, Regularization = 0.003993062353, Objective = 0.016243251740, Norm = 1.594299483367
+Call 11090: Overlap = 0.983756748260, Regularization = 0.003993062353, Objective = 0.016243251740, Norm = 1.594299483367
+Call 11100: Overlap = 0.983756748260, Regularization = 0.003993062353, Objective = 0.016243251740, Norm = 1.594299483367
+Call 11110: Overlap = 0.983756748260, Regularization = 0.003993062353, Objective = 0.016243251740, Norm = 1.594299483367
+Call 11120: Overlap = 0.983756748260, Regularization = 0.003992925107, Objective = 0.016243251740, Norm = 1.594326614388
+Call 11130: Overlap = 0.983756748261, Regularization = 0.003992805968, Objective = 0.016243251739, Norm = 1.594350138030
+Call 11140: Overlap = 0.983756748261, Regularization = 0.003992805968, Objective = 0.016243251739, Norm = 1.594350138030
+Call 11150: Overlap = 0.983756748261, Regularization = 0.003992805968, Objective = 0.016243251739, Norm = 1.594350138030
+Call 11160: Overlap = 0.983756748261, Regularization = 0.003992805968, Objective = 0.016243251739, Norm = 1.594350138030
+Call 11170: Overlap = 0.983756748261, Regularization = 0.003992805968, Objective = 0.016243251739, Norm = 1.594350138030
+Call 11180: Overlap = 0.983756748261, Regularization = 0.003992805968, Objective = 0.016243251739, Norm = 1.594350138030
+Call 11190: Overlap = 0.983756748295, Regularization = 0.003992902516, Objective = 0.016243251705, Norm = 1.594330896113
+Call 11200: Overlap = 0.983756748396, Regularization = 0.003992839383, Objective = 0.016243251604, Norm = 1.594343609953
+Call 11210: Overlap = 0.983756748407, Regularization = 0.003992848919, Objective = 0.016243251593, Norm = 1.594341724782
+Call 11220: Overlap = 0.983756748407, Regularization = 0.003992848919, Objective = 0.016243251593, Norm = 1.594341724782
+Call 11230: Overlap = 0.983756748481, Regularization = 0.003992831224, Objective = 0.016243251519, Norm = 1.594345524204
+Call 11240: Overlap = 0.983756748481, Regularization = 0.003992831224, Objective = 0.016243251519, Norm = 1.594345524204
+Final overlap for s = 1.00: 0.983756748481
+Final energy of QCMPS ansatz for s = 1.00: -2.215215404902, Energy of HF ansatz: -2.215215410025
+Final overlap: 0.983756748481
+Final energy of QCMPS ansatz: -2.215215404902, Energy of HF ansatz: -2.215215410025
+Total Energy: -2.215215404965
+Total Energy: -2.215215404965
+Total Energy: -2.215215404965
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404986
+Total Energy: -2.215215404989
+Total Energy: -2.215215404989
+Total Energy: -2.215215404989
+Total Energy: -2.215215404993
+Total Energy: -2.215215404993
+Total Energy: -2.215215405003
+Total Energy: -2.215215405011
+Total Energy: -2.215215405011
+Total Energy: -2.215215405011
+Total Energy: -2.215215405011
+Total Energy: -2.215215405011
+Total Energy: -2.215215405011
+Total Energy: -2.215215405014
+Total Energy: -2.215215405020
+Total Energy: -2.215215405026
+Total Energy: -2.215215405032
+Total Energy: -2.215215405034
+Total Energy: -2.215215405035
+Total Energy: -2.215215405047
+Total Energy: -2.215215405070
+Total Energy: -2.215215405078
+Total Energy: -2.215215405079
+Total Energy: -2.215215405081
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405082
+Total Energy: -2.215215405083
+Total Energy: -2.215215405084
+Total Energy: -2.215215405084
+Total Energy: -2.215215405084
+Total Energy: -2.215215405084
+Total Energy: -2.215215405084
+Total Energy: -2.215215405085
+Total Energy: -2.215215405087
+Total Energy: -2.215215405088
+Total Energy: -2.215215405088
+Total Energy: -2.215215405089
+Total Energy: -2.215215405089
+Total Energy: -2.215215405090
+Total Energy: -2.215215405090
+Total Energy: -2.215215405090
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405092
+Total Energy: -2.215215405093
+Total Energy: -2.215215405094
+Total Energy: -2.215215405094
+Total Energy: -2.215215405094
+Total Energy: -2.215215405095
+Total Energy: -2.215215405095
+Total Energy: -2.215215405095
+Total Energy: -2.215215405097
+Total Energy: -2.215215405099
+Total Energy: -2.215215405102
+Total Energy: -2.215215405102
+Total Energy: -2.215215405103
+Total Energy: -2.215215405103
+Total Energy: -2.215215405104
+Total Energy: -2.215215405105
+Total Energy: -2.215215405106
+Total Energy: -2.215215405108
+Total Energy: -2.215215405108
+Total Energy: -2.215215405108
+Total Energy: -2.215215405108
+Total Energy: -2.215215405108
+Total Energy: -2.215215405109
+Total Energy: -2.215215405109
+Total Energy: -2.215215405111
+Total Energy: -2.215215405112
+Total Energy: -2.215215405113
+Total Energy: -2.215215405113
+Total Energy: -2.215215405113
+Total Energy: -2.215215405116
+Total Energy: -2.215215405118
+Total Energy: -2.215215405119
+Total Energy: -2.215215405122
+Total Energy: -2.215215405122
+Total Energy: -2.215215405122
+Total Energy: -2.215215405122
+Total Energy: -2.215215405122
+Total Energy: -2.215215405122
+Total Energy: -2.215215405122
+Total Energy: -2.215215405123
+Total Energy: -2.215215405123
+Total Energy: -2.215215405123
+Total Energy: -2.215215405123
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405130
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405147
+Total Energy: -2.215215405150
+Total Energy: -2.215215405150
+Total Energy: -2.215215405150
+Total Energy: -2.215215405150
+Total Energy: -2.215215405150
+Total Energy: -2.215215405150
+Total Energy: -2.215215405150
+Total Energy: -2.215215405151
+Total Energy: -2.215215405167
+Total Energy: -2.215215405169
+Total Energy: -2.215215405170
+Total Energy: -2.215215405179
+Total Energy: -2.215215405179
+Total Energy: -2.215215405179
+Total Energy: -2.215215405183
+Total Energy: -2.215215405206
+Total Energy: -2.215215405209
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405211
+Total Energy: -2.215215405212
+Total Energy: -2.215215405212
+Total Energy: -2.215215405213
+Total Energy: -2.215215405214
+Total Energy: -2.215215405216
+Total Energy: -2.215215405217
+Total Energy: -2.215215405217
+Total Energy: -2.215215405217
+Total Energy: -2.215215405218
+Total Energy: -2.215215405218
+Total Energy: -2.215215405218
+Total Energy: -2.215215405218
+Total Energy: -2.215215405218
+Total Energy: -2.215215405221
+Total Energy: -2.215215405222
+Total Energy: -2.215215405229
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405237
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405257
+Total Energy: -2.215215405269
+Total Energy: -2.215215405269
+Total Energy: -2.215215405269
+Total Energy: -2.215215405269
+Total Energy: -2.215215405269
+Total Energy: -2.215215405271
+Total Energy: -2.215215405271
+Total Energy: -2.215215405271
+Total Energy: -2.215215405278
+Total Energy: -2.215215405278
+Total Energy: -2.215215405281
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405282
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405301
+Total Energy: -2.215215405302
+Total Energy: -2.215215405302
+Total Energy: -2.215215405302
+Total Energy: -2.215215405304
+Total Energy: -2.215215405304
+Total Energy: -2.215215405306
+Total Energy: -2.215215405306
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405307
+Total Energy: -2.215215405334
+Total Energy: -2.215215405334
+Total Energy: -2.215215405334
+Total Energy: -2.215215405339
+Total Energy: -2.215215405339
+Total Energy: -2.215215405339
+Total Energy: -2.215215405339
+Total Energy: -2.215215405339
+Total Energy: -2.215215405339
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Total Energy: -2.215215405354
+Final energy of QCMPS ansatz: -2.215215405354, Energy of HF ansatz: -2.215215410025
