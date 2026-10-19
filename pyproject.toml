@@ -15,4 +15,4 @@ dependencies = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["qcmps*"]
+include = ["qcmps*", "experiments*"]

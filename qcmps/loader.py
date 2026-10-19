@@ -38,3 +38,20 @@ class FCIDumpLoader:
             permuted_terms.append(("".join(permuted), coeff))
     
         self.hamiltonian = SparsePauliOp.from_list(permuted_terms).simplify()
+
+    def interleave_spin_orbitals(self) -> None:
+        n = self.n_spatial_orbitals
+        
+        permutation = (
+            [2 * orbital for orbital in range(n)] +
+            [2 * orbital + 1 for orbital in range(n)]
+        )
+        
+        self.permute_hamiltonian(permutation)
+    
+    def hf_occupancy(self) -> list[int]:
+        return (
+            [2 * orbital for orbital in range(self.num_alpha)] + 
+            [2 * orbital + 1 for orbital in range(self.num_beta)]
+        )
+        

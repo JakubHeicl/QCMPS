@@ -3,15 +3,12 @@ from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitation
 from qcmps.gates import UGate, CUGate
 from qcmps.layers import SingleQubitLayerType, EntanglingLayerType
 
-import numpy as np
 from scipy.optimize import minimize
-from pathlib import Path
 
-def main():
-    PROJECT_ROOT = Path(__file__).resolve().parents[1]
-    fcidump_path = PROJECT_ROOT / "fcidumps" / "H4_FCIDUMP"
-    
-    loader = FCIDumpLoader(fcidump_path)
+from experiments._common import H4_FCIDUMP_PATH
+
+def main():    
+    loader = FCIDumpLoader(H4_FCIDUMP_PATH)
     loader.permute_hamiltonian([0, 2, 4, 6, 1, 3, 5, 7])
 
     hf_occupancy = [0, 1, 2, 3]

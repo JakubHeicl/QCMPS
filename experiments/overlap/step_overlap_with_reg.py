@@ -4,21 +4,19 @@ from qcmps.gates import UGate, CUGate
 from qcmps.layers import SingleQubitLayerType, EntanglingLayerType
 from qcmps.logger import Logger
 
-from pathlib import Path
 from scipy.optimize import minimize
 import numpy as np
 
+from experiments._common import H4_FCIDUMP_PATH
+
 def main():
-    PROJECT_ROOT = Path(__file__).resolve().parents[1]
-    fcidump_path = PROJECT_ROOT / "fcidumps" / "H4_FCIDUMP"
-    
     logger = Logger("step_overlap_with_reg_log.txt")
     
     np.random.seed(42)  
     
     #Prepare the loader and permute the Hamiltonian to match the ordering of the qubits in the ansatz
     logger.log("Loading the system")
-    loader = FCIDumpLoader(fcidump_path)
+    loader = FCIDumpLoader(H4_FCIDUMP_PATH)
     loader.permute_hamiltonian([0, 2, 4, 6, 1, 3, 5, 7])
     
     hf_occupancy = [0, 1, 2, 3]
