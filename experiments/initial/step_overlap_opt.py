@@ -1,6 +1,7 @@
 from qcmps.loader import FCIDumpLoader
 from qcmps.ansatz import GlobalQCMPS, Ansatz, HFPreset, DoubleExcitation, Component
-from qcmps.circuit_blocks import UGate, CUGate, SingleQubitLayerType, EntanglingLayerType
+from qcmps.gates import UGate, CUGate
+from qcmps.layers import SingleQubitLayerType, EntanglingLayerType
 
 from pathlib import Path
 from scipy.optimize import minimize

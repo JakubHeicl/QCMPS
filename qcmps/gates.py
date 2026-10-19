@@ -111,64 +111,73 @@ class DoubleExcitationGate(Gate):
     @staticmethod
     def n_parameters() -> int:
         return 1
+    
+class SO4Gate(Gate):
+    def __init__(self, parameters: list[float]):
+        super().__init__(parameters, 2)
 
-class LayerType(ABC):
-    def __init__(self, gate_type: type[Gate]):
-        self.gate_type = gate_type
-        
-    def build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
-        
-        if len(parameters) != self.n_parameters(n_qubits):
-            raise ValueError(f"Expected {self.n_parameters(n_qubits)} parameters, got {len(parameters)}.")
-        
-        return self._build(n_qubits, parameters)
-    
-    @abstractmethod
-    def _build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
-        pass
-        
-    def n_parameters(self, n_qubits: int) -> int:
-        if n_qubits < 1:
-            raise ValueError("Number of qubits must be at least 1.")
-        
-        return self._n_parameters(n_qubits)
-    
-    @abstractmethod
-    def _n_parameters(self, n_qubits: int) -> int:
-        pass
-    
-class EntanglingLayerType(LayerType):
-    
-    def _build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
-        circuit = QuantumCircuit(n_qubits)
-        
-        index = 0
-        
-        for qubit in range(n_qubits - 1):
-            gate_circuit = self.gate_type(parameters[index:index + self.gate_type.n_parameters()])
-            index += self.gate_type.n_parameters()
-            
-            circuit.append(gate_circuit, [qubit, qubit + 1])
-        
-        return circuit
-    
-    def _n_parameters(self, n_qubits: int) -> int:
-        return self.gate_type.n_parameters() * (n_qubits - 1)
+        (
+            theta_01,
+            theta_02,
+            theta_03,
+            theta_12,
+            theta_13,
+            theta_23,
+        ) = parameters
 
-class SingleQubitLayerType(LayerType):
-    
-    def _build(self, n_qubits: int, parameters: list[float]) -> QuantumCircuit:
-        circuit = QuantumCircuit(n_qubits)
-        
-        index = 0
-        
-        for qubit in range(n_qubits):
-            gate_circuit = self.gate_type(parameters[index:index + self.gate_type.n_parameters()])
-            index += self.gate_type.n_parameters()
-            
-            circuit.append(gate_circuit, [qubit])
-        
-        return circuit
-    
-    def _n_parameters(self, n_qubits: int) -> int:
-        return self.gate_type.n_parameters() * n_qubits
+        # Rotace |00> <-> |01>
+        self.cry(
+            2 * theta_01,
+            control_qubit=1,
+            target_qubit=0,
+            ctrl_state=0,
+        )
+
+        # Rotace |00> <-> |10>
+        self.cry(
+            2 * theta_02,
+            control_qubit=0,
+            target_qubit=1,
+            ctrl_state=0,
+        )
+
+        # Po změně báze:
+        # |00> <-> |11>
+        # |01> <-> |10>
+        self.cx(0, 1)
+
+        self.cry(
+            2 * theta_03,
+            control_qubit=1,
+            target_qubit=0,
+            ctrl_state=0,
+        )
+
+        self.cry(
+            2 * theta_12,
+            control_qubit=1,
+            target_qubit=0,
+            ctrl_state=1,
+        )
+
+        self.cx(0, 1)
+
+        # Rotace |01> <-> |11>
+        self.cry(
+            2 * theta_13,
+            control_qubit=0,
+            target_qubit=1,
+            ctrl_state=1,
+        )
+
+        # Rotace |10> <-> |11>
+        self.cry(
+            2 * theta_23,
+            control_qubit=1,
+            target_qubit=0,
+            ctrl_state=1,
+        )
+
+    @staticmethod
+    def n_parameters() -> int:
+        return 6

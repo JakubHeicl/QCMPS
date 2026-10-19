@@ -1,11 +1,13 @@
 from __future__ import annotations
-from .circuit_blocks import DoubleExcitationGate, LayerType
+from .layers import LayerType
+from .gates import DoubleExcitationGate
 
 import numpy as np
 from typing import Callable
 from qiskit import QuantumCircuit
 from qiskit.circuit import ParameterVector
 from qiskit.quantum_info import SparsePauliOp, Statevector
+from qiskit_algorithms.gradients import ReverseEstimatorGradient
 
 from abc import ABC
 from itertools import combinations
@@ -45,7 +47,38 @@ class Component(ABC, QuantumCircuit):
     
     def uniform_parameters(self, min = 0.0, max = 2 * np.pi) -> None:
         self.parameters_values = np.random.uniform(min, max, self.n_parameters)
-    
+        
+    def perturb_parameters(self, perturbation_strength: float) -> None:
+        
+        perturbation = np.random.uniform(-perturbation_strength, perturbation_strength, self.n_parameters)
+        
+        self.parameters_values += perturbation
+        
+    def resize_parameters(self, new_n_parameters: int) -> None:
+        
+        old_n_parameters = self.n_parameters
+        self.n_parameters = new_n_parameters
+        
+        if new_n_parameters == old_n_parameters:
+            return
+        
+        if new_n_parameters > old_n_parameters:
+            if self.parameters_values is not None:
+                new_parameters_values = np.zeros(new_n_parameters)
+                new_parameters_values[:old_n_parameters] = self.parameters_values
+                self.parameters_values = new_parameters_values
+                self.parameters_symbols.resize(new_n_parameters)
+            else:
+                self.parameters_values = np.zeros(new_n_parameters)
+                self.parameters_symbols = ParameterVector(f"{self.name}_theta", new_n_parameters)
+        else:
+            if self.parameters_values is not None:
+                self.parameters_values = self.parameters_values[:new_n_parameters]
+                self.parameters_symbols.resize(new_n_parameters)
+            else:
+                self.parameters_symbols = None
+                self.parameters_values = None
+                
     @staticmethod
     def from_fixed_circuit(circuit: QuantumCircuit) -> Component:
         
@@ -63,8 +96,13 @@ class Ansatz(QuantumCircuit):
         
         self.n_qubits = n_qubits
         self.components: list[Component] = []
+        self.component_qubits: list[list[int]] = []
+        
         self.hamiltonian: SparsePauliOp | None = None
+        self.hamiltonian_qubits: list[int] = list(range(self.n_qubits))
         self.nuclear_repulsion: float | None = None
+        
+        self.gradient_calculator = ReverseEstimatorGradient()
         
     def add_component(self, component: Component, qubits: list[int]):
         
@@ -72,12 +110,20 @@ class Ansatz(QuantumCircuit):
             raise ValueError(f"Expected {component.n_qubits} qubits for the component, got {len(qubits)}.")
         
         self.components.append(component)
+        self.component_qubits.append(qubits)
+        
         self.compose(component, qubits=qubits, inplace=True)
         
-    def add_hamiltonian(self, hamiltonian: SparsePauliOp, target_qubits: list[int] | None = None):
-        self.hamiltonian = hamiltonian
-        self.target_qubits = target_qubits if target_qubits is not None else list(range(self.n_qubits))
+    def rebuild(self) -> None:
+        self.clear()
         
+        for component, qubits in zip(self.components, self.component_qubits):
+            self.compose(component, qubits=qubits, inplace=True)
+        
+    def add_hamiltonian(self, hamiltonian: SparsePauliOp, hamiltonian_qubits: list[int] | None = None):
+        self.hamiltonian = hamiltonian
+        self.hamiltonian_qubits = hamiltonian_qubits if hamiltonian_qubits is not None else list(range(self.n_qubits))
+
     def add_nuclear_repulsion(self, nuclear_repulsion: float):
         self.nuclear_repulsion = nuclear_repulsion
             
@@ -106,6 +152,23 @@ class Ansatz(QuantumCircuit):
         
         return objective_function
     
+    def energy_gradient_function(self, component: Component) -> Callable[[np.ndarray], np.ndarray]:
+        
+        if not any(item is component for item in self.components):
+            raise ValueError("The specified component is not part of the ansatz.")
+        
+        if self.hamiltonian is None:
+            raise ValueError("Hamiltonian has not been added.")
+        
+        def gradient_function(x: np.ndarray) -> np.ndarray:
+            component.update_parameters(x)
+            
+            result = self.gradient_calculator.run([self], [self.hamiltonian], [x], [list(component.parameters_symbols)]).result()
+            
+            return np.asarray(result.gradients[0], dtype=float)
+        
+        return gradient_function
+    
     def zero_state_objective(self, component: Component, target_qubits: list[int]) -> Callable[[np.ndarray], float]:
         
         if not any(item is component for item in self.components):
@@ -132,7 +195,7 @@ class Ansatz(QuantumCircuit):
         circuit = self.bound_circuit()
         state = Statevector.from_instruction(circuit)
 
-        energy = state.expectation_value(self.hamiltonian, qargs=self.target_qubits)
+        energy = state.expectation_value(self.hamiltonian, qargs=self.hamiltonian_qubits)
         return float(np.real_if_close(energy))
     
     def total_energy(self) -> float:
@@ -235,3 +298,28 @@ class GlobalQCMPS(Component):
                 self.swap(orbital + qubit - 1, orbital + qubit)
 
             self.compose(block, qubits=list(range(orbital, orbital + self.block_entries)), inplace=True)
+
+    def add_layers(self, layer_types: list[LayerType]) -> None:
+        old_values = self.parameters_values.reshape(
+            self.n_phys_qubits,
+            self.num_block_params,
+        )
+
+        added_block_params = sum(
+            layer.n_parameters(self.block_entries)
+            for layer in layer_types
+        )
+
+        new_values = np.pad(
+            old_values,
+            ((0, 0), (0, added_block_params)),
+        ).reshape(-1)
+
+        self.layer_types.extend(layer_types)
+        self.num_block_params += added_block_params
+
+        self.resize_parameters(len(new_values))
+        self.parameters_values = new_values
+
+        self.build_blocks()
+        self.build_circuit()
