@@ -1,0 +1,110 @@
+HF energy:
+-2.368421284283
+Initial total energy after uniform initialization:
+-1.445341539905
+Starting QCMPS optimization...
+[opt] Total Energy: -1.602358147513
+[opt] Total Energy: -1.777768977145
+[opt] Total Energy: -1.879125234792
+[opt] Total Energy: -2.048593040959
+[opt] Total Energy: -2.182655696258
+[opt] Total Energy: -2.345781416577
+[opt] Total Energy: -2.452382248574
+[opt] Total Energy: -2.647160297988
+[opt] Total Energy: -2.678608511331
+[opt] Total Energy: -2.698253989228
+[opt] Total Energy: -2.715434172871
+[opt] Total Energy: -2.732248411467
+[opt] Total Energy: -2.742339233345
+[opt] Total Energy: -2.746443166787
+[opt] Total Energy: -2.750504578813
+[opt] Total Energy: -2.751165627642
+[opt] Total Energy: -2.752972185367
+[opt] Total Energy: -2.753413735124
+[opt] Total Energy: -2.754201233082
+[opt] Total Energy: -2.754800970743
+[opt] Total Energy: -2.754962006933
+[opt] Total Energy: -2.755174515628
+[opt] Total Energy: -2.755209312880
+[opt] Total Energy: -2.755274471106
+[opt] Total Energy: -2.755307608434
+[opt] Total Energy: -2.755353473141
+[opt] Total Energy: -2.755382235755
+[opt] Total Energy: -2.755413529358
+[opt] Total Energy: -2.755471057706
+[opt] Total Energy: -2.755487095091
+[opt] Total Energy: -2.755509144860
+[opt] Total Energy: -2.755520850616
+[opt] Total Energy: -2.755530062807
+[opt] Total Energy: -2.755533459891
+[opt] Total Energy: -2.755536589168
+[opt] Total Energy: -2.755541341931
+[opt] Total Energy: -2.755543937227
+[opt] Total Energy: -2.755547085597
+[opt] Total Energy: -2.755549567981
+[opt] Total Energy: -2.755550955298
+[opt] Total Energy: -2.755552210278
+[opt] Total Energy: -2.755554439300
+[opt] Total Energy: -2.755555502994
+[opt] Total Energy: -2.755556908137
+[opt] Total Energy: -2.755559529278
+[opt] Total Energy: -2.755562940892
+[opt] Total Energy: -2.755567574151
+[opt] Total Energy: -2.755571138233
+[opt] Total Energy: -2.755577189902
+[opt] Total Energy: -2.755582800277
+[opt] Total Energy: -2.755589245576
+[opt] Total Energy: -2.755597360147
+[opt] Total Energy: -2.755600693701
+[opt] Total Energy: -2.755602976888
+[opt] Total Energy: -2.755606855639
+[opt] Total Energy: -2.755608967454
+[opt] Total Energy: -2.755610075791
+[opt] Total Energy: -2.755612028482
+[opt] Total Energy: -2.755612429707
+[opt] Total Energy: -2.755613093331
+[opt] Total Energy: -2.755613674157
+[opt] Total Energy: -2.755614141303
+[opt] Total Energy: -2.755614371748
+[opt] Total Energy: -2.755614561141
+[opt] Total Energy: -2.755614760407
+Final total energy:
+-2.755614760407
+Adding additional layers to QCMPS...
+-2.755614760407
+Perturbing QCMPS parameters...
+Energy after perturbing parameters:
+-2.755590670210
+Starting QCMPS optimization after adding layers and perturbing parameters...
+[opt] Total Energy: -2.755603306343
+[opt] Total Energy: -2.755607548562
+[opt] Total Energy: -2.755612516847
+[opt] Total Energy: -2.755613826762
+[opt] Total Energy: -2.755614485225
+[opt] Total Energy: -2.755614990253
+[opt] Total Energy: -2.755615121393
+[opt] Total Energy: -2.755615384170
+[opt] Total Energy: -2.755615523376
+[opt] Total Energy: -2.755615651587
+[opt] Total Energy: -2.755615704169
+[opt] Total Energy: -2.755615766358
+[opt] Total Energy: -2.755615834269
+[opt] Total Energy: -2.755615889196
+[opt] Total Energy: -2.755615915466
+[opt] Total Energy: -2.755615933090
+[opt] Total Energy: -2.755615956840
+[opt] Total Energy: -2.755616002718
+[opt] Total Energy: -2.755616077326
+[opt] Total Energy: -2.755616111724
+[opt] Total Energy: -2.755616178504
+[opt] Total Energy: -2.755616223296
+[opt] Total Energy: -2.755616257205
+[opt] Total Energy: -2.755616289235
+[opt] Total Energy: -2.755616361602
+[opt] Total Energy: -2.755616399317
+[opt] Total Energy: -2.755616440833
+[opt] Total Energy: -2.755616503691
+[opt] Total Energy: -2.755616540928
+[opt] Total Energy: -2.755616607889
+Final total energy after adding layers and perturbing parameters:
+-2.755616607889

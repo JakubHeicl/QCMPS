@@ -1,6 +1,7 @@
 from __future__ import annotations
 from .layers import LayerType
 from .gates import DoubleExcitationGate
+from .utils import todo
 
 import numpy as np
 from typing import Callable
@@ -141,17 +142,69 @@ class Ansatz(QuantumCircuit):
 
         return QuantumCircuit.assign_parameters(self, parameter_map, inplace=False)
     
-    def energy_objective(self, component: Component) -> Callable[[np.ndarray], float]:
+    def energy_objective(self, components: Component | list[Component], parameter_groups: np.ndarray | list[np.ndarray] | None = None) -> Callable[[np.ndarray], float]:
         
-        if not any(item is component for item in self.components):
+        if isinstance(components, Component):
+            components = [components]
+        
+        if any(not any(item is component for item in self.components) for component in components):
             raise ValueError("The specified component is not part of the ansatz.")
         
+        if parameter_groups is None:
+            parameter_groups = [np.arange(component.n_parameters) for component in components]
+        elif isinstance(parameter_groups, np.ndarray):
+            parameter_groups = [parameter_groups]
+        
+        if len(parameter_groups) != len(components):
+            raise ValueError("The number of parameter groups must match the number of components.")
+        
+        normalized_groups = []
+        baselines = []
+        
+        for component, group in zip(components, parameter_groups, strict = True):
+            
+            group = np.asarray(group, dtype=int)
+            
+            if group.ndim != 1:
+                raise ValueError("Each parameter group must be a 1D array.")
+            
+            if np.any(group < 0) or np.any(group >= component.n_parameters):
+                raise ValueError("Parameter group indices are out of bounds for the component.")
+            
+            if len(np.unique(group)) != len(group):
+                raise ValueError("Parameter group indices must be unique for each component.")
+            
+            normalized_groups.append(group.copy())
+            baselines.append(component.current_parameters())
+        
+        expected_parameters = sum(len(group) for group in normalized_groups)
+        
         def objective_function(x: np.ndarray) -> float:
-            component.update_parameters(x)
+            
+            x = np.asarray(x, dtype=float)
+            
+            if len(x) != expected_parameters:
+                raise ValueError(f"Expected {expected_parameters} parameters, got {len(x)}.")
+        
+            offset = 0
+            
+            for component, group, baseline in zip(components, normalized_groups, baselines, strict = True):
+                
+                n_group_parameters = len(group)
+                
+                local_parameters = x[offset:offset + n_group_parameters]
+                
+                full_parameters = baseline.copy()
+                full_parameters[group] = local_parameters
+                
+                component.update_parameters(full_parameters)
+                offset += n_group_parameters   
+            
             return self.energy()
         
         return objective_function
     
+    @todo("Need to implement calculation for multiple components at once. Maybe a general function for general objective functions.")
     def energy_gradient_function(self, component: Component) -> Callable[[np.ndarray], np.ndarray]:
         
         if not any(item is component for item in self.components):
@@ -169,6 +222,7 @@ class Ansatz(QuantumCircuit):
         
         return gradient_function
     
+    @todo("Need to implement calculation for multiple components at once. Maybe a general function for general objective functions.")
     def zero_state_objective(self, component: Component, target_qubits: list[int]) -> Callable[[np.ndarray], float]:
         
         if not any(item is component for item in self.components):
@@ -204,10 +258,12 @@ class Ansatz(QuantumCircuit):
         
         return self.energy() + self.nuclear_repulsion
     
+    @todo("Implement a general printing function")
     def print_energy(self, *args, **kwargs):
         energy = self.energy()
         print(f"Energy: {energy:.12f}")
-    
+
+    @todo("Implement a general printing function")
     def print_total_energy(self, *args, **kwargs):
         total_energy = self.total_energy()
         print(f"Total Energy: {total_energy:.12f}")
@@ -323,3 +379,15 @@ class GlobalQCMPS(Component):
 
         self.build_blocks()
         self.build_circuit()
+        
+    def block_parameter_groups(self) -> list[np.ndarray]:
+        
+        offset = 0
+        parameter_groups = []
+        
+        for _ in range(self.n_phys_qubits):
+            
+            parameter_groups.append(np.arange(offset, offset + self.num_block_params))
+            offset += self.num_block_params
+            
+        return parameter_groups

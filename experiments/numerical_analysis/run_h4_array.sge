@@ -1,0 +1,41 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -cwd
+#$ -V
+#$ -N h4_qcmps
+#$ -j y
+#$ -o experiments/numerical_analysis/cluster_logs
+#$ -t 1-6
+#$ -tc 6
+
+set -euo pipefail
+
+BOND_QUBITS=(1 2 3)
+SEEDS=(0 1)
+
+TASK_INDEX=$((SGE_TASK_ID - 1))
+N_SEEDS=${#SEEDS[@]}
+BOND_INDEX=$((TASK_INDEX / N_SEEDS))
+SEED_INDEX=$((TASK_INDEX % N_SEEDS))
+
+BOND=${BOND_QUBITS[$BOND_INDEX]}
+SEED=${SEEDS[$SEED_INDEX]}
+
+echo "Task ${SGE_TASK_ID}: bond qubits=${BOND}, seed=${SEED}"
+echo "Python: $(command -v python)"
+python --version
+
+python -u experiments/numerical_analysis/h4_overnight.py \
+    --bond-qubits "${BOND}" \
+    --seeds "${SEED}" \
+    --max-layers 4 \
+    --initial-global-maxiter 150 \
+    --polish-global-maxiter 250 \
+    --max-sweeps 5 \
+    --local-maxiter 5 \
+    --sweep-tolerance 1e-6 \
+    --gtol 1e-6 \
+    --perturbation 1e-3 \
+    --log-every 10 \
+    --output-dir experiments/numerical_analysis/h4_array_results \
+    --skip-summary

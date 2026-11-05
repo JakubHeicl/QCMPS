@@ -12,12 +12,12 @@ from experiments._common import H4_FCIDUMP_PATH, H6_FCIDUMP_PATH
 def main():
     loader = FCIDumpLoader(H6_FCIDUMP_PATH)
     loader.interleave_spin_orbitals()
-    logger = Logger("energy_so4_h6.log")
+    logger = Logger("energy_so4_h6_3bond.log")
     
     hf_occupancy = loader.hf_occupancy()
 
     num_phys_qubits = loader.n_spin_orbitals
-    num_bond_qubits = 2
+    num_bond_qubits = 3
     num_qubits = num_phys_qubits + num_bond_qubits
     
     full_hamiltonian = SparsePauliOp.from_list([
