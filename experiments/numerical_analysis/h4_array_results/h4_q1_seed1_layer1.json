@@ -1,0 +1,21 @@
+{
+  "system": "H4",
+  "seed": 1,
+  "n_bond_qubits": 1,
+  "bond_dimension": 2,
+  "n_layers": 1,
+  "n_parameters": 48,
+  "total_energy": -2.2221891252063193,
+  "global": {
+    "initial_electronic_energy": -2.377498697115999,
+    "final_electronic_energy": -4.7510121275442945,
+    "n_function_evaluations": 8527,
+    "n_iterations": 150,
+    "converged": false,
+    "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "energy_history": [
+      -2.377498697115999,
+      -4.7510121275442945
+    ]
+  }
+}

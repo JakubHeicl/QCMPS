@@ -105,18 +105,20 @@ class GlobalOptimizer(Optimizer):
     
 class SweepOptimizer(Optimizer):
     
-    def __init__(
-        self,
-        logger: Logger | None = None,
-        log_every_n_steps: int = 1,
-        max_sweeps = 10,
-        local_maxiter = 10,
-        tolerance = 1e-7         
-    ):
+    def __init__(self, logger: Logger | None = None, log_every_n_steps: int = 1, max_sweeps = 10, local_maxiter = 10, tolerance = 1e-7):
+        
         super().__init__(logger, log_every_n_steps)
         self.max_sweeps = max_sweeps
         self.local_maxiter = local_maxiter
         self.tolerance = tolerance
+
+    @abstractmethod
+    def _parameter_groups(self, qcmps: GlobalQCMPS) -> list[np.ndarray]:
+        pass
+    
+    @abstractmethod
+    def _group_label(self, group_index: int, n_groups: int) -> str:
+        pass
 
     def optimize(
         self, 
@@ -129,14 +131,14 @@ class SweepOptimizer(Optimizer):
         self.step_counter = 0
         
         if not isinstance(components, GlobalQCMPS):
-            raise TypeError("SweepOptimizer only supports GlobalQCMPS components.")
+            raise TypeError(f"{type(self).__name__} only supports GlobalQCMPS components.")
         
         qcmps: GlobalQCMPS = components
         
         if not any(component is qcmps for component in ansatz.components):
             raise ValueError("The specified component is not part of the ansatz.")
         
-        groups = qcmps.block_parameter_groups()
+        groups = self._parameter_groups(qcmps)
         
         if not groups:
             raise ValueError("No parameter groups found in the GlobalQCMPS component.")
@@ -168,9 +170,10 @@ class SweepOptimizer(Optimizer):
             
             energy_before_sweep = current_energy
             
-            for block_index, group in sweep_order:
-                
-                self.log(f"Optimizing block {block_index + 1}/{len(groups)}...")
+            for group_index, group in sweep_order:
+
+                group_label = self._group_label(group_index, len(groups))
+                self.log(f"Optimizing {group_label.lower()}/{len(groups)}...")
                 
                 baseline = qcmps.current_parameters()
                 x0 = baseline[group].copy()
@@ -197,7 +200,7 @@ class SweepOptimizer(Optimizer):
                 else:
                     qcmps.update_parameters(baseline)
                     
-                self.log(f"[Sweep {sweep_index + 1} Block {block_index + 1}] Total energy: {current_energy + shift:.12f}")
+                self.log(f"[Sweep {sweep_index + 1} {group_label}] Total energy: {current_energy + shift:.12f}")
             
             sweep_energies.append(current_energy)
             
@@ -209,8 +212,6 @@ class SweepOptimizer(Optimizer):
                 self.log(f"Convergence reached after {sweep_index + 1} sweeps. Relative change: {relative_change:.2e}")
                 converged = True
                 break
-            
-        completed_sweeps = len(sweep_energies) - 1
         
         if converged:
             message = "Sweep optimization converged to the relative energy tolerance."
@@ -227,4 +228,26 @@ class SweepOptimizer(Optimizer):
             message=message,
             energy_history=sweep_energies
         )
+
+
+class OneSiteOptimizer(SweepOptimizer):
+    
+    def _parameter_groups(self, qcmps: GlobalQCMPS) -> list[np.ndarray]:
+        return qcmps.block_parameter_groups()
+
+    def _group_label(self, group_index: int, n_groups: int) -> str:
+        return f"Block {group_index + 1}"
+    
+class TwoSiteOptimizer(SweepOptimizer):
+
+    def _parameter_groups(self, qcmps: GlobalQCMPS) -> list[np.ndarray]:
+        block_groups = qcmps.block_parameter_groups()
+
+        if len(block_groups) < 2:
+            raise ValueError("TwoSiteOptimizer requires at least two QCMPS parameter blocks.")
+
+        return [np.concatenate((left_group, right_group)) for left_group, right_group in zip(block_groups[:-1], block_groups[1:])]
+
+    def _group_label(self, group_index: int, n_groups: int) -> str:
+        return f"Site pair {group_index + 1}-{group_index + 2}"
             

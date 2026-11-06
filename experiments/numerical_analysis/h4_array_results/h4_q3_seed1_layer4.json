@@ -1,0 +1,37 @@
+{
+  "system": "H4",
+  "seed": 1,
+  "n_bond_qubits": 3,
+  "bond_dimension": 8,
+  "n_layers": 4,
+  "n_parameters": 576,
+  "total_energy": -2.221338721039455,
+  "sweep": {
+    "initial_electronic_energy": -4.746441243442308,
+    "final_electronic_energy": -4.749037951515316,
+    "n_function_evaluations": 37231,
+    "n_iterations": 350,
+    "converged": false,
+    "message": "Maximum number of sweeps was reached.",
+    "energy_history": [
+      -4.746441243442308,
+      -4.747073948560108,
+      -4.74753326606505,
+      -4.747926174323331,
+      -4.74845664722712,
+      -4.749037951515316
+    ]
+  },
+  "global_polish": {
+    "initial_electronic_energy": -4.749037951515316,
+    "final_electronic_energy": -4.75016172337743,
+    "n_function_evaluations": 15003,
+    "n_iterations": 23,
+    "converged": false,
+    "message": "STOP: TOTAL NO. OF F,G EVALUATIONS EXCEEDS LIMIT",
+    "energy_history": [
+      -4.749037951515316,
+      -4.75016172337743
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "system": "H4",
+  "seed": 1,
+  "n_bond_qubits": 2,
+  "bond_dimension": 4,
+  "n_layers": 4,
+  "n_parameters": 384,
+  "total_energy": -2.226950273406821,
+  "sweep": {
+    "initial_electronic_energy": -4.7557577707585725,
+    "final_electronic_energy": -4.7557732704125835,
+    "n_function_evaluations": 5734,
+    "n_iterations": 57,
+    "converged": true,
+    "message": "Sweep optimization converged to the relative energy tolerance.",
+    "energy_history": [
+      -4.7557577707585725,
+      -4.75577321532125,
+      -4.7557732704125835
+    ]
+  },
+  "global_polish": {
+    "initial_electronic_energy": -4.7557732704125835,
+    "final_electronic_energy": -4.755773275744796,
+    "n_function_evaluations": 1541,
+    "n_iterations": 1,
+    "converged": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "energy_history": [
+      -4.7557732704125835,
+      -4.755773275744796
+    ]
+  }
+}

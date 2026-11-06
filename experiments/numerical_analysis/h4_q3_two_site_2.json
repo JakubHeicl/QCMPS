@@ -1,0 +1,8 @@
+{
+  "system": "H4",
+  "n_bond_qubits": 3,
+  "bond_dimension": 8,
+  "n_layers": 2,
+  "n_parameters": 288,
+  "total_energy": -2.215215284215244
+}

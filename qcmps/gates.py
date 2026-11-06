@@ -181,3 +181,4 @@ class SO4Gate(Gate):
     @staticmethod
     def n_parameters() -> int:
         return 6
+    

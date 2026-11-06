@@ -1,0 +1,321 @@
+Energy: -2.228225343638
+Starting Sweep optimization...
+[Optimizer] Sweep 1/5 started.
+[Optimizer] Optimizing block 1/8...
+[Optimizer] Total Energy: -2.228234896270
+[Optimizer] [Sweep 1 Block 1] Total energy: -2.228275604218
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 1 Block 2] Total energy: -2.228429445875
+[Optimizer] Optimizing block 3/8...
+[Optimizer] Total Energy: -2.228448315827
+[Optimizer] [Sweep 1 Block 3] Total energy: -2.228454455921
+[Optimizer] Optimizing block 4/8...
+[Optimizer] [Sweep 1 Block 4] Total energy: -2.228545125050
+[Optimizer] Optimizing block 5/8...
+[Optimizer] Total Energy: -2.228681901354
+[Optimizer] [Sweep 1 Block 5] Total energy: -2.228867008828
+[Optimizer] Optimizing block 6/8...
+[Optimizer] [Sweep 1 Block 6] Total energy: -2.229562778118
+[Optimizer] Optimizing block 7/8...
+[Optimizer] Total Energy: -2.229582805116
+[Optimizer] [Sweep 1 Block 7] Total energy: -2.229824992951
+[Optimizer] Optimizing block 8/8...
+[Optimizer] [Sweep 1 Block 8] Total energy: -2.229882719914
+[Optimizer] Optimizing block 7/8...
+[Optimizer] Total Energy: -2.229885210841
+[Optimizer] [Sweep 1 Block 7] Total energy: -2.229899276073
+[Optimizer] Optimizing block 6/8...
+[Optimizer] [Sweep 1 Block 6] Total energy: -2.230253254306
+[Optimizer] Optimizing block 5/8...
+[Optimizer] Total Energy: -2.230387109059
+[Optimizer] [Sweep 1 Block 5] Total energy: -2.230712489496
+[Optimizer] Optimizing block 4/8...
+[Optimizer] [Sweep 1 Block 4] Total energy: -2.230905517095
+[Optimizer] Optimizing block 3/8...
+[Optimizer] Total Energy: -2.230926954194
+[Optimizer] [Sweep 1 Block 3] Total energy: -2.230932758884
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 1 Block 2] Total energy: -2.230944607803
+[Optimizer] [Sweep 1] Total energy: -2.230944607803, Relative change: 5.716e-04
+[Optimizer] Sweep 2/5 started.
+[Optimizer] Optimizing block 1/8...
+[Optimizer] Total Energy: -2.230953628193
+[Optimizer] [Sweep 2 Block 1] Total energy: -2.230955744099
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 2 Block 2] Total energy: -2.230958371751
+[Optimizer] Optimizing block 3/8...
+[Optimizer] Total Energy: -2.230959881144
+[Optimizer] [Sweep 2 Block 3] Total energy: -2.230961242972
+[Optimizer] Optimizing block 4/8...
+[Optimizer] [Sweep 2 Block 4] Total energy: -2.231005017946
+[Optimizer] Optimizing block 5/8...
+[Optimizer] Total Energy: -2.231079288937
+[Optimizer] [Sweep 2 Block 5] Total energy: -2.231123501810
+[Optimizer] Optimizing block 6/8...
+[Optimizer] [Sweep 2 Block 6] Total energy: -2.231488429621
+[Optimizer] Optimizing block 7/8...
+[Optimizer] Total Energy: -2.231523436620
+[Optimizer] [Sweep 2 Block 7] Total energy: -2.231559104242
+[Optimizer] Optimizing block 8/8...
+[Optimizer] [Sweep 2 Block 8] Total energy: -2.231568847555
+[Optimizer] Optimizing block 7/8...
+[Optimizer] Total Energy: -2.231571807717
+[Optimizer] [Sweep 2 Block 7] Total energy: -2.231575504066
+[Optimizer] Optimizing block 6/8...
+[Optimizer] [Sweep 2 Block 6] Total energy: -2.231740375931
+[Optimizer] Optimizing block 5/8...
+[Optimizer] Total Energy: -2.231760169254
+[Optimizer] [Sweep 2 Block 5] Total energy: -2.231792619131
+[Optimizer] Optimizing block 4/8...
+[Optimizer] [Sweep 2 Block 4] Total energy: -2.231799608998
+[Optimizer] Optimizing block 3/8...
+[Optimizer] Total Energy: -2.231808444272
+[Optimizer] [Sweep 2 Block 3] Total energy: -2.231809127967
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 2 Block 2] Total energy: -2.231810800567
+[Optimizer] [Sweep 2] Total energy: -2.231810800567, Relative change: 1.820e-04
+[Optimizer] Sweep 3/5 started.
+[Optimizer] Optimizing block 1/8...
+[Optimizer] Total Energy: -2.231811543727
+[Optimizer] [Sweep 3 Block 1] Total energy: -2.231811579115
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 3 Block 2] Total energy: -2.231812951515
+[Optimizer] Optimizing block 3/8...
+[Optimizer] Total Energy: -2.231814439739
+[Optimizer] [Sweep 3 Block 3] Total energy: -2.231816785241
+[Optimizer] Optimizing block 4/8...
+[Optimizer] [Sweep 3 Block 4] Total energy: -2.231825084302
+[Optimizer] Optimizing block 5/8...
+[Optimizer] Total Energy: -2.231842144432
+[Optimizer] [Sweep 3 Block 5] Total energy: -2.231846919628
+[Optimizer] Optimizing block 6/8...
+[Optimizer] [Sweep 3 Block 6] Total energy: -2.231952601701
+[Optimizer] Optimizing block 7/8...
+[Optimizer] Total Energy: -2.231955585459
+[Optimizer] [Sweep 3 Block 7] Total energy: -2.231960557751
+[Optimizer] Optimizing block 8/8...
+[Optimizer] [Sweep 3 Block 8] Total energy: -2.231964923553
+[Optimizer] Optimizing block 7/8...
+[Optimizer] Total Energy: -2.231967365373
+[Optimizer] [Sweep 3 Block 7] Total energy: -2.231970218672
+[Optimizer] Optimizing block 6/8...
+[Optimizer] [Sweep 3 Block 6] Total energy: -2.232032401008
+[Optimizer] Optimizing block 5/8...
+[Optimizer] Total Energy: -2.232042720597
+[Optimizer] [Sweep 3 Block 5] Total energy: -2.232044686540
+[Optimizer] Optimizing block 4/8...
+[Optimizer] [Sweep 3 Block 4] Total energy: -2.232051386588
+[Optimizer] Optimizing block 3/8...
+[Optimizer] Total Energy: -2.232054664500
+[Optimizer] [Sweep 3 Block 3] Total energy: -2.232056144508
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 3 Block 2] Total energy: -2.232056564932
+[Optimizer] [Sweep 3] Total energy: -2.232056564932, Relative change: 5.162e-05
+[Optimizer] Sweep 4/5 started.
+[Optimizer] Optimizing block 1/8...
+[Optimizer] Total Energy: -2.232057004945
+[Optimizer] [Sweep 4 Block 1] Total energy: -2.232057004945
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 4 Block 2] Total energy: -2.232057035254
+[Optimizer] Optimizing block 3/8...
+[Optimizer] [Sweep 4 Block 3] Total energy: -2.232059531019
+[Optimizer] Optimizing block 4/8...
+[Optimizer] Total Energy: -2.232065429446
+[Optimizer] [Sweep 4 Block 4] Total energy: -2.232072171092
+[Optimizer] Optimizing block 5/8...
+[Optimizer] [Sweep 4 Block 5] Total energy: -2.232080854609
+[Optimizer] Optimizing block 6/8...
+[Optimizer] Total Energy: -2.232119640792
+[Optimizer] [Sweep 4 Block 6] Total energy: -2.232127677392
+[Optimizer] Optimizing block 7/8...
+[Optimizer] [Sweep 4 Block 7] Total energy: -2.232129798355
+[Optimizer] Optimizing block 8/8...
+[Optimizer] Total Energy: -2.232132365688
+[Optimizer] [Sweep 4 Block 8] Total energy: -2.232132967983
+[Optimizer] Optimizing block 7/8...
+[Optimizer] [Sweep 4 Block 7] Total energy: -2.232133991879
+[Optimizer] Optimizing block 6/8...
+[Optimizer] Total Energy: -2.232164867965
+[Optimizer] [Sweep 4 Block 6] Total energy: -2.232168665767
+[Optimizer] Optimizing block 5/8...
+[Optimizer] [Sweep 4 Block 5] Total energy: -2.232174392480
+[Optimizer] Optimizing block 4/8...
+[Optimizer] Total Energy: -2.232176939729
+[Optimizer] [Sweep 4 Block 4] Total energy: -2.232177659477
+[Optimizer] Optimizing block 3/8...
+[Optimizer] [Sweep 4 Block 3] Total energy: -2.232180458512
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 4 Block 2] Total energy: -2.232180500155
+[Optimizer] [Sweep 4] Total energy: -2.232180500155, Relative change: 2.603e-05
+[Optimizer] Sweep 5/5 started.
+[Optimizer] Optimizing block 1/8...
+[Optimizer] Total Energy: -2.232180792640
+[Optimizer] [Sweep 5 Block 1] Total energy: -2.232180792640
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 5 Block 2] Total energy: -2.232181221312
+[Optimizer] Optimizing block 3/8...
+[Optimizer] Total Energy: -2.232183220030
+[Optimizer] [Sweep 5 Block 3] Total energy: -2.232183220030
+[Optimizer] Optimizing block 4/8...
+[Optimizer] [Sweep 5 Block 4] Total energy: -2.232184137627
+[Optimizer] Optimizing block 5/8...
+[Optimizer] Total Energy: -2.232185490382
+[Optimizer] [Sweep 5 Block 5] Total energy: -2.232185490382
+[Optimizer] Optimizing block 6/8...
+[Optimizer] [Sweep 5 Block 6] Total energy: -2.232215672000
+[Optimizer] Optimizing block 7/8...
+[Optimizer] Total Energy: -2.232217353202
+[Optimizer] [Sweep 5 Block 7] Total energy: -2.232217353202
+[Optimizer] Optimizing block 8/8...
+[Optimizer] [Sweep 5 Block 8] Total energy: -2.232220598912
+[Optimizer] Optimizing block 7/8...
+[Optimizer] [Sweep 5 Block 7] Total energy: -2.232220681880
+[Optimizer] Optimizing block 6/8...
+[Optimizer] Total Energy: -2.232238437154
+[Optimizer] [Sweep 5 Block 6] Total energy: -2.232242983351
+[Optimizer] Optimizing block 5/8...
+[Optimizer] [Sweep 5 Block 5] Total energy: -2.232246196819
+[Optimizer] Optimizing block 4/8...
+[Optimizer] Total Energy: -2.232246675897
+[Optimizer] [Sweep 5 Block 4] Total energy: -2.232246910616
+[Optimizer] Optimizing block 3/8...
+[Optimizer] [Sweep 5 Block 3] Total energy: -2.232249070245
+[Optimizer] Optimizing block 2/8...
+[Optimizer] [Sweep 5 Block 2] Total energy: -2.232249103913
+[Optimizer] [Sweep 5] Total energy: -2.232249103913, Relative change: 1.441e-05
+Final energy: -2.232249103913
+Starting Global optimization...
+[Optimizer] Total Energy: -2.232249360271
+[Optimizer] Total Energy: -2.232249722670
+[Optimizer] Total Energy: -2.232250193628
+[Optimizer] Total Energy: -2.232250616985
+[Optimizer] Total Energy: -2.232251843253
+[Optimizer] Total Energy: -2.232252391832
+[Optimizer] Total Energy: -2.232253020868
+[Optimizer] Total Energy: -2.232253646920
+[Optimizer] Total Energy: -2.232254162059
+[Optimizer] Total Energy: -2.232255480697
+[Optimizer] Total Energy: -2.232257927822
+[Optimizer] Total Energy: -2.232263068642
+[Optimizer] Total Energy: -2.232265716915
+[Optimizer] Total Energy: -2.232268805807
+[Optimizer] Total Energy: -2.232270309640
+[Optimizer] Total Energy: -2.232270682392
+[Optimizer] Total Energy: -2.232271371840
+[Optimizer] Total Energy: -2.232272471735
+[Optimizer] Total Energy: -2.232273537825
+[Optimizer] Total Energy: -2.232274127095
+[Optimizer] Total Energy: -2.232275637767
+[Optimizer] Total Energy: -2.232278409956
+[Optimizer] Total Energy: -2.232281440993
+[Optimizer] Total Energy: -2.232284931751
+[Optimizer] Total Energy: -2.232290229858
+[Optimizer] Total Energy: -2.232292555100
+[Optimizer] Total Energy: -2.232295102799
+[Optimizer] Total Energy: -2.232298909110
+[Optimizer] Total Energy: -2.232301984081
+[Optimizer] Total Energy: -2.232304210695
+[Optimizer] Total Energy: -2.232310464584
+[Optimizer] Total Energy: -2.232313070023
+[Optimizer] Total Energy: -2.232316017014
+[Optimizer] Total Energy: -2.232320438239
+[Optimizer] Total Energy: -2.232326914698
+[Optimizer] Total Energy: -2.232333962860
+[Optimizer] Total Energy: -2.232337540834
+[Optimizer] Total Energy: -2.232341155097
+[Optimizer] Total Energy: -2.232342872597
+[Optimizer] Total Energy: -2.232344521755
+[Optimizer] Total Energy: -2.232345819810
+[Optimizer] Total Energy: -2.232346877618
+[Optimizer] Total Energy: -2.232348493050
+[Optimizer] Total Energy: -2.232349731989
+[Optimizer] Total Energy: -2.232351397770
+[Optimizer] Total Energy: -2.232352612349
+[Optimizer] Total Energy: -2.232353690196
+[Optimizer] Total Energy: -2.232354718697
+[Optimizer] Total Energy: -2.232358786445
+[Optimizer] Total Energy: -2.232363497068
+[Optimizer] Total Energy: -2.232367146841
+[Optimizer] Total Energy: -2.232369625986
+[Optimizer] Total Energy: -2.232371735811
+[Optimizer] Total Energy: -2.232374027074
+[Optimizer] Total Energy: -2.232377784601
+[Optimizer] Total Energy: -2.232380542948
+[Optimizer] Total Energy: -2.232382614357
+[Optimizer] Total Energy: -2.232385878172
+[Optimizer] Total Energy: -2.232386700696
+[Optimizer] Total Energy: -2.232387611994
+[Optimizer] Total Energy: -2.232388836749
+[Optimizer] Total Energy: -2.232390017946
+[Optimizer] Total Energy: -2.232391199465
+[Optimizer] Total Energy: -2.232391700140
+[Optimizer] Total Energy: -2.232392271634
+[Optimizer] Total Energy: -2.232392817400
+[Optimizer] Total Energy: -2.232393950465
+[Optimizer] Total Energy: -2.232394680473
+[Optimizer] Total Energy: -2.232395743132
+[Optimizer] Total Energy: -2.232395832300
+[Optimizer] Total Energy: -2.232396605861
+[Optimizer] Total Energy: -2.232396773339
+[Optimizer] Total Energy: -2.232397106044
+[Optimizer] Total Energy: -2.232397718402
+[Optimizer] Total Energy: -2.232398070076
+[Optimizer] Total Energy: -2.232398589217
+[Optimizer] Total Energy: -2.232398884391
+[Optimizer] Total Energy: -2.232399345478
+[Optimizer] Total Energy: -2.232399602190
+[Optimizer] Total Energy: -2.232399935939
+[Optimizer] Total Energy: -2.232400190917
+[Optimizer] Total Energy: -2.232400552003
+[Optimizer] Total Energy: -2.232400736393
+[Optimizer] Total Energy: -2.232401100838
+[Optimizer] Total Energy: -2.232401362094
+[Optimizer] Total Energy: -2.232401557043
+[Optimizer] Total Energy: -2.232402006892
+[Optimizer] Total Energy: -2.232402506844
+[Optimizer] Total Energy: -2.232402855552
+[Optimizer] Total Energy: -2.232403195188
+[Optimizer] Total Energy: -2.232403422875
+[Optimizer] Total Energy: -2.232403811979
+[Optimizer] Total Energy: -2.232404145214
+[Optimizer] Total Energy: -2.232404448972
+[Optimizer] Total Energy: -2.232405148839
+[Optimizer] Total Energy: -2.232405499845
+[Optimizer] Total Energy: -2.232405828457
+[Optimizer] Total Energy: -2.232406167380
+[Optimizer] Total Energy: -2.232406624014
+[Optimizer] Total Energy: -2.232406789280
+[Optimizer] Total Energy: -2.232407244928
+[Optimizer] Total Energy: -2.232407440274
+[Optimizer] Total Energy: -2.232407795732
+[Optimizer] Total Energy: -2.232408324355
+[Optimizer] Total Energy: -2.232408672102
+[Optimizer] Total Energy: -2.232409006027
+[Optimizer] Total Energy: -2.232409272333
+[Optimizer] Total Energy: -2.232409445035
+[Optimizer] Total Energy: -2.232409668116
+[Optimizer] Total Energy: -2.232410087069
+[Optimizer] Total Energy: -2.232410354092
+[Optimizer] Total Energy: -2.232410626909
+[Optimizer] Total Energy: -2.232410884427
+[Optimizer] Total Energy: -2.232411081439
+[Optimizer] Total Energy: -2.232411348169
+[Optimizer] Total Energy: -2.232411686927
+[Optimizer] Total Energy: -2.232411951239
+[Optimizer] Total Energy: -2.232412712629
+[Optimizer] Total Energy: -2.232412935025
+[Optimizer] Total Energy: -2.232413588025
+[Optimizer] Total Energy: -2.232414129293
+[Optimizer] Total Energy: -2.232414390775
+[Optimizer] Total Energy: -2.232414708612
+[Optimizer] Total Energy: -2.232414989043
+[Optimizer] Total Energy: -2.232415309059
+[Optimizer] Total Energy: -2.232415484575
+[Optimizer] Total Energy: -2.232415772214
+[Optimizer] Total Energy: -2.232416323470
+[Optimizer] Total Energy: -2.232416969197
+[Optimizer] Total Energy: -2.232417417816
+[Optimizer] Total Energy: -2.232417674876
+[Optimizer] Total Energy: -2.232417832661
+[Optimizer] Total Energy: -2.232417948204
+[Optimizer] Total Energy: -2.232418213692

@@ -1,0 +1,21 @@
+{
+  "system": "H4",
+  "seed": 1,
+  "n_bond_qubits": 3,
+  "bond_dimension": 8,
+  "n_layers": 1,
+  "n_parameters": 144,
+  "total_energy": -2.2152228270903374,
+  "global": {
+    "initial_electronic_energy": -2.654227310640383,
+    "final_electronic_energy": -4.7440458294283125,
+    "n_function_evaluations": 15081,
+    "n_iterations": 94,
+    "converged": false,
+    "message": "STOP: TOTAL NO. OF F,G EVALUATIONS EXCEEDS LIMIT",
+    "energy_history": [
+      -2.654227310640383,
+      -4.7440458294283125
+    ]
+  }
+}

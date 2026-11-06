@@ -1,0 +1,21 @@
+{
+  "system": "H4",
+  "seed": 0,
+  "n_bond_qubits": 3,
+  "bond_dimension": 8,
+  "n_layers": 1,
+  "n_parameters": 144,
+  "total_energy": -2.215216367028664,
+  "global": {
+    "initial_electronic_energy": -2.178006220246145,
+    "final_electronic_energy": -4.744039369366639,
+    "n_function_evaluations": 14356,
+    "n_iterations": 92,
+    "converged": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "energy_history": [
+      -2.178006220246145,
+      -4.744039369366639
+    ]
+  }
+}

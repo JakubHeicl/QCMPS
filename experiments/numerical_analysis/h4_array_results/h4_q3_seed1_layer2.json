@@ -1,0 +1,34 @@
+{
+  "system": "H4",
+  "seed": 1,
+  "n_bond_qubits": 3,
+  "bond_dimension": 8,
+  "n_layers": 2,
+  "n_parameters": 288,
+  "total_energy": -2.215431968695335,
+  "sweep": {
+    "initial_electronic_energy": -4.744031532838392,
+    "final_electronic_energy": -4.744055903800507,
+    "n_function_evaluations": 5403,
+    "n_iterations": 87,
+    "converged": true,
+    "message": "Sweep optimization converged to the relative energy tolerance.",
+    "energy_history": [
+      -4.744031532838392,
+      -4.744053504992751,
+      -4.744055903800507
+    ]
+  },
+  "global_polish": {
+    "initial_electronic_energy": -4.744055903800507,
+    "final_electronic_energy": -4.74425497103331,
+    "n_function_evaluations": 15029,
+    "n_iterations": 48,
+    "converged": false,
+    "message": "STOP: TOTAL NO. OF F,G EVALUATIONS EXCEEDS LIMIT",
+    "energy_history": [
+      -4.744055903800507,
+      -4.74425497103331
+    ]
+  }
+}
