@@ -1,0 +1,108 @@
+HF Total energy: -2.215215410025
+Initial energy: 0.133369946443
+Starting Two site optimization...
+[Optimizer] Sweep 1/15 started.
+[Optimizer] [Sweep 1 Site pair 1-2] Total energy: -0.221496050686
+[Optimizer] [Sweep 1 Site pair 2-3] Total energy: -0.297607604618
+[Optimizer] [Sweep 1 Site pair 3-4] Total energy: -0.424047735355
+[Optimizer] [Sweep 1 Site pair 4-5] Total energy: -0.830380049434
+[Optimizer] [Sweep 1 Site pair 5-6] Total energy: -0.856725956291
+[Optimizer] [Sweep 1 Site pair 6-7] Total energy: -1.055544891550
+[Optimizer] [Sweep 1 Site pair 7-8] Total energy: -1.198739504896
+[Optimizer] [Sweep 1 Site pair 6-7] Total energy: -1.200150644324
+[Optimizer] [Sweep 1 Site pair 5-6] Total energy: -1.200491323202
+[Optimizer] [Sweep 1 Site pair 4-5] Total energy: -1.200689656108
+[Optimizer] [Sweep 1 Site pair 3-4] Total energy: -1.505911772262
+[Optimizer] [Sweep 1 Site pair 2-3] Total energy: -1.507249790191
+[Optimizer] [Sweep 1] Total energy: -1.507249790191, Relative change: 1.641e+00
+[Optimizer] Sweep 2/15 started.
+[Optimizer] [Sweep 2 Site pair 1-2] Total energy: -1.691420301492
+[Optimizer] [Sweep 2 Site pair 2-3] Total energy: -1.691426725997
+[Optimizer] [Sweep 2 Site pair 3-4] Total energy: -1.691440428839
+[Optimizer] [Sweep 2 Site pair 4-5] Total energy: -1.691949753139
+[Optimizer] [Sweep 2 Site pair 5-6] Total energy: -2.033366207830
+[Optimizer] [Sweep 2 Site pair 6-7] Total energy: -2.210171924208
+[Optimizer] [Sweep 2 Site pair 7-8] Total energy: -2.210180172128
+[Optimizer] [Sweep 2 Site pair 6-7] Total energy: -2.210591655326
+[Optimizer] [Sweep 2 Site pair 5-6] Total energy: -2.215181256775
+[Optimizer] [Sweep 2 Site pair 4-5] Total energy: -2.215182737838
+[Optimizer] [Sweep 2 Site pair 3-4] Total energy: -2.215208392439
+[Optimizer] [Sweep 2 Site pair 2-3] Total energy: -2.215209158812
+[Optimizer] [Sweep 2] Total energy: -2.215209158812, Relative change: 4.697e-01
+[Optimizer] Sweep 3/15 started.
+[Optimizer] [Sweep 3 Site pair 1-2] Total energy: -2.215212455186
+[Optimizer] [Sweep 3 Site pair 2-3] Total energy: -2.215212455394
+[Optimizer] [Sweep 3 Site pair 3-4] Total energy: -2.215212455946
+[Optimizer] [Sweep 3 Site pair 4-5] Total energy: -2.215212478926
+[Optimizer] [Sweep 3 Site pair 5-6] Total energy: -2.215212487453
+[Optimizer] [Sweep 3 Site pair 6-7] Total energy: -2.215221972094
+[Optimizer] [Sweep 3 Site pair 7-8] Total energy: -2.215221976058
+[Optimizer] [Sweep 3 Site pair 6-7] Total energy: -2.215221976183
+[Optimizer] [Sweep 3 Site pair 5-6] Total energy: -2.215222007053
+[Optimizer] [Sweep 3 Site pair 4-5] Total energy: -2.215246522839
+[Optimizer] [Sweep 3 Site pair 3-4] Total energy: -2.215303315420
+[Optimizer] [Sweep 3 Site pair 2-3] Total energy: -2.215303902089
+[Optimizer] [Sweep 3] Total energy: -2.215303902089, Relative change: 4.277e-05
+[Optimizer] Sweep 4/15 started.
+[Optimizer] [Sweep 4 Site pair 1-2] Total energy: -2.215304309034
+[Optimizer] [Sweep 4 Site pair 2-3] Total energy: -2.215304309540
+[Optimizer] [Sweep 4 Site pair 3-4] Total energy: -2.215314550392
+[Optimizer] [Sweep 4 Site pair 4-5] Total energy: -2.215464054612
+[Optimizer] [Sweep 4 Site pair 5-6] Total energy: -2.215639909582
+[Optimizer] [Sweep 4 Site pair 6-7] Total energy: -2.215775378549
+[Optimizer] [Sweep 4 Site pair 7-8] Total energy: -2.215780120901
+[Optimizer] [Sweep 4 Site pair 6-7] Total energy: -2.215794936022
+[Optimizer] [Sweep 4 Site pair 5-6] Total energy: -2.215885277048
+[Optimizer] [Sweep 4 Site pair 4-5] Total energy: -2.216298570600
+[Optimizer] [Sweep 4 Site pair 3-4] Total energy: -2.219794814784
+[Optimizer] [Sweep 4 Site pair 2-3] Total energy: -2.219917528792
+[Optimizer] [Sweep 4] Total energy: -2.219917528792, Relative change: 2.083e-03
+[Optimizer] Sweep 5/15 started.
+[Optimizer] [Sweep 5 Site pair 1-2] Total energy: -2.219924998763
+[Optimizer] [Sweep 5 Site pair 2-3] Total energy: -2.219925002045
+[Optimizer] [Sweep 5 Site pair 3-4] Total energy: -2.220644469820
+[Optimizer] [Sweep 5 Site pair 4-5] Total energy: -2.221901692847
+[Optimizer] [Sweep 5 Site pair 5-6] Total energy: -2.222124426816
+[Optimizer] [Sweep 5 Site pair 6-7] Total energy: -2.222124917631
+[Optimizer] [Sweep 5 Site pair 7-8] Total energy: -2.222124921845
+[Optimizer] [Sweep 5 Site pair 6-7] Total energy: -2.222124923462
+[Optimizer] [Sweep 5 Site pair 5-6] Total energy: -2.222129090571
+[Optimizer] [Sweep 5 Site pair 4-5] Total energy: -2.222133970574
+[Optimizer] [Sweep 5 Site pair 3-4] Total energy: -2.222198699997
+[Optimizer] [Sweep 5 Site pair 2-3] Total energy: -2.222199586703
+[Optimizer] [Sweep 5] Total energy: -2.222199586703, Relative change: 1.028e-03
+[Optimizer] Sweep 6/15 started.
+[Optimizer] [Sweep 6 Site pair 1-2] Total energy: -2.222211300339
+[Optimizer] [Sweep 6 Site pair 2-3] Total energy: -2.222211300339
+[Optimizer] [Sweep 6 Site pair 3-4] Total energy: -2.222211904791
+[Optimizer] [Sweep 6 Site pair 4-5] Total energy: -2.222211915311
+[Optimizer] [Sweep 6 Site pair 5-6] Total energy: -2.222212204099
+[Optimizer] [Sweep 6 Site pair 6-7] Total energy: -2.222212208025
+[Optimizer] [Sweep 6 Site pair 7-8] Total energy: -2.222212211964
+[Optimizer] [Sweep 6 Site pair 6-7] Total energy: -2.222212213211
+[Optimizer] [Sweep 6 Site pair 5-6] Total energy: -2.222212214274
+[Optimizer] [Sweep 6 Site pair 4-5] Total energy: -2.222212214522
+[Optimizer] [Sweep 6 Site pair 3-4] Total energy: -2.222212225256
+[Optimizer] [Sweep 6 Site pair 2-3] Total energy: -2.222212225375
+[Optimizer] [Sweep 6] Total energy: -2.222212225375, Relative change: 5.687e-06
+[Optimizer] Sweep 7/15 started.
+[Optimizer] [Sweep 7 Site pair 1-2] Total energy: -2.222212226511
+[Optimizer] [Sweep 7 Site pair 2-3] Total energy: -2.222212226511
+[Optimizer] [Sweep 7 Site pair 3-4] Total energy: -2.222212226511
+[Optimizer] [Sweep 7 Site pair 4-5] Total energy: -2.222212227027
+[Optimizer] [Sweep 7 Site pair 5-6] Total energy: -2.222212227754
+[Optimizer] [Sweep 7 Site pair 6-7] Total energy: -2.222212228406
+[Optimizer] [Sweep 7 Site pair 7-8] Total energy: -2.222212228645
+[Optimizer] [Sweep 7 Site pair 6-7] Total energy: -2.222212229410
+[Optimizer] [Sweep 7 Site pair 5-6] Total energy: -2.222212230070
+[Optimizer] [Sweep 7 Site pair 4-5] Total energy: -2.222212230277
+[Optimizer] [Sweep 7 Site pair 3-4] Total energy: -2.222212230277
+[Optimizer] [Sweep 7 Site pair 2-3] Total energy: -2.222212230277
+[Optimizer] [Sweep 7] Total energy: -2.222212230277, Relative change: 2.206e-09
+[Optimizer] Convergence reached after 7 sweeps. Relative change: 2.21e-09
+Total energy: -2.222212230277
+Total energy variance: 0.063142955002
+Particle number: 3.999999962377
+Particle number variance: 0.000000043097
+Alpha particle number: 1.999999973410
+Beta particle number: 1.999999988966

@@ -1,0 +1,94 @@
+HF Total energy: -1.575616476702
+Initial energy: -1.110823710303
+Total energy: -1.110823710303
+Particle number: 3.938047807933
+Particle number variance: 1.541741616010
+Alpha particle number: 1.357281130831
+Beta particle number: 2.580766677103
+Starting Two site optimization...
+[Optimizer] Sweep 1/1 started.
+[Optimizer] [Sweep 1 Site pair 1-2] Objective value: 0.316915745960
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: 0.287712205811
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -0.539259745685
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -0.575028911666
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -0.708792526030
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.163073911111
+[Optimizer] [Sweep 1 Site pair 7-8] Objective value: -1.221515230447
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.343621855148
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -1.378167260651
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -1.378379048660
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -1.381258755991
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: -1.398896743794
+[Optimizer] [Sweep 1] Objective value: -1.398896743794, Relative change: 2.150e+00
+Total energy: -1.439590978187
+Particle number: 4.013032150699
+Particle number variance: 0.022268605740
+Alpha particle number: 2.036451982889
+Beta particle number: 1.976580167810
+Starting Two site optimization...
+[Optimizer] Sweep 1/1 started.
+[Optimizer] [Sweep 1 Site pair 1-2] Objective value: -1.423638109582
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: -1.426528522143
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -1.426850637616
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -1.428754515906
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -1.429341911385
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.433066034187
+[Optimizer] [Sweep 1 Site pair 7-8] Objective value: -1.434387121444
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.434388377058
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -1.434460728444
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -1.434481847646
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -1.434742715409
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: -1.435402385259
+[Optimizer] [Sweep 1] Objective value: -1.435402385259, Relative change: 2.610e-02
+Total energy: -1.438573057933
+Particle number: 4.000013947970
+Particle number variance: 0.000064911579
+Alpha particle number: 2.003494180893
+Beta particle number: 1.996519767078
+Energy after adding layers: -1.438573057933
+Energy after perturbing parameters: -1.403910523682
+Total energy: -1.403910523682
+Particle number: 3.962046801448
+Particle number variance: 0.157228123064
+Alpha particle number: 1.994563276983
+Beta particle number: 1.967483524465
+Starting Two site optimization...
+[Optimizer] Sweep 1/1 started.
+[Optimizer] [Sweep 1 Site pair 1-2] Objective value: -1.277477066663
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: -1.340905623386
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -1.361300738778
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -1.372592034937
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -1.381948810389
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.415440480711
+[Optimizer] [Sweep 1 Site pair 7-8] Objective value: -1.428990868099
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.428991243619
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -1.431228110950
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -1.431763473072
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -1.434583010453
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: -1.435782361704
+[Optimizer] [Sweep 1] Objective value: -1.435782361704, Relative change: 1.775e-01
+Total energy: -1.438093439095
+Particle number: 3.999487407094
+Particle number variance: 0.000924542309
+Alpha particle number: 1.999741872669
+Beta particle number: 1.999745534425
+Starting Two site optimization...
+[Optimizer] Sweep 1/1 started.
+[Optimizer] [Sweep 1 Site pair 1-2] Objective value: -1.437076423177
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: -1.437178955982
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -1.437224040764
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -1.437503862606
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -1.438071927197
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.438072718427
+[Optimizer] [Sweep 1 Site pair 7-8] Objective value: -1.438072718764
+[Optimizer] [Sweep 1 Site pair 6-7] Objective value: -1.438072718940
+[Optimizer] [Sweep 1 Site pair 5-6] Objective value: -1.438072719736
+[Optimizer] [Sweep 1 Site pair 4-5] Objective value: -1.438103582074
+[Optimizer] [Sweep 1 Site pair 3-4] Objective value: -1.438118935770
+[Optimizer] [Sweep 1 Site pair 2-3] Objective value: -1.438192338250
+[Optimizer] [Sweep 1] Objective value: -1.438192338250, Relative change: 1.679e-03
+Total energy: -1.438229088890
+Particle number: 3.999999989378
+Particle number variance: 0.000000017512
+Alpha particle number: 2.000001521153
+Beta particle number: 1.999998468225

@@ -1,14 +1,16 @@
 from __future__ import annotations
+import json
 from .layers import LayerType
 from .gates import DoubleExcitationGate
 from .utils import todo
 
 import numpy as np
 from typing import Callable
-from qiskit import QuantumCircuit
+from qiskit import QuantumCircuit   
 from qiskit.circuit import ParameterVector
-from qiskit.quantum_info import SparsePauliOp, Statevector
+from qiskit.quantum_info import Statevector
 from qiskit_algorithms.gradients import ReverseEstimatorGradient
+from pathlib import Path
 
 from abc import ABC
 from itertools import combinations
@@ -52,7 +54,6 @@ class Component(ABC, QuantumCircuit):
     def perturb_parameters(self, perturbation_strength: float) -> None:
         
         perturbation = np.random.uniform(-perturbation_strength, perturbation_strength, self.n_parameters)
-        
         self.parameters_values += perturbation
         
     def resize_parameters(self, new_n_parameters: int) -> None:
@@ -99,10 +100,6 @@ class Ansatz(QuantumCircuit):
         self.components: list[Component] = []
         self.component_qubits: list[list[int]] = []
         
-        self.hamiltonian: SparsePauliOp | None = None
-        self.hamiltonian_qubits: list[int] = list(range(self.n_qubits))
-        self.nuclear_repulsion: float | None = None
-        
         self.gradient_calculator = ReverseEstimatorGradient()
         
     def add_component(self, component: Component, qubits: list[int]):
@@ -120,14 +117,7 @@ class Ansatz(QuantumCircuit):
         
         for component, qubits in zip(self.components, self.component_qubits):
             self.compose(component, qubits=qubits, inplace=True)
-        
-    def add_hamiltonian(self, hamiltonian: SparsePauliOp, hamiltonian_qubits: list[int] | None = None):
-        self.hamiltonian = hamiltonian
-        self.hamiltonian_qubits = hamiltonian_qubits if hamiltonian_qubits is not None else list(range(self.n_qubits))
-
-    def add_nuclear_repulsion(self, nuclear_repulsion: float):
-        self.nuclear_repulsion = nuclear_repulsion
-            
+          
     def bound_circuit(self) -> QuantumCircuit:
         parameter_map = {}
 
@@ -142,7 +132,11 @@ class Ansatz(QuantumCircuit):
 
         return QuantumCircuit.assign_parameters(self, parameter_map, inplace=False)
     
-    def energy_objective(self, components: Component | list[Component], parameter_groups: np.ndarray | list[np.ndarray] | None = None) -> Callable[[np.ndarray], float]:
+    def statevector(self) -> Statevector:
+        bound_circuit = self.bound_circuit()
+        return Statevector.from_instruction(bound_circuit)
+    
+    def objective(self, function: Callable[[Ansatz], float], components: Component | list[Component], parameter_groups: np.ndarray | list[np.ndarray] | None = None) -> Callable[[np.ndarray], float]:
         
         if isinstance(components, Component):
             components = [components]
@@ -157,7 +151,7 @@ class Ansatz(QuantumCircuit):
         
         if len(parameter_groups) != len(components):
             raise ValueError("The number of parameter groups must match the number of components.")
-        
+    
         normalized_groups = []
         baselines = []
         
@@ -200,7 +194,7 @@ class Ansatz(QuantumCircuit):
                 component.update_parameters(full_parameters)
                 offset += n_group_parameters   
             
-            return self.energy()
+            return function(self)
         
         return objective_function
     
@@ -222,52 +216,113 @@ class Ansatz(QuantumCircuit):
         
         return gradient_function
     
-    @todo("Need to implement calculation for multiple components at once. Maybe a general function for general objective functions.")
-    def zero_state_objective(self, component: Component, target_qubits: list[int]) -> Callable[[np.ndarray], float]:
+    def save_checkpoint(self, path: Path | str):
+        path = Path(path)
         
-        if not any(item is component for item in self.components):
-            raise ValueError("The specified component is not part of the ansatz.")
+        checkpoint_data = {
+            "format_version": 1,
+            "n_qubits": self.n_qubits,
+            "components": [],
+            "component_qubits": self.component_qubits,
+        }
         
-        def objective_function(x: np.ndarray) -> float:
-            component.update_parameters(x)
-            return self.zero_state_infidelity(target_qubits)
+        for component in self.components:
+            component_data = {
+                "name": component.name,
+                "type": type(component).__qualname__,
+                "n_qubits": component.n_qubits,
+                "n_parameters": component.n_parameters,
+                "parameters_values": component.parameters_values.tolist() if component.parameters_values is not None else None,
+            }
+            checkpoint_data["components"].append(component_data)
         
-        return objective_function
-    
-    def zero_state_infidelity(self, target_qubits: list[int]) -> float:
-        
-        circuit = self.bound_circuit()
-        state = Statevector.from_instruction(circuit)
-        
-        physical_zero_probability = state.probabilities(qargs=target_qubits)[0]
-        return 1 - float(physical_zero_probability)
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(checkpoint_data, f, indent=4)
+            
+    def load_checkpoint(self, path: Path | str):
+        path = Path(path)
 
-    def energy(self) -> float:
-        if self.hamiltonian is None:
-            raise ValueError("Hamiltonian has not been added.")
-
-        circuit = self.bound_circuit()
-        state = Statevector.from_instruction(circuit)
-
-        energy = state.expectation_value(self.hamiltonian, qargs=self.hamiltonian_qubits)
-        return float(np.real_if_close(energy))
-    
-    def total_energy(self) -> float:
-        if self.nuclear_repulsion is None:
-            raise ValueError("Nuclear repulsion energy has not been added to the ansatz.")
+        if not path.exists():
+            raise FileNotFoundError(f"Checkpoint file not found: {path}")
         
-        return self.energy() + self.nuclear_repulsion
-    
-    @todo("Implement a general printing function")
-    def print_energy(self, *args, **kwargs):
-        energy = self.energy()
-        print(f"Energy: {energy:.12f}")
+        with open(path, 'r', encoding='utf-8') as f:
+            checkpoint_data = json.load(f)
+            
+        n_qubits = checkpoint_data["n_qubits"]
+        format_version = checkpoint_data["format_version"]
+        component_qubits = checkpoint_data["component_qubits"]
+        components_data = checkpoint_data["components"]
+        
+        if format_version != 1:
+            raise ValueError(f"Unsupported checkpoint format version: {format_version}")
 
-    @todo("Implement a general printing function")
-    def print_total_energy(self, *args, **kwargs):
-        total_energy = self.total_energy()
-        print(f"Total Energy: {total_energy:.12f}")
+        if n_qubits != self.n_qubits:
+            raise ValueError(f"Checkpoint n_qubits ({n_qubits}) does not match ansatz n_qubits ({self.n_qubits}).")
+        
+        if len(components_data) != len(component_qubits):
+            raise ValueError("Mismatch between number of components and component qubits in checkpoint.")
+        
+        if len(components_data) != len(self.components):
+            raise ValueError("Mismatch between number of components in checkpoint and ansatz.")
+        
+        if len(component_qubits) != len(self.component_qubits):
+            raise ValueError("Checkpoint component placement count does not match ansatz component placement count.")
+        
+        validated_parameters = []
+        
+        for (component_data, component_qubit_list, component, current_qubit_list) in zip(components_data, component_qubits, self.components, self.component_qubits, strict = True):
+            
+            name = component_data["name"]
+            type_name = component_data["type"]
+            component_n_qubits = component_data["n_qubits"]
+            n_parameters = component_data["n_parameters"]
+            parameters_values = np.array(component_data["parameters_values"], dtype=float) if component_data["parameters_values"] is not None else None
+            
+            if name != component.name:
+                raise ValueError(f"Checkpoint component name ({name}) does not match ansatz component name ({component.name}).")
+            
+            if type_name != type(component).__qualname__:
+                raise ValueError(f"Checkpoint component type ({type_name}) does not match ansatz component type ({type(component).__qualname__}).")
+            
+            if component_n_qubits != component.n_qubits:
+                raise ValueError(f"Checkpoint component n_qubits ({component_n_qubits}) does not match ansatz component n_qubits ({component.n_qubits}).")
+            
+            if n_parameters != component.n_parameters:
+                raise ValueError(f"Checkpoint component n_parameters ({n_parameters}) does not match ansatz component n_parameters ({component.n_parameters}).")
+            
+            if component_qubit_list != current_qubit_list:
+                raise ValueError(f"Checkpoint component qubit placement ({component_qubit_list}) does not match ansatz component qubit placement ({current_qubit_list}).")
 
+            if n_parameters == 0:
+                if parameters_values is not None:
+                    raise ValueError(
+                        "A parameterless component must not contain parameter values."
+                    )
+            else:
+                if parameters_values is None:
+                    raise ValueError(
+                        f"Checkpoint component {name} is missing parameter values."
+                    )
+
+                if parameters_values.shape != (n_parameters,):
+                    raise ValueError(
+                        f"Checkpoint component {name} expected "
+                        f"{n_parameters} parameter values, got shape "
+                        f"{parameters_values.shape}."
+                    )
+
+                if not np.all(np.isfinite(parameters_values)):
+                    raise ValueError(
+                        f"Checkpoint component {name} contains non-finite parameters."
+                    )
+            
+            validated_parameters.append(parameters_values)
+        
+        for component, parameters in zip(self.components, validated_parameters, strict = True):
+        
+            if component.n_parameters > 0:
+                component.update_parameters(parameters)
+        
 class HFPreset(Component):
     def __init__(self, n_qubits: int, occupied_indices: list[int]):
         super().__init__(n_qubits, 0, "HFPreset")
@@ -337,10 +392,7 @@ class GlobalQCMPS(Component):
                 
                 n_params = layer_type.n_parameters(self.block_entries)
                 
-                block.compose(
-                    layer_type.build(self.block_entries, self.parameters_symbols[index:index + n_params]),
-                    inplace=True,
-                )
+                block.compose(layer_type.build(self.block_entries, self.parameters_symbols[index:index + n_params]), inplace=True)
                 index += n_params
             
             self.blocks.append(block)
@@ -355,28 +407,43 @@ class GlobalQCMPS(Component):
 
             self.compose(block, qubits=list(range(orbital, orbital + self.block_entries)), inplace=True)
 
-    def add_layers(self, layer_types: list[LayerType]) -> None:
-        old_values = self.parameters_values.reshape(
-            self.n_phys_qubits,
-            self.num_block_params,
-        )
-
-        added_block_params = sum(
-            layer.n_parameters(self.block_entries)
-            for layer in layer_types
-        )
-
-        new_values = np.pad(
-            old_values,
-            ((0, 0), (0, added_block_params)),
-        ).reshape(-1)
-
-        self.layer_types.extend(layer_types)
-        self.num_block_params += added_block_params
-
+    def add_layers(self, layer_types: list[LayerType], initializer: Callable[[int], np.ndarray] | None = None) -> None:
+        
+        self.insert_layers(len(self.layer_types), layer_types, initializer)
+        
+    def insert_layers(self, index: int, layer_types: list[LayerType], initializer: Callable[[int], np.ndarray] | None = None) -> None:
+        
+        if index < 0 or index > len(self.layer_types):
+            raise ValueError(f"Index {index} is out of bounds for inserting layers into {len(self.layer_types)} existing layers.")
+        
+        if not layer_types:
+            return
+        
+        old_block_params = self.num_block_params
+        old_values = self.parameters_values.reshape(self.n_phys_qubits, old_block_params)
+        
+        inserted_block_params = sum(layer.n_parameters(self.block_entries) for layer in layer_types)
+        n_inserted_parameters = self.n_phys_qubits * inserted_block_params
+        
+        if initializer is None:
+            inserted_values = np.zeros(n_inserted_parameters)
+        else:
+            inserted_values = np.asarray(initializer(n_inserted_parameters), dtype=float)
+            if inserted_values.shape != (n_inserted_parameters,):
+                raise ValueError(f"Initializer must return {n_inserted_parameters} parameters, got shape {inserted_values.shape}.")
+        
+        inserted_values = inserted_values.reshape(self.n_phys_qubits, inserted_block_params)
+        
+        insertion_offset = sum(layer.n_parameters(self.block_entries) for layer in self.layer_types[:index])
+        
+        new_values = np.concatenate((old_values[:, :insertion_offset], inserted_values, old_values[:, insertion_offset:]), axis=1).reshape(-1)
+        
+        self.layer_types = self.layer_types[:index] + layer_types + self.layer_types[index:]
+        self.num_block_params = old_block_params + inserted_block_params
+        
         self.resize_parameters(len(new_values))
-        self.parameters_values = new_values
-
+        self.update_parameters(new_values)
+        
         self.build_blocks()
         self.build_circuit()
         
@@ -391,3 +458,20 @@ class GlobalQCMPS(Component):
             offset += self.num_block_params
             
         return parameter_groups
+    
+    def layer_parameter_groups(self, layer_index: int) -> list[np.ndarray]:
+        
+        n_layers = len(self.layer_types)
+        
+        if layer_index < 0:
+            layer_index += n_layers
+            
+        if layer_index < 0 or layer_index >= n_layers:
+            raise ValueError(f"Layer index {layer_index} is out of bounds for {n_layers} layers.")
+        
+        layer_sizes = [layer.n_parameters(self.block_entries) for layer in self.layer_types]
+        
+        layer_start = sum(layer_sizes[:layer_index])
+        layer_stop = layer_start + layer_sizes[layer_index]
+        
+        return [block * self.num_block_params + np.arange(layer_start, layer_stop) for block in range(self.n_phys_qubits)]
